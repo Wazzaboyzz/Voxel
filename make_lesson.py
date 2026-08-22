@@ -12,6 +12,7 @@ Pipeline:
   4. Piper (free, local TTS) generates narration audio per slide
   5. Freesound.org (free API) pulls background music/SFX matching each slide's mood
   6. ffmpeg stitches narration + music into each slide's embedded audio
+  7. A canonical project.json manifest is written for the run (project_provider)
 
 Usage:
     python make_lesson.py "Present perfect tense for intermediate ESL students"
@@ -38,6 +39,7 @@ from pptx.dml.color import RGBColor
 
 from content_provider import generate_outline
 from image_provider import generate_all_images as generate_all_slide_images, LESSON_STYLE_SUFFIX
+from project_provider import build_lesson_project_record, write_project_json
 
 
 FREESOUND_API_KEY = os.environ.get("FREESOUND_API_KEY", "")
@@ -204,6 +206,20 @@ def main():
     print("Mixing final audio per slide (ffmpeg)...")
     mixed_files = mix_audio(narration_files, bg_files, run_dir / "mixed")
 
+    print("Writing project.json manifest...")
+    record = build_lesson_project_record(
+        topic=topic,
+        slides=slides,
+        image_files=image_files,
+        deck_path=deck_path,
+        narration_files=narration_files,
+        bg_files=bg_files,
+        mixed_files=mixed_files,
+        run_dir=run_dir,
+    )
+    project_json_path = write_project_json(record, run_dir)
+    print(f"  -> {project_json_path}")
+
     print()
     print("Done. Output folder:")
     print(f"  {run_dir.resolve()}")
@@ -211,6 +227,10 @@ def main():
     print("NOTE: audio files are generated but not yet embedded into the .pptx")
     print("itself. Open the deck and manually insert each slide's mixed audio")
     print("file via PowerPoint's Insert > Audio menu, matching by slide number.")
+
+
+if __name__ == "__main__":
+    main()
 
 
 if __name__ == "__main__":
