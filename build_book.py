@@ -10,6 +10,7 @@ Pipeline:
   1. Nemotron 3 Ultra (free, via OpenRouter) writes the full page-by-page
      manuscript: for each page, the text (or none, for coloring books) and
      an image_prompt describing the illustration for that page.
+     (via content_provider.generate_manuscript - shared across Voxel)
   2. Pollinations.ai (free, no key) generates one illustration per page.
   3. reportlab (free, pure Python) lays out a real print-ready interior PDF
      at the correct KDP trim size, with bleed margins and page numbers.
@@ -29,9 +30,6 @@ Required local tools:
 No key required for Pollinations basic image generation.
 """
 
-import os
-import sys
-import json
 import time
 import argparse
 import urllib.parse
@@ -42,10 +40,8 @@ from reportlab.lib.pagesizes import inch
 from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
 
+from content_provider import generate_manuscript
 
-OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
-NEMOTRON_MODEL = "nvidia/nemotron-3-ultra-550b-a55b:free"
-OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 POLLINATIONS_IMAGE_URL = "https://image.pollinations.ai/prompt/"
 
@@ -72,65 +68,8 @@ PAPER_THICKNESS_CREAM = 0.0025     # inches per page, cream paper
 
 # ---------------------------------------------------------------------------
 # Step 1 - Nemotron writes the full page-by-page manuscript
+# (shared implementation: content_provider.generate_manuscript)
 # ---------------------------------------------------------------------------
-
-def generate_manuscript(concept, page_count):
-    if not OPENROUTER_API_KEY:
-        raise RuntimeError(
-            "OPENROUTER_API_KEY is not set. Export it before running:\n"
-            "  export OPENROUTER_API_KEY=your_key_here"
-        )
-
-    system_prompt = (
-        f"You are a children's book author and illustrator's art director. "
-        f"Given a book concept, produce a JSON array of exactly {page_count} "
-        f"page objects. Return ONLY valid JSON, no markdown fences, no "
-        f"preamble. Each object must have exactly these keys:\n"
-        '  "page_number": integer, 1-indexed\n'
-        '  "text": the text for this page (can be an empty string for '
-        "pages meant to be pure illustration, e.g. coloring book pages)\n"
-        '  "image_prompt": a concrete, specific visual description '
-        "(10-25 words) of the illustration for this page - describe an "
-        "actual scene, character pose, or object, not an abstract idea\n"
-        "If the concept describes a coloring book, text should be empty "
-        "or a very short caption, and image_prompt should describe a "
-        "clean line-art scene suitable for coloring. If it's a story, "
-        "text should carry the narrative forward page by page and "
-        "image_prompt should illustrate that page's specific moment."
-    )
-
-    response = requests.post(
-        OPENROUTER_URL,
-        headers={
-            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-            "Content-Type": "application/json",
-        },
-        json={
-            "model": NEMOTRON_MODEL,
-            "messages": [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": f"Book concept: {concept}"},
-            ],
-        },
-        timeout=180,
-    )
-    response.raise_for_status()
-    data = response.json()
-    raw_text = data["choices"][0]["message"]["content"].strip()
-
-    if raw_text.startswith("```"):
-        raw_text = raw_text.strip("`")
-        if raw_text.lower().startswith("json"):
-            raw_text = raw_text[4:].strip()
-
-    try:
-        pages = json.loads(raw_text)
-    except json.JSONDecodeError as e:
-        raise RuntimeError(
-            f"Nemotron did not return valid JSON. Raw response was:\n{raw_text}"
-        ) from e
-
-    return pages
 
 
 # ---------------------------------------------------------------------------
