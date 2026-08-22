@@ -8,6 +8,7 @@ Pipeline:
   2. Pollinations.ai generates one illustration per page (image_provider.generate_all_images)
   3. reportlab lays out a print-ready interior PDF at the correct KDP trim size
   4. A separate cover PDF is generated: front + spine + back
+  5. A canonical project.json manifest is written for the run (project_provider)
 
 Usage:
     python build_book.py "24-page coloring book of ocean animals for ages 4-7" --trim 8.5x8.5 --pages 24
@@ -28,6 +29,7 @@ from reportlab.lib.utils import ImageReader
 
 from content_provider import generate_manuscript
 from image_provider import generate_all_images, BOOK_STYLE_SUFFIX, COLORING_BOOK_STYLE_SUFFIX
+from project_provider import build_project_record, write_project_json
 
 
 OUTPUT_DIR = Path("output_books")
@@ -121,6 +123,23 @@ def main():
     front_image = image_files[0] if image_files else None
     build_cover_pdf(args.concept[:40], len(pages), trim_width_in, trim_height_in, cover_path, paper=args.paper, front_image=front_image)
     print(f"  -> {cover_path}")
+
+    print("Writing project.json manifest...")
+    product_type = "coloring_book" if args.coloring_book else "illustrated_book"
+    record = build_project_record(
+        concept=args.concept,
+        product_type=product_type,
+        trim_width_in=trim_width_in,
+        trim_height_in=trim_height_in,
+        paper=args.paper,
+        pages=pages,
+        image_files=image_files,
+        interior_path=interior_path,
+        cover_path=cover_path,
+        run_dir=run_dir,
+    )
+    project_json_path = write_project_json(record, run_dir)
+    print(f"  -> {project_json_path}")
 
     print()
     print("Done. Output folder:")
