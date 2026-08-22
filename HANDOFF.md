@@ -23,15 +23,22 @@ where things stand and how to not break what's already here.
   `build_book.py`.
 - `test_content_provider.py` mocks the OpenRouter call and checks the
   schema both callers depend on. No API key or network needed to run it.
-  4/4 tests passing as of the last CI run.
-- `.github/workflows/test.yml` runs that test on every push/PR to `main`.
-  **If you break the schema in `content_provider.py`, this should fail
-  before it reaches main.** If it doesn't, the test needs strengthening —
-  don't just disable it.
-- **Gap:** there is no test coverage yet for `image_provider.py`
-  (`generate_image` / `generate_all_images`). It's shared code per the
-  rule below ("add or update a test when you change shared logic") but
-  currently untested. This should be the next thing built.
+- `test_image_provider.py` mocks the Pollinations HTTP call, verifies
+  `generate_image` builds the right URL/params, and verifies
+  `generate_all_images` handles a failed request per-item without
+  crashing the batch. No API key or network needed to run it. Added
+  2026-08-22 — this closes the test-coverage gap that used to be listed
+  here.
+- `.github/workflows/test.yml` runs `python -m pytest -v` on every
+  push/PR to `main` — generic, not hardcoded to any one test filename,
+  so it automatically picks up any `test_*.py` file. Confirmed
+  2026-08-22. **If you break the schema in `content_provider.py` or
+  `image_provider.py`, this should fail before it reaches main.** If it
+  doesn't, the test needs strengthening — don't just disable it.
+- All 7 tests (4 from `test_content_provider.py` + 3 from
+  `test_image_provider.py`) passing as of the last CI run (Run #9,
+  2026-08-22).
+- **No remaining test-coverage gaps** for the two shared modules.
 
 ## Rules for anyone (or anything) working on this repo
 
@@ -62,14 +69,7 @@ where things stand and how to not break what's already here.
 
 ## Next up (in order)
 
-1. **Add test coverage for `image_provider.py`** — mock the Pollinations
-   HTTP call, verify `generate_image` builds the right URL/params, verify
-   `generate_all_images` handles a failed request per-item without
-   crashing the batch. Follow the same mocking pattern already used in
-   `test_content_provider.py`.
-2. Add that new test file to `.github/workflows/test.yml` (it likely
-   already runs `pytest` broadly, but confirm the new file is picked up).
-3. Then Phase 2: canonical `project.json` per run.
+1. Phase 2: canonical `project.json` per run.
 
 ## Footer
 
