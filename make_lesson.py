@@ -4,6 +4,7 @@ make_lesson.py - one command, topic in, ready-to-teach PPT out.
 
 Pipeline:
   1. Nemotron 3 Ultra (free, via OpenRouter) writes the lesson outline/script
+     (via content_provider.generate_outline - shared across Voxel)
   2. python-pptx builds the .pptx deck from that outline
   3. Piper (free, local TTS) generates narration audio per slide
   4. Freesound.org (free API) pulls background music/SFX matching each slide's mood
@@ -24,7 +25,6 @@ Required local tools (install once, all free):
 
 import os
 import sys
-import json
 import subprocess
 from pathlib import Path
 
@@ -33,74 +33,16 @@ from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
 
+from content_provider import generate_outline
 
-OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
+
 FREESOUND_API_KEY = os.environ.get("FREESOUND_API_KEY", "")
-
-NEMOTRON_MODEL = "nvidia/nemotron-3-ultra-550b-a55b:free"
-OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 FREESOUND_SEARCH_URL = "https://freesound.org/apiv2/search/text/"
 
 PIPER_BIN = os.environ.get("PIPER_BIN", "piper")
 PIPER_VOICE = os.environ.get("PIPER_VOICE", "en_US-lessac-medium.onnx")
 
 OUTPUT_DIR = Path("output")
-
-
-def generate_outline(topic):
-    if not OPENROUTER_API_KEY:
-        raise RuntimeError(
-            "OPENROUTER_API_KEY is not set. Export it before running:\n"
-            "  export OPENROUTER_API_KEY=your_key_here"
-        )
-
-    system_prompt = (
-        "You are a lesson-deck writer. Given a topic, produce a JSON array "
-        "of 6-10 slide objects for a classroom teaching deck. Return ONLY "
-        "valid JSON, no markdown fences, no preamble. Each object must have "
-        "exactly these keys:\n"
-        '  "title": short slide title (few words)\n'
-        '  "body": array of 2-5 short bullet point strings for the slide\n'
-        '  "narration": 1-3 sentences the teacher/narrator would say aloud '
-        "for this slide, plain spoken language\n"
-        '  "mood": one or two words describing the background music mood '
-        '(e.g. "calm focused", "upbeat playful", "serious neutral")\n'
-        "The first slide should be a title/intro slide. The last slide should "
-        "be a short recap/summary slide."
-    )
-
-    response = requests.post(
-        OPENROUTER_URL,
-        headers={
-            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-            "Content-Type": "application/json",
-        },
-        json={
-            "model": NEMOTRON_MODEL,
-            "messages": [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": f"Topic: {topic}"},
-            ],
-        },
-        timeout=120,
-    )
-    response.raise_for_status()
-    data = response.json()
-    raw_text = data["choices"][0]["message"]["content"].strip()
-
-    if raw_text.startswith("```"):
-        raw_text = raw_text.strip("`")
-        if raw_text.lower().startswith("json"):
-            raw_text = raw_text[4:].strip()
-
-    try:
-        slides = json.loads(raw_text)
-    except json.JSONDecodeError as e:
-        raise RuntimeError(
-            f"Nemotron did not return valid JSON. Raw response was:\n{raw_text}"
-        ) from e
-
-    return slides
 
 
 def build_deck(topic, slides, out_path):
