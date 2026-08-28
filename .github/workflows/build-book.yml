@@ -1,0 +1,72 @@
+name: Build Book
+
+# Manual trigger only. Run this from the "Actions" tab -> "Build Book" ->
+# "Run workflow", fill in the concept, and download the finished PDFs from
+# the run's "Artifacts" section when it finishes.
+
+on:
+  workflow_dispatch:
+    inputs:
+      concept:
+        description: "Book concept/theme (full sentence, e.g. a shy dragon who learns to make friends, bedtime story ages 3-6)"
+        required: true
+        type: string
+      pages:
+        description: "Number of pages"
+        required: false
+        default: "20"
+        type: string
+      trim:
+        description: "Trim size"
+        required: false
+        default: "8.5x8.5"
+        type: choice
+        options:
+          - "8.5x8.5"
+          - "8.5x11"
+          - "6x9"
+          - "5x8"
+      coloring_book:
+        description: "Coloring book (uncheck for illustrated story book)"
+        required: false
+        default: false
+        type: boolean
+      paper:
+        description: "Paper type"
+        required: false
+        default: "white"
+        type: choice
+        options:
+          - "white"
+          - "cream"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build the book
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          if [ "${{ inputs.coloring_book }}" = "true" ]; then
+            python build_book.py "${{ inputs.concept }}" --pages ${{ inputs.pages }} --trim ${{ inputs.trim }} --paper ${{ inputs.paper }} --coloring-book
+          else
+            python build_book.py "${{ inputs.concept }}" --pages ${{ inputs.pages }} --trim ${{ inputs.trim }} --paper ${{ inputs.paper }}
+          fi
+
+      - name: Upload finished book (PDFs + project.json)
+        uses: actions/upload-artifact@v4
+        with:
+          name: voxel-book-output
+          path: output_books/
+          retention-days: 14
