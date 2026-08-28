@@ -14,20 +14,24 @@ where things stand and how to not break what's already here.
 ## Where things actually stand
 
 - **Phases 1–3 are done.** `content_provider.py` (shared text gen),
-  `image_provider.py` (shared image gen), and `project_provider.py`
+  `image_provider.py` (shared image gen, now wrapping Google's Gemini
+  API instead of Pollinations as of 2026-08-28), and `project_provider.py`
   (canonical `project.json` per run) are all built, all tested, and
   both `make_lesson.py` and `build_book.py` use them — no duplicated
-  logic in either caller. Verified against the live repo on 2026-08-22.
+  logic in either caller.
 - `test_content_provider.py`, `test_image_provider.py`, and
   `test_project_provider.py` mock every external call (OpenRouter,
-  Pollinations) or use a real temp dir (file I/O only) — none need a
-  real API key or network to run. 11/11 tests passing as of the last
-  CI run.
+  Gemini) or use a real temp dir (file I/O only) — none need a
+  real API key or network to run.
 - `.github/workflows/test.yml` runs the full suite on every push/PR to
   `main`, no filename hardcoded — any `test_*.py` file is picked up
   automatically.
-- **Phase 4 (first real book, end to end) has NOT started.** This is
-  the actual next step — see below. It is not a code task.
+- **Phase 4 (first real book, end to end) is in progress** via
+  `Voxel_Phase4_Build_Book.ipynb` in Google Colab (Zia is browser-only,
+  no terminal/local Python). Manuscript generation (Step 4) works.
+  Illustration generation (Step 5) was switched from Pollinations
+  (low quality, inconsistent, text baked into images and clipping) to
+  Gemini/"Nano Banana" (Step 2b added for the Gemini API key).
 
 ## Rules for anyone (or anything) working on this repo
 
@@ -52,9 +56,22 @@ where things stand and how to not break what's already here.
 - **Don't claim a change works without running the tests.**
   `python -m pytest -v` locally, or check the Actions tab after pushing.
 - This repo owner (Zia) is a non-coder working browser-only (GitHub web
-  editor, no terminal). GitHub's write API returns 403 on this repo for
-  automated tools — if you're an AI assistant hitting that, give Zia
-  the exact web-editor URL (`.../edit/main/<path>` or
+  editor, no terminal). **Before attempting any write to this or any
+  other repo, an AI assistant must call whatever "get authenticated
+  user" tool it has and confirm out loud which GitHub account is
+  currently connected.** This repo lives under the `Wazzaboyzz`
+  account, which is separate from Zia's other GitHub account
+  (`aliwaziri10`) — Claude's GitHub connector can only be linked to one
+  account at a time, and previous sessions wasted significant time
+  hitting silent 403s because the connector was authenticated as the
+  wrong account, or authorized but not actually installed on the
+  account. If a write 403s even with the right account connected,
+  check github.com/settings/installations for the "Claude Github MCP
+  Connector" app specifically (not "Claude"/Claude Code's app, a
+  different app) and confirm it is actually installed (not just
+  authorized) on Wazzaboyzz with repository access covering this repo.
+  Only if reconnection/permission fixes aren't possible right now, give
+  Zia the exact web-editor URL (`.../edit/main/<path>` or
   `.../new/main?filename=<path>`) plus the full file content to paste,
   never a partial diff or "find this line" instruction.
 
@@ -69,9 +86,9 @@ Steps, in order:
 1. **Pick one real book concept** — a real one you intend to publish,
    not a placeholder. Coloring book or illustrated book, your call.
 2. **Run `build_book.py` locally** with that concept (needs
-   `OPENROUTER_API_KEY` set, and `reportlab` + `requests` installed —
-   see the docstring at the top of `build_book.py` for the exact
-   command and flags).
+   `OPENROUTER_API_KEY` and `GEMINI_API_KEY` set, and `reportlab` +
+   `requests` installed — see the docstring at the top of
+   `build_book.py` for the exact command and flags).
 3. **Open the output folder** it creates under `output_books/<name>/`.
    Check the interior PDF and cover PDF by eye. Check `project.json` —
    does it accurately describe what got made?
