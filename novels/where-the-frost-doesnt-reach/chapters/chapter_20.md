@@ -1,6 +1,5 @@
 # CHAPTER TWENTY
 
-Chapter Ten
 The Kell homestead sat up on the ridge with its lights on, ordinary and warm-looking in a way that made Mara's skin crawl, wind vanes turning slow and lazy on the barn roof against a sky that had gone strange and heavy, clouds moving in from a direction Mara was fairly sure the weather report hadn't predicted, low and bruised-looking in a way that felt less like weather and more like something being held back with visible effort. The house itself was a handsome old farmhouse, white clapboard gone slightly gray with age, the kind of place that had probably featured on the town's historical walking tour at some point, its very respectability now feeling to Mara like the most calculated part of the whole arrangement.
 They found Wren's bicycle abandoned at the bottom of the drive, wheel still spinning, the small, mechanical tick of it the only sound besides the wind, and something about that detail, the bike still moving like its rider had only just stepped away, made the whole scene feel more urgent than anything else could have.
 Mara felt her pulse spike at the sight of it, the particular certainty of arriving somewhere seconds too late layered over the equally sharp fear that they might be arriving exactly on time, into something they weren't ready for.
