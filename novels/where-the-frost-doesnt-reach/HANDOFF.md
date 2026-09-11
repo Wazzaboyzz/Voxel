@@ -6,6 +6,33 @@
 ## READ NEXT — pre-publish checklist
 Before touching anything else, read `PRE_PUBLISH_CHECKLIST.md` in this same folder. It has 6 open tasks (style-originality check, character-name collision audit, real-person name check, continuity read-through, AI-authorship tell check, KDP formatting requirements) with a recommended priority order. This project is otherwise ~90% done per Zia — that checklist is the remaining 10%.
 
+## TASK 5 (AI-tell rewrite pass) — PROGRESS TRACKER — READ THIS BEFORE STARTING TASK 5
+
+**Method (proven, use this exact process for every remaining chapter):**
+1. Fetch the chapter's current content + sha from GitHub.
+2. Cross-check it against ch.3 (canon) for continuity issues while you're in there anyway — kills two tasks at once.
+3. Find every instance of "the particular ___" and "the specific ___". Replace each with natural, varied phrasing that keeps the exact same meaning — cut the intensifier, use a different construction, or just state the plain fact. No plot, dialogue, or fact changes, ever.
+4. Also worth a glance (not mandatory, same tic family): "the kind of ___", standalone "particular"/"specific" used as plain adjectives.
+5. Watch for **tense mismatches introduced by your own fix** — if the replacement lands inside past-tense narration, make sure the new phrasing is past tense too. (Real example caught this session: "calculating exactly how much worse a known flaw becomes once you realize" should have been "became... realized" — present-tense verbs had slipped into a past-tense paragraph.)
+6. Verify zero em dashes remain after your edit (should already be zero, this is a can't-hurt check).
+7. Push the whole corrected chapter file via the API directly (Zia has explicitly said to stop doing the manual find/replace-in-chat workflow for this specific task — it was too slow at 38+ chapters remaining; push directly, verify by reading the file back, move to the next chapter without waiting for a check-in unless something looks genuinely wrong).
+8. Update this table with a one-line result.
+
+**Status (as of this session, chapters checked in order):**
+
+| Chapter | Task 5 (AI-tell) | Task 4 (continuity vs. ch.3) | Notes |
+|---|---|---|---|
+| 1 | DONE | N/A (is canon) | Fixed prior session — 5 instances, varied constructions. |
+| 2 | DONE | N/A (is canon) | Fixed prior session — 1 instance. |
+| 3 | DONE | N/A (is canon) | Fixed prior session — 1 instance. Zero em dashes confirmed. |
+| 4 | DONE | Checked, no issues | Fixed prior session — 4 instances. |
+| 5 | DONE | Checked, no issues | Fixed this session — 6 instances: "the particular discomfort"→"that unsettled feeling"; "the specific thinness of a man"→cut, restated plain; "the particular glance of someone checking"→"checking, the way you would when"; "the particular density of paper"→"paper gone soft and dense"; "tired in the specific way of someone who spent"→"tired the way people get from spending"; "the specific reluctance of someone who has learned"→"reluctant the way you get when you've learned". Pushed live. |
+| 6 | DONE | Checked, no issues | Fixed this session — 5 instances, all "the particular ___" cut or rephrased. Zia caught one awkward resulting sentence ("...engineered around once" — double "once") and it was corrected, then further polished to "calculating exactly how much worse a known flaw became once she realized someone had already learned to work around it" (past tense fix applied). Pushed live and verified by reading back — confirmed correct on GitHub. One remaining minor "specific" (not the "the specific X" pattern, just the bare word) was flagged as optional/low-priority and left as-is. |
+| 7 | **NOT YET APPLIED — fixes identified, ready to push, do this first** | Checked, no issues | 7 instances found, none pushed yet: (1) "checking the monitor with the particular brisk efficiency of someone whose job required" → "checking the monitor with the brisk efficiency of someone whose job required"; (2) "cataloguing the particular way grief and fury sat together" → "cataloguing the way grief and fury sat together"; (3) "something in her had gone quietly alert, the particular instinct of noticing a beam" → "...the instinct of noticing a beam"; (4) "with the specific unease of a woman who had just watched a piece move" → "with the uneasy sense of a woman who had just watched a piece move"; (5) "starting to recognize as the particular vulnerability of a man deciding" → "starting to recognize as the vulnerability of a man deciding"; (6) "familiar and unfamiliar at once, the particular vertigo of a landscape" → "familiar and unfamiliar at once, that vertigo of a landscape"; (7) "old enough to have quietly held this particular secret since before" → "old enough to have quietly held this exact secret since before". Current sha as of this session: 2dfe4f2471b0d9ce9d3d465d02fd358b2585f55f — re-fetch to confirm it hasn't changed before pushing, in case Zia edited it manually in the meantime. |
+| 8–45 | NOT STARTED | NOT STARTED | Full remaining scope. Work sequentially, same method as above. Chapter 38 and 44 are also flagged in the main table above as over the 2,500-word ceiling — a trim pass on those two can happen in the same sitting as their AI-tell/continuity check, no need for a separate pass. |
+
+**Session budget note:** this session ended near its limit partway through chapter 7 — the fixes above are analyzed and ready, just not yet written back to GitHub. Start the next session by pushing chapter 7's fix directly (content given above), verify, then continue to chapter 8 without re-deriving any of this.
+
 ## What this project is
 Expanding an original 24-chapter draft (~26,900 words) into a 45-chapter, ~112,500-word novel, per `beat_map_45ch.md` in this same folder (authoritative for chapter-by-chapter mapping).
 
@@ -36,8 +63,8 @@ All novel files live at `novels/where-the-frost-doesnt-reach/` in `Wazzaboyzz/Vo
 Proposed order:
 1. Fix ch.20 formatting bug — DONE (earlier session).
 2. Pick one word-count target and update both files to agree — DONE. Locked at 2,000-2,500.
-3. Read chapters 4-9 against final ch.3 for continuity, fix any mismatches — NOT STARTED. Can now proceed since ch.1-3 canon is settled. (Also tracked as Task 4 in PRE_PUBLISH_CHECKLIST.md.)
-4. Expand every under-target chapter to the agreed range — NOT STARTED. Per the corrected table below, chapters currently BELOW 2,000 words: 2, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 31, 32, 35, 36, 37, 42, 45. Chapters currently ABOVE the 2,500 ceiling (need a trim pass instead): 38 (2,544), 44 (2,556).
+3. Read chapters 4-9 against final ch.3 for continuity, fix any mismatches — IN PROGRESS, see Task 5 tracker above (continuity is being checked as part of the same pass as the AI-tell fix, chapters 4-7 confirmed clean so far).
+4. Expand every under-target chapter to the agreed range — NOT STARTED. Per the corrected table below, chapters currently BELOW 2,000 words: 2, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 31, 32, 35, 36, 37, 42, 45. Chapters currently ABOVE the 2,500 ceiling (need a trim pass instead): 38 (2,544), 44 (2,556). Zia has said 1,800 words is an acceptable floor — chapters at or above 1,800 do NOT need expansion, only those genuinely below 1,800 are real gaps (re-check the table against this revised floor before doing any expansion work).
 5. Full read-through for voice consistency and plot contradictions once everything is length-correct — NOT STARTED. (Also tracked as Task 4 in PRE_PUBLISH_CHECKLIST.md.)
 
 ## Status: chapters completed in the new 45-chapter structure (verified Sept 2026, word counts re-checked against actual file content this session)
@@ -51,18 +78,18 @@ Proposed order:
 | 5 | DONE | 2,023 | NEW — first Rosewood/Thomas visit. In target. |
 | 6 | DONE | 2,068 | Thomas's first tolling reveal. In target. |
 | 7 | DONE | 1,963 | Continues reveal; Warren Reyes (Thomas's son) name established. Below target. |
-| 8 | DONE | 1,659 | Records office, survey file found. Name-collision bug FIXED this session (grandfather now Silas Reyes). Below target. |
+| 8 | DONE | 1,659 | Records office, survey file found. Name-collision bug FIXED (grandfather now Silas Reyes). Below target. |
 | 9 | DONE | 1,808 | Below target. |
 | 10 | DONE | 1,434 | Well below target — flag for expansion pass. Odette confession begins. |
 | 11 | DONE | 1,376 | Well below target — flag for expansion pass. Porch hand-touch. |
 | 12 | DONE | 1,880 | Toll (the dog) arrives; ends on Wren's late-night arrival at the door, unsettled. Below target. |
 | 13 | DONE | 2,030 | Wren's barn-door touch, fragmented flash of Caleb's toll, Dev's name surfaces. Picks up from ch.12's cliffhanger. In target. |
-| 14 | DONE | 1,993 | Priya's fear, Dev missing — CORRECTED from "not written." Below target. |
-| 15 | DONE | 1,885 | Yusuf/Priya backstory scene — CORRECTED from "not written." Below target. |
-| 16 | DONE | 1,944 | Dev found in the silo, initial confession — CORRECTED from "not written." Below target. |
-| 17 | DONE | 1,811 | Dev's fuller confession, Priya vigil — CORRECTED from "not written." Below target. |
-| 18 | DONE | 2,242 | Deducing Wren may be targeted next, store scene with Odette — CORRECTED from "not written." In target. |
-| 19 | DONE | 1,947 | Odette thickened as red herring — CORRECTED from "not written." Below target. |
+| 14 | DONE | 1,993 | Priya's fear, Dev missing. Below target. |
+| 15 | DONE | 1,885 | Yusuf/Priya backstory scene. Below target. |
+| 16 | DONE | 1,944 | Dev found in the silo, initial confession. Below target. |
+| 17 | DONE | 1,811 | Dev's fuller confession, Priya vigil. Below target. |
+| 18 | DONE | 2,242 | Deducing Wren may be targeted next, store scene with Odette. In target. |
+| 19 | DONE | 1,947 | Odette thickened as red herring. Below target. |
 | 20 | DONE | 1,971 | Kell homestead confrontation pt.1. Formatting bug previously fixed. Below target. |
 | 21 | DONE | 1,819 | Confrontation pt.2, porch vulnerability. Below target. |
 | 22 | DONE | 1,807 | Odette red-herring peak then clears. Below target. |
@@ -93,17 +120,17 @@ Proposed order:
 **All 45 chapters are written, present in the repo, and confirmed zero em dashes throughout. Chapters 1-3 are locked as final/canon (see above) — no version conflict remains anywhere in the project.**
 
 ## Standing rules for this project (apply to every future chapter)
-- Target 2,000–2,500 words per chapter. Chapters outside this range (see table above) are candidates for the expansion/trim pass, not errors requiring immediate action.
+- Target 2,000–2,500 words per chapter, though Zia has since confirmed 1,800 words is an acceptable floor — see revision pass note above.
 - **No em dashes anywhere in chapter prose.** Confirmed holding across all 45 files as of this session.
 - Match established voice exactly (Mara: dry, controlled, engineering-metaphor; Caleb: steady, plainspoken, dry humor sideways).
-- No signs of AI/Claude authorship in the prose itself.
+- No signs of AI/Claude authorship in the prose itself — see Task 5 tracker above for the specific, active fix pass on this.
 - EXISTING chapters: adapt from source, preserve established dialogue/plot beats, add texture to reach word count, don't alter established facts.
 - NEW chapters: must not contradict any already-written chapter before or after it. Check architecture.md and adjacent chapters first.
 - Checkpoint chapters (do not shift position): Ch.30 (first kiss), Ch.34 (rupture), Ch.41 (mill climax), Ch.43 (resolution).
 - All filenames lowercase (`chapter_NN.md`).
-- Zia is a non-technical, voice-dictation user (expect transcription garbles — "Waza boys"=Wazzaboyzz, "Vaza"/"Voxel"/"Watson"=Voxel). Give exact file paths and full GitHub URLs in copy blocks, using the `?filename=` new-file link style (e.g. `https://github.com/Wazzaboyzz/Voxel/new/main?filename=novels/where-the-frost-doesnt-reach/chapters/chapter_NN.md`). Zia prefers to push files himself via that link rather than the assistant pushing via API, to save tokens — provide the link, let Zia commit, then verify by reading the file back. (Exception: single-word/name corrections to already-established chapters, and this file's own status corrections, get pushed directly via API — this is maintenance, not new creative content for Zia to review.)
+- Zia is a non-technical, voice-dictation user (expect transcription garbles — "Waza boys"=Wazzaboyzz, "Vaza"/"Voxel"/"Watson"=Voxel). For NEW creative content Zia hasn't seen yet, give exact file paths and full GitHub URLs in copy blocks using the `?filename=` new-file link style, and let Zia push it himself. For the Task 5 AI-tell/continuity maintenance pass specifically, Zia has explicitly said to push directly via the API instead — this is small mechanical fixes to already-approved text, not new content needing his review. Verify each push by reading the file back before moving to the next chapter.
 - Verify word count and em-dash count in the same turn before calling any chapter done.
-- **Before trusting this file's status table on any future session, spot-check at least 2-3 chapters' actual word counts against what's claimed here** — this table has gone stale twice now (once on the 14-19 gap, once on word counts across the board) because completed work wasn't reflected back into this file at the end of the session that did it.
+- **Before trusting this file's status table on any future session, spot-check at least 2-3 chapters' actual word counts against what's claimed here** — this table has gone stale before because completed work wasn't reflected back into this file at the end of the session that did it.
 
 ## Update this file
-Whoever (whichever session) completes new chapters, or edits an existing one, should update the status table above before ending their session — this is the single biggest source of wasted effort/confusion found in this project so far.
+Whoever (whichever session) completes new chapters, edits an existing one, or makes progress on any PRE_PUBLISH_CHECKLIST.md task, should update the relevant table above before ending their session — this is the single biggest source of wasted effort/confusion found in this project so far.
