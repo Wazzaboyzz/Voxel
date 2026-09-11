@@ -3,6 +3,9 @@
 **Series:** The Amity Falls Series, Book 1
 **Confirmed title:** "Where the Frost Doesn't Reach" — NOT "The Weight of What We Forget" / "The Hollow Season."
 
+## READ NEXT — pre-publish checklist
+Before touching anything else, read `PRE_PUBLISH_CHECKLIST.md` in this same folder. It has 6 open tasks (style-originality check, character-name collision audit, real-person name check, continuity read-through, AI-authorship tell check, KDP formatting requirements) with a recommended priority order. This project is otherwise ~90% done per Zia — that checklist is the remaining 10%.
+
 ## What this project is
 Expanding an original 24-chapter draft (~26,900 words) into a 45-chapter, ~112,500-word novel, per `beat_map_45ch.md` in this same folder (authoritative for chapter-by-chapter mapping).
 
@@ -12,6 +15,7 @@ This session did a full read of every file in this folder plus all 45 chapter fi
 1. **Ch.8 name collision — ACTUALLY FIXED NOW.** `architecture.md` documented a fix (rename Caleb's grandfather from "Warren Reyes" to "Silas Reyes" to avoid colliding with Thomas's son Warren from ch.6/7) that had never been applied to the file. Chapter_08.md still said "Warren Reyes" as of this session. Fixed and pushed directly. Verified: single occurrence in the whole 45-chapter manuscript, now corrected, word count unchanged (1,659).
 2. **Chapters 14-19 status was wrong — CORRECTED.** This file previously said 14-19 were "NOT WRITTEN, assigned to another session/profile." They are in fact written, in the repo, and their content matches the beat map exactly (Dev found in silo ch.16, Priya's vigil ch.17, Wren/Odette store scene ch.18-19). Status table below corrected. No duplication risk anymore — the gap this file used to warn about doesn't exist.
 3. **Word-count table was stale across nearly every chapter** — corrected below against actual current file content (chapters have clearly been edited/expanded since the old counts were recorded, in most cases upward).
+4. **New pre-publish checklist opened** — see `PRE_PUBLISH_CHECKLIST.md`. Zia raised a style-originality concern (possibly resembling a famous romantic-suspense author, name recalled as "Nora something" — not found anywhere in this repo's files or commit history when searched) plus a real-person-name check. Both logged as tasks there, not yet run.
 
 No other continuity issues found: the only other name mentioned in `architecture.md`'s log (the ch.7 duplication fix) is confirmed correctly applied — ch.7 does not re-run ch.6's toll explanation.
 
@@ -25,15 +29,16 @@ All novel files live at `novels/where-the-frost-doesnt-reach/` in `Wazzaboyzz/Vo
 - `chapters/` — chapter_NN.md, all lowercase. All 45 files exist as of this session.
 - `beat_map_45ch.md` — authoritative chapter mapping, old ch → new ch. NOTE: its "Written by" column also says "Not yet written" for chapters that are now written (35-45) — that column is stale in the same way this file's table was; trust the table below instead. It also references the ch.1-3 zip conflict as still open — that conflict is now resolved (see above), ignore that note in the beat map.
 - `architecture.md` — worldbuilding/continuity reference, check before writing any chapter.
+- `PRE_PUBLISH_CHECKLIST.md` — pending pre-publish quality tasks, read before the next session does anything else.
 - `HANDOFF.md` — this file.
 
 ## Revision pass (in progress)
 Proposed order:
 1. Fix ch.20 formatting bug — DONE (earlier session).
 2. Pick one word-count target and update both files to agree — DONE. Locked at 2,000-2,500.
-3. Read chapters 4-9 against final ch.3 for continuity, fix any mismatches — NOT STARTED. Can now proceed since ch.1-3 canon is settled.
+3. Read chapters 4-9 against final ch.3 for continuity, fix any mismatches — NOT STARTED. Can now proceed since ch.1-3 canon is settled. (Also tracked as Task 4 in PRE_PUBLISH_CHECKLIST.md.)
 4. Expand every under-target chapter to the agreed range — NOT STARTED. Per the corrected table below, chapters currently BELOW 2,000 words: 2, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 31, 32, 35, 36, 37, 42, 45. Chapters currently ABOVE the 2,500 ceiling (need a trim pass instead): 38 (2,544), 44 (2,556).
-5. Full read-through for voice consistency and plot contradictions once everything is length-correct — NOT STARTED.
+5. Full read-through for voice consistency and plot contradictions once everything is length-correct — NOT STARTED. (Also tracked as Task 4 in PRE_PUBLISH_CHECKLIST.md.)
 
 ## Status: chapters completed in the new 45-chapter structure (verified Sept 2026, word counts re-checked against actual file content this session)
 
