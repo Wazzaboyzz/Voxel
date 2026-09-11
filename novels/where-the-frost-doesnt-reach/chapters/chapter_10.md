@@ -1,6 +1,6 @@
 # CHAPTER TEN
 
-Odette didn't stand when they climbed out of the truck, didn't call out a greeting, just sat there on the top step with the dish towel twisted so tight in her hands that Mara could see the muscles standing out in her forearms even in the porch light's dim, yellow wash. Toll lifted her head from where she'd been sprawled by the door, gave one soft thump of her tail against the boards, and settled back down, apparently deciding this particular tension in the air belonged to the humans and not to her.
+Odette didn't stand when they climbed out of the truck, didn't call out a greeting, just sat there on the top step with the dish towel twisted so tight in her hands that Mara could see the muscles standing out in her forearms even in the porch light's dim, yellow wash. Toll lifted her head from where she'd been sprawled by the door, gave one soft thump of her tail against the boards, and settled back down, apparently deciding this tension in the air belonged to the humans and not to her.
 
 "You went to the records office," Odette said. Not a question.
 
@@ -20,7 +20,7 @@ Caleb had gone very still, the stillness Mara now recognized as the exact center
 
 "I don't know the opposite either, and I wasn't willing to bet your life on finding out which." Odette's eyes were wet now, unashamed of it, tracking his face with a desperation that looked, to Mara, like a woman finally setting down a weight she'd carried alone for far too long and terrified of what she'd find underneath it. "I loved your father like my own brother and I promised him, before he died, that I'd keep you safe in a town that doesn't always know how to do that for the people it decides don't need protecting. I have made mistakes trying to keep that promise. I am not going to apologize for the promise itself."
 
-Nobody spoke for a moment. The evening had gone that particular deep gold that Mara remembered from a hundred nights on this porch, back when it had been easy, before either of them understood what the valley actually was, the light catching the dust in the air and turning it briefly, deceptively beautiful, the kind of light that made a person forget, for a moment, that anything underneath it could be wrong at all.
+Nobody spoke for a moment. The evening had gone the deep gold Mara remembered from a hundred nights on this porch, back when it had been easy, before either of them understood what the valley actually was, the light catching the dust in the air and turning it briefly, deceptively beautiful, the kind of light that made a person forget, for a moment, that anything underneath it could be wrong at all.
 
 "Kell," Caleb said finally, changing tack, the anger banked but not gone, sitting just under the surface of his voice like a current running beneath still water. "What do you know about him. Actually know, not what Thomas suspected forty years ago."
 
@@ -30,7 +30,7 @@ She stopped, and something in her face shifted, a decision visibly settling into
 
 "And I know," she said, quieter now, "that three days ago, before your grandmother's funeral even happened, Mara, he came into the store and asked me, very casually, whether Thomas Voss's granddaughter was a Finder, and how skilled."
 
-Mara felt something cold settle low in her stomach, the specific chill of learning a threat had been circling long before she'd noticed it. "You told him."
+Mara felt something cold settle low in her stomach, the chill of learning a threat had been circling long before she'd noticed it. "You told him."
 
 "I told him I didn't know, because at the time I didn't." Odette met her eyes directly, some old fierceness surfacing through the guilt. "He didn't ask like small talk, Mara. He asked like a man doing an inventory. I've thought about that phrasing every day since, wondering if I should have lied more convincingly, wondering what he'd have done with a different answer, and I don't have a good answer for either question, and I've stopped pretending to myself that I do."
 
@@ -45,3 +45,11 @@ Caleb had gone quiet for a moment, some new calculation visibly running behind h
 "You're defending him."
 
 "I'm explaining him. There's a difference, and I need you both to understand it, because a man who thinks he's the villain is easy to fight. A man who's convinced himself he's the last line of defense is going to be a great deal harder to stop, because he won't experience anything you do to him as justice. He'll experience it as betrayal by people too naive to understand what he's been protecting them from."
+
+Mara sat down on the step below Odette, close enough now that she could see the older woman's hands trembling faintly even at rest, two years of secrecy finally shaking loose all at once now that the dam had broken. "What else haven't you told us."
+
+"That Kell isn't the only name on your grandfather's list who never got fully cleared." Odette's voice had gone very quiet, almost reluctant, as though even now, at the end of all her other confessions, this last one cost her something extra. "There's a girl in this town, barely more than a teenager, who's been coming into more of her gift than her mother knows what to do with. If Kell's inventorying Finders, Mara, he isn't just asking about you."
+
+Caleb's head came up sharply. "Wren."
+
+"Wren," Odette confirmed, and something in the way she said the name, careful and afraid at once, told Mara this fear had been sitting in Odette a long time before tonight ever gave her a reason to say it out loud.
