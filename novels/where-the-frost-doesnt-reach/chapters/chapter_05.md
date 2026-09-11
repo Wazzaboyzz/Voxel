@@ -8,9 +8,9 @@ Thomas Voss was sitting by the window when she came in, an oxygen line looped ov
 
 "Of course I came." Mara pulled the second chair closer, the vinyl cushion creaking under her. "How are you feeling?"
 
-"Don't do that." His voice was thin but not weak, the specific thinness of a man conserving effort rather than lacking it. "You didn't drive out here to ask me how I'm feeling. You drove out here because your grandmother's dead and you found something in that house that scared you, and you want to know if I'm well enough to explain it before I'm not around to ask."
+"Don't do that." His voice was thin but not weak, a man conserving effort rather than lacking it. "You didn't drive out here to ask me how I'm feeling. You drove out here because your grandmother's dead and you found something in that house that scared you, and you want to know if I'm well enough to explain it before I'm not around to ask."
 
-Mara felt the directness of it land somewhere just under her ribs, an old, familiar sensation, the particular discomfort of being read accurately by someone who'd known her before she'd learned how to control what she showed people.
+Mara felt the directness of it land somewhere just under her ribs, an old, familiar sensation, that unsettled feeling of being read accurately by someone who'd known her before she'd learned how to control what she showed people.
 
 "I found a photograph," she said, deciding there was no version of this conversation where dancing around it would serve either of them well. "You and Grandma. On the back it says, the year everything went wrong, and somehow also right. You said something like that to me yesterday. About me looking like her, that year."
 
@@ -48,15 +48,15 @@ She drove back to the orchard house in the fading light with her grandfather's w
 
 Del caught her in the parking lot before she reached her car, jogging a little to close the distance, a manila folder tucked under one arm.
 
-"Ms. Voss." She glanced back toward the building once, the particular glance of someone checking whether a conversation is about to be observed. "I don't usually do this. Overstep, I mean. But your grandfather's a good man, and he doesn't get many visitors who ask him real questions instead of just talking at him about the weather."
+"Ms. Voss." She glanced back toward the building once, checking, the way you would when a conversation might be about to be observed. "I don't usually do this. Overstep, I mean. But your grandfather's a good man, and he doesn't get many visitors who ask him real questions instead of just talking at him about the weather."
 
 "Is he alright? I didn't mean to tire him out."
 
 "He's fine. Or as fine as he gets these days." Del hesitated, weighing something. "He talks in his sleep sometimes. Has for the eight months I've been with him. Names, mostly. Nothing that ever made sense to me until you walked in today and he lit up like I hadn't seen him do in weeks." She held out the folder. "This isn't anything official. Just some papers he asked me to keep somewhere safe a while back, before his hands got too unsteady to trust with anything that mattered. He never told me what they were, just said if his granddaughter ever came around asking the right kind of questions, I should probably let her see them before I let anyone else."
 
-Mara took the folder carefully, feeling the slight weight of it, the particular density of paper that had been handled many times over many years. "Why give this to me now? I only asked him one real question."
+Mara took the folder carefully, feeling the slight weight of it, paper gone soft and dense from being handled many times over many years. "Why give this to me now? I only asked him one real question."
 
-"Because it was the right one." Del's eyes were steady, kind, tired in the specific way of someone who spent her days holding other people's fear so they didn't have to carry all of it themselves. "He's been waiting a long time for somebody to ask about nineteen eighty-six instead of just humoring an old man's confusion. I think some part of him's been afraid he'd die before anybody did."
+"Because it was the right one." Del's eyes were steady, kind, tired the way people get from spending their days holding other people's fear so they didn't have to carry all of it themselves. "He's been waiting a long time for somebody to ask about nineteen eighty-six instead of just humoring an old man's confusion. I think some part of him's been afraid he'd die before anybody did."
 
 She walked back toward the building before Mara could ask anything else, leaving her standing in the parking lot with a folder she hadn't earned yet, by her grandfather's own reckoning, but had apparently been given anyway.
 
@@ -66,7 +66,7 @@ The drive back to the orchard house took longer than it should have, not because
 
 ---
 
-Back at the house, she made herself dinner she barely tasted, a can of soup heated more out of obligation to her own body than any real hunger, and set the folder on the kitchen table while she ate, looking at it the way she might look at an inspection report she suspected contained bad news, the specific reluctance of someone who has learned, professionally, that delaying the reading never actually changes what's written inside.
+Back at the house, she made herself dinner she barely tasted, a can of soup heated more out of obligation to her own body than any real hunger, and set the folder on the kitchen table while she ate, looking at it the way she might look at an inspection report she suspected contained bad news, reluctant the way you get when you've learned, professionally, that delaying the reading never actually changes what's written inside.
 
 She opened it once the dishes were done, because there was no longer a reasonable excuse left to delay it with.
 
