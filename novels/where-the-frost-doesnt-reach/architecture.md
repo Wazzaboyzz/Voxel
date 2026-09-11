@@ -1,3 +1,78 @@
+# STORY ARCHITECTURE
+
+## Working Title
+**Where the Frost Doesn't Reach**
+(Series: *The Amity Falls Series*, Book 1)
+
+## Premise
+Eight years ago, Mara Voss left the town of Amity Falls the night her fiance, Caleb Reyes, disappeared without a trace. She has spent every year since telling herself she left because he broke her heart. She comes back for her grandmother's funeral and finds Caleb alive, running the family orchard, and looking at her like he has never met her before. He hasn't. Somebody took the two years of his life that included her, cleanly, and left the rest of him intact. Mara has to find out who did it, why the town closes ranks every time she asks, and whether what she's falling into now is real or just the shape grief makes when it's given a second chance.
+
+## The Supernatural World and Its Rules
+
+Amity Falls sits in a river valley that has never shown up right on satellite maps, off by a few hundred yards, always. The valley is home to a hidden population of "Kindred," people descended from families who made a bargain three generations back with something the old records call the Tender. Nobody remembers agreeing to it. That's the point.
+
+**The bargain:** In exchange for the valley's protection (crops that don't fail, floods that turn aside, sickness that skips the town), certain families carry an ability, and the price is memory. Any Kindred who uses their gift beyond a small daily threshold "runs a debt." The valley collects the debt by taking memories, not randomly, but the memories most tied to the emotional cost of what was used. Use your gift to save someone from a car wreck, and you might lose the memory of the year you met your best friend. The valley doesn't take memories to punish; it takes them because emotion is the fuel it draws on, and grief and love and terror carry the most.
+
+**Shifters** are one lineage of Kindred, tied to the original agricultural bargain (they were the valley's "wardens," able to take animal shape to patrol its borders against things the founders feared). They are not a separate secret society with alphas and claiming rites. They're just one of six family lines, no more special or dominant than the others, and shifting is treated by the town the way people might treat being left-handed: notable, occasionally inconvenient, not a personality.
+
+**The six lineages:** Wardens (shifters), Menders (healers, cannot heal themselves), Callers (can compel truth or calm in a five-foot radius, at the cost of their own composure later), Weathers (mild influence over local weather, at the cost of physical stamina), Finders (can locate lost objects or people, at the cost of a memory of the search itself, which is the central engine of the mystery), and Wicks (can carry a small flame or light without a source, mostly decorative now, a lineage nearly died out).
+
+**Memory erasure specifics (original mechanism):** The valley does not erase memories on its own initiative for punishment. But there is a second, illegal use: a Finder, if they choose, can direct the valley's collection toward someone else's memory instead of their own, essentially paying a debt with someone else's currency. This is called "redirecting the toll," and it is the valley's oldest taboo, half because it's a violation and half because nobody is sure what happens to a person whose memories keep getting spent on someone else's behalf. Caleb's missing two years were not an accident of his own gift use. Someone redirected a toll onto him. Repeatedly. He has no gift of his own (he's one of the rare "Plain" born into a Kindred family), which is why nobody suspected he was a target. Plain family members are considered safe from tolling. They aren't.
+
+This mechanism matters because: it makes memory loss a crime with a perpetrator and a motive, not a fog machine. It creates believable stakes (whoever did this to Caleb needed a large, unnoticed debt paid off fast, meaning they used a significant gift for something urgent and dangerous, and covered the cost with a man nobody would think to check). It gives Mara an active investigation instead of a passive tragedy. It also means Caleb's memory could theoretically be recovered, which is the emotional engine of the slow burn: hope without guarantee.
+
+## Heroine: Mara Voss, 31
+Occupation: structural engineer, lives in Chicago, left Amity Falls at 23.
+Voice: dry, controlled, uses precision and competence to manage grief. Physically restless when anxious; catalogs exits in rooms out of old habit, not paranoia exactly, just a tell.
+Wound: she believes she is the kind of person other people leave, because her mother did, and because Caleb, as far as she knew, did too. She has built a life that requires no one stay.
+Gift: Mara is a Finder, though she never used it seriously and left town partly to avoid it. Finders in Amity Falls are watched carefully because of the tolling taboo. Her rustiness and reluctance become a plot-relevant liability and a source of internal conflict, since the person she needs to find is the man she loved.
+
+## Hero: Caleb Reyes, 33
+Occupation: runs Reyes Orchard, the family business, inherited when his father died during Mara's absence, which he does remember.
+Voice: steady, plainspoken, dry humor that surfaces sideways. Physically grounded, a man who works with his hands and it shows in how he moves through a room.
+Wound: waking up two years ago (his subjective experience) with a fiancee's ring in a drawer he doesn't remember buying, a town that treats him gently in a way that made him suspicious before Mara arrived, and now a woman who looks at him like he broke something. He doesn't trust the gap in himself. He's spent two years assuming he did something to deserve losing that time.
+Key tension: he is not the same man Mara left. He's harder in places, softer in others, and the novel resists the easy fix of "get the memories back and everything resets." Even if recovered, two years happened to him that she wasn't there for, and two years happened to her that he doesn't share.
+
+## Supporting Cast
+- **Odette Reyes**, Caleb's aunt, runs the general store, functions as town information broker and red herring (seems to know more than she says, and does, but for protective reasons, not guilty ones).
+- **Deputy Priya Nair**, Mara's childhood friend, Caller lineage, torn between loyalty to Mara and an oath she took to the town council about what outsiders (even returning ones) can be told.
+- **Thomas Voss**, Mara's grandfather, a Warden, dying slowly, the last person who might know who first taught someone to redirect a toll, since he investigated a similar case decades ago that the town buried.
+- **Wren Castellano**, 19, a new Finder just coming into her gift, scared of it, becomes Mara's reluctant protege and the person most at risk if the real antagonist needs a fresh, unnoticed source to toll.
+- **Ambrose Kell**, town council chair, Weathers lineage, the face of Amity Falls's institutional denial, genuinely believes protecting the town's secret is worth the cost, not a mustache-twirler, a true believer.
+- **Silas Reyes**, Caleb's paternal grandfather (deceased before the novel begins). Investigated and cleared by Thomas during the 1986 case (crossed off the suspect list). Caleb's father never mentioned the investigation to him. Do not confuse with "Warren," below — unrelated character, different family.
+- **Warren**, Thomas's son / Mara's uncle. Lost two summers of his own childhood memory when Thomas overused his own gift chasing the 1986 Elias Frey case. Distinct from Silas Reyes.
+
+## The Town
+Amity Falls is not decorative fog and gingerbread houses. It is an orchard economy town that had one bad decade in the 1980s when a drought (a real one, the valley's protection failed once, mysteriously) nearly killed it, and the town's collective memory of that scarcity is why they protect the bargain so fiercely now. Old wealth (the founding six families) sits uneasily next to a town that genuinely needs the orchards and the mill to survive. The setting matters because: the town's economic fear is the antagonist's actual motive (see below), the physical geography (the valley's odd border, the orchard's reliance on Weather-lineage rain, the river that floods everything but Amity Falls) is load-bearing for the mystery, and Mara's engineering brain lets her notice physical inconsistencies (soil samples, drainage patterns, property lines) that point toward the human cause behind supernatural cover.
+
+## Central Mystery
+Who has been redirecting tolls onto Caleb, and why, for two years running.
+
+## Antagonist
+**Ambrose Kell**, in partnership with a Finder he's coerced (revealed late as **Priya's own estranged brother, Dev Nair**, a talented Finder who left the valley's approval process and has been secretly working for Kell). Kell has spent two years using an escalating series of gifts, mostly Weather manipulation, to hide a slow-motion problem: the valley's protection is failing again, the way it did in the 1980s, and Kell has been manually patching it (extra rain here, redirected frost there) to prevent panic and economic collapse before an election that would remove him from the council chair. Each use ran up a debt too large to pay from his own memory without becoming visibly impaired, so he found Dev and pressured him (through the threat of exposing an old, unrelated Finder violation of Dev's) to redirect the tolls onto Caleb, a Plain family member with no Finder oversight and, crucially, someone Kell believed had already lost Mara and therefore had "less to lose."
+
+This is not a supernatural villain who wants to eat souls. It's a man protecting a town's economy and his own position by strip-mining an innocent person's memory, and telling himself it's the lesser evil.
+
+## Secrets, Clues, Red Herrings
+- **Red herring 1:** Odette's evasiveness reads as guilt; she is actually protecting Thomas, who is dying and whom she believes cannot survive the stress of the truth.
+- **Red herring 2:** Caleb's own missing time initially seems self-inflicted (did he do something to himself, is he lying to Mara about remembering), because Plain family members supposedly cannot be tolled. This assumption is the actual mystery to dismantle.
+- **Clue chain:** the ring in the drawer (dated to a jeweler visit Caleb has no memory of, which Mara can trace); anomalous rainfall records that Mara's engineering eye flags as impossible without intervention; Wren's early, uncontrolled Finder gift accidentally "touching" the edge of Caleb's toll and giving her a fragment image she doesn't understand; Thomas's old case file, hidden in the orchard's original property survey documents (town matters and land records are literally overlaid, reinforcing setting-as-plot).
+- **Secret reveal order:** the reader learns the valley's tolling taboo exists (early), learns Caleb is Plain and "shouldn't" be a target (early-mid), learns someone IS tolling him anyway (midpoint), learns it's connected to town-wide weather anomalies (past midpoint), learns Kell is behind the anomalies (late), learns Dev is the Finder committing the violation and why (climax), and the true scope, that this has been happening long enough to have caused the 1980s drought crisis too, in an earlier, unpunished iteration, is the Book 2 hook.
+
+## Romantic Progression (Slow Burn, Closed Door)
+1. **Reunion, wrongfooted** (ch 1-3): Mara arrives for the funeral, finds Caleb transformed and blank toward her. Initial dynamic is grief and confusion, not attraction; the town's strangeness registers before the romance does.
+2. **Forced proximity, professional distance** (ch 4-7): Mara's grandfather's estate involves the orchard land; she has reason to keep interacting with Caleb. Old rhythms surface unconsciously (he still makes her coffee the way she likes it without being told; this unnerves them both).
+3. **Cracks in denial** (ch 8-12): Mara begins investigating the memory gap seriously; Caleb, suspicious of the gentle way the town treats him, becomes her reluctant ally. Attraction surfaces through competence and honesty, not tension-manufactured touching. First real vulnerability: he asks her to just tell him what they were, no performance, and she can't do it without breaking.
+4. **Earned closeness** (ch 13-18): A near-miss (Wren's uncontrolled gift puts her in danger; Mara and Caleb work together to protect her) becomes the turning point where trust outpaces evidence. Physical awareness escalates in small, specific ways (his hand on her back stopping her from stepping into traffic, and neither of them commenting on how long it stays there). First kiss around ch 16-17, interrupted by Deputy Nair's discovery of Dev's involvement, keeping it from resolving into anything more before the plot reasserts.
+5. **Rupture** (ch 19-21): Caleb learns Mara is a Finder and initially recoils; if a Finder did this to him, how does he know she's not implicated, or that his growing feelings for her aren't themselves manufactured somehow (a fear the plot validates is impossible, but he doesn't know that yet). This is the low point, not manufactured miscommunication, but a legitimate trust rupture given what he's survived.
+6. **Choice, not memory** (ch 22-24): Climax resolves the external mystery. Caleb's memories are not simply restored (a full-reset ending would undercut the theme); instead, the toll mechanism is broken and a few key memories partially surface, enough for him to feel the truth of what they had without regaining the whole record. He chooses her anyway, without full memory, which is the thematic answer to Mara's core wound: someone can stay even without every reason being handed to them.
+
+## Book 1 Resolution
+Kell is exposed and steps down; Dev is dealt with in a Kindred-specific way that raises questions the book doesn't fully answer (the town's justice system is opaque and unsettling, planting series doubt about whether "protecting the bargain" is worth what it costs). Caleb and Mara are together, tentatively, honestly, without a clean memory-restoration bow. Thomas's old case file reveals the 1980s drought crisis was the same phenomenon, unresolved, someone else got away with an earlier version of this.
+
+## Unresolved Thread into Book 2
+The last page: Wren, now aware of her gift and drawn into Finder training, discovers in Thomas's old files a name connected to the 1980s case that shouldn't still be alive today given the timeline, unless that person is also Kindred and has been managing their own age the way Kell managed the weather. The valley's original bargain might not have been made only once. Someone has been quietly renewing it, at a cost the town has never been told about.
+
 ## Continuity Corrections Log
 
 - **Ch.8 name collision fixed:** Caleb's grandfather was originally named "Warren Reyes" in ch.8 (found crossed off Thomas's 1986 suspect list). This collided with the *already-established* "Warren" from ch.6/7 — Thomas's own son, Mara's uncle, whose two summers were lost to Thomas's gift-overuse while chasing the Elias Frey case. Two unrelated characters, same first name, introduced one chapter apart. Fixed by renaming Caleb's grandfather to **Silas Reyes** in ch.8. Any future chapter referencing Caleb's paternal grandfather should use **Silas Reyes**, not Warren. "Warren" (no surname needed in-text) remains reserved for Thomas's son / Mara's uncle only.
