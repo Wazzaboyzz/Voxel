@@ -6,6 +6,7 @@ Checkpoint math (must hold after expansion):
 - Mill climax: ch22/24 = 91.7% → ch41/45 = 91.1% ✓ close match
 - Resolution: ch23/24 = 95.8% → ch43/45 = 95.6% ✓ close match
 - Denouement/hook: ch24/24 = 100% → ch44-45/45 = 97.8-100% ✓ match
+- Intimacy scene: NEW checkpoint decided mid-expansion (session covering ch.33-34). Placed in ch.44, post-resolution, no danger left on the page. Does not shift any existing checkpoint. See note on ch.44 below.
 
 Total original content: ~26,900 words (ch1-24, short version).
 Target: 45 x ~2,500 = ~112,500 words.
@@ -34,21 +35,21 @@ consistent with architecture.md and established voice/continuity).
 | 17 | NEW | Dev's fuller confession — more of Kell's blackmail leverage explained | NEW | Not yet written |
 | 18 | 9 | Deducing Wren may be targeted next | EXISTING | Not yet written |
 | 19 | NEW | Odette thickened as red herring — suspicious behavior beat (per original ChatGPT brief: keep Odette/Dev viable suspects longer) | NEW | Not yet written |
-| 20 | 10 | Kell homestead confrontation, part 1 | EXISTING | Not yet written |
-| 21 | 11 | Kell homestead confrontation, part 2 — porch vulnerability | EXISTING | Not yet written |
-| 22 | NEW | Odette red-herring peak, then quietly clears | NEW | Not yet written |
-| 23 | 12 (part 1) | Weather station discovery begins | EXISTING | Not yet written |
-| 24 | 12/13 | Amplifier found and photographed | EXISTING | Not yet written |
-| 25 | 13 (part 1) | Yusuf agrees to file complaint | EXISTING | Not yet written |
-| 26 | 13 (part 2) | Anonymous threat text arrives | EXISTING | Not yet written |
-| 27 | NEW | Wren pushes to help "on purpose" — her agency arc begins | NEW | Not yet written |
-| 28 | 14 | Group decides Wren reads an inert object; Caleb's confession at the crooked tree | EXISTING | Not yet written |
-| 29 | 15 | Wren reads the knife — Corinne flash; Odette explains Whitlock | EXISTING | Not yet written |
-| 30 | 16 | FIRST KISS — interrupted by Kell's frame-up of Dev | EXISTING | Not yet written — **checkpoint chapter, do not shift** |
-| 31 | 17 (part 1) | Building the countywide case begins | EXISTING | Not yet written |
-| 32 | NEW | Door-to-door canvassing scene, found-family texture | NEW | Not yet written |
-| 33 | 17 (part 2) | Case-building concludes, eleven households secured | EXISTING | Not yet written |
-| 34 | 18 | RUPTURE — Caleb's fear his feelings were manufactured | EXISTING | Not yet written — **checkpoint chapter, do not shift** |
+| 20 | 10 | Kell homestead confrontation, part 1 | EXISTING | DONE |
+| 21 | 11 | Kell homestead confrontation, part 2 — porch vulnerability | EXISTING | DONE |
+| 22 | NEW | Odette red-herring peak, then quietly clears | NEW | DONE |
+| 23 | 12 (part 1) | Weather station discovery begins | EXISTING | DONE |
+| 24 | 12/13 | Amplifier found and photographed | EXISTING | DONE |
+| 25 | 13 (part 1) | Yusuf agrees to file complaint | EXISTING | DONE |
+| 26 | 13 (part 2) | Anonymous threat text arrives | EXISTING | DONE |
+| 27 | NEW | Wren pushes to help "on purpose" — her agency arc begins | NEW | DONE |
+| 28 | 14 | Group decides Wren reads an inert object; Caleb's confession at the crooked tree | EXISTING | DONE |
+| 29 | 15 | Wren reads the knife — Corinne flash; Odette explains Whitlock | EXISTING | DONE |
+| 30 | 16 | FIRST KISS — interrupted by Kell's frame-up of Dev | EXISTING | DONE — **checkpoint chapter, do not shift** |
+| 31 | 17 (part 1) | Building the countywide case begins | EXISTING | DONE |
+| 32 | NEW | Door-to-door canvassing scene, found-family texture | NEW | DONE |
+| 33 | 17 (part 2) | Case-building concludes, town backlash, Caleb voices early doubt, escalates to Yusuf's tires slashed | EXISTING | DONE |
+| 34 | 18 | RUPTURE — Caleb's fear his feelings were manufactured | EXISTING | DONE — **checkpoint chapter, do not shift** |
 | 35 | NEW | Days of distance — both handling the rupture separately | NEW | Not yet written |
 | 36 | 19 | The hearing — partial win | EXISTING | Not yet written |
 | 37 | NEW | Aftermath — Caleb still distant despite the win | NEW | Not yet written |
@@ -58,7 +59,7 @@ consistent with architecture.md and established voice/continuity).
 | 41 | 22 | Mill confrontation, Wren's proposal | EXISTING | Not yet written — **checkpoint chapter, do not shift** |
 | 42 | NEW | Extended release sequence — more of Mara/Wren's joint effort shown in real time | NEW | Not yet written |
 | 43 | 23 | Resolution — Kell falls, memory returns, Thomas's death | EXISTING | Not yet written — **checkpoint chapter, do not shift** |
-| 44 | NEW | The weeks between — Mara stays, memory returns in pieces | NEW | Not yet written |
+| 44 | NEW | The weeks between — Mara stays, memory returns in pieces. **Also the intimacy checkpoint** (added mid-expansion): once danger has fully passed and Caleb's trust has settled, include one on-page intimate scene at moderate/"steamy" heat (felt and real, not clinical, not graphic) matching the book's established restrained, dry-witted voice. This is a deliberate genre-convention addition for romantic suspense reader expectations — do not push it earlier in the sequence, it needs the resolved trust from ch.43 behind it to land as earned rather than gratuitous. | NEW | Not yet written |
 | 45 | 24 | Wedding + Whitlock letter hook | EXISTING | Not yet written |
 
 ## Rules for whichever profile writes NEW chapters
@@ -66,6 +67,7 @@ consistent with architecture.md and established voice/continuity).
 - Must not introduce any plot fact that contradicts a later EXISTING chapter already written.
 - Must match established voice (Mara: dry, controlled, engineering-metaphor; Caleb: steady, plainspoken).
 - Target 2,000-2,500 words per chapter (NEW chapters can run toward the top of that range since they carry no pre-existing word-count floor).
+- No em dashes anywhere in chapter prose (standing rule, see HANDOFF.md).
 
 ## Outstanding decision needed from Zia before writing continues
 Pick ONE version of chapters 1-3 (this conversation's expansion, or Ch_1_to_10_expanded.zip's version) before any profile writes chapter 4 onward, since chapter 4 content depends on exactly what's been established in 1-3.
