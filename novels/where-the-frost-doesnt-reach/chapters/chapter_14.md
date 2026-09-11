@@ -52,4 +52,24 @@ Priya gathered the photograph back into the folder with careful hands, the earli
 
 "Then we ask him today," Mara said. "Together. No more waiting on a version of this that turns out to be easier."
 
+Caleb had been quiet through most of this, working something over, and now he spoke slowly, choosing each word with the particular care Mara had learned meant he'd thought it through twice before letting it out. "I keep thinking about the two years I lost. Nobody in this town warned me either, not really. Odette hedged. My aunt cried and blamed allergies. Everyone knew enough to be careful around me and not enough of them thought I deserved to know why." His jaw tightened. "If Dev found something out that scared people enough to help hide him, that's the same pattern. This whole valley's better at managing its own fear than it is at protecting the people that fear is actually about."
+
+"That's not comforting," Priya said.
+
+"It's not meant to be. It's meant to tell us we're not chasing something new. We're chasing the same thing that's been running underneath this whole town for longer than any of us have been alive to notice it." Caleb's hand found Toll's head as the dog settled against his leg, an absent, grounding gesture. "Which means whoever's been managing it has had a lot of practice making sure nobody connects the dots. We need to be smarter about connecting them than they're used to people being."
+
+Mara turned that over, feeling old inspection instincts sharpen underneath the fear, the particular clarity that came from treating a mystery like a structural problem instead of an emotional one. "Then we treat this like any investigation. We don't chase feelings. We chase what's documented, and where the documentation goes conveniently quiet, that's where we look hardest."
+
+"Careful," Priya said, something almost like a smile ghosting across her tired face. "You're starting to sound like a deputy."
+
+"I've spent a career finding the load-bearing lie in a structure everyone else trusted because it hadn't fallen down yet. This isn't so different." Mara meant it as reassurance, and heard, saying it, how much steadier it made her feel too, the specific comfort of a skill she trusted applied to a fear she didn't yet know how to hold any other way.
+
 Priya nodded, closing the folder, and for a moment the kitchen held only the sound of the wind outside and Toll's steady breathing from her spot by the door, three people bracing themselves, in their different ways, for a morning that was about to make an old grief considerably harder to keep filed away as simple absence.
+
+She stood, gathering her keys from the counter, and paused halfway to the door, looking back at the two of them with something unguarded crossing her face for just a moment. "Thank you. Both of you. I know this isn't your fight the way it's mine. You could have kept your distance from Dev's part of this and only chased down what's happened to Caleb directly."
+
+"It's the same fight," Caleb said simply. "It was always going to be the same fight the moment we understood how this town actually works."
+
+"Still. Thank you." Priya's voice had gone rough. "Four years is a long time to carry something alone. I didn't realize how heavy it had gotten until I watched the two of you agree to help carry it without me even having to ask properly."
+
+Mara stood too, resting a hand briefly on Priya's shoulder, the same steadying gesture she'd offered Wren days before, the particular language this summer had taught all of them for saying the things that didn't fit neatly into words. "You don't have to carry any of it alone anymore. Not the finding, and not whatever we find once we get there."
