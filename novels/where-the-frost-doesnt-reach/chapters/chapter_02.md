@@ -28,7 +28,7 @@ Priya's hand stopped on the gum, fingers going still against the wrapper, a smal
 
 "C and M," Mara said, keeping her voice level with the same discipline she used presenting bad structural news to a nervous client, the fact first, the reaction managed afterward. "A date fourteen months ago. Priya, I wasn't here fourteen months ago. Caleb doesn't remember me existing. So who is C and M, or is it what I think it is, and if it's what I think it is, I need you to stop protecting whatever this town is protecting and tell me."
 
-A man at the end of the counter, thick forearms, a Carhartt jacket gone soft with wear, paused stacking feed bags long enough that Mara clocked him listening, the particular stillness of a person pretending not to eavesdrop while doing exactly that. He caught her noticing and gave her a small, apologetic nod, the universal signal for I heard that and I'm not going to pretend otherwise, unlike some people in this room.
+A man at the end of the counter, thick forearms, a Carhartt jacket gone soft with wear, paused stacking feed bags long enough that Mara clocked him listening, that unmistakable stillness of a person pretending not to eavesdrop while doing exactly that. He caught her noticing and gave her a small, apologetic nod, the universal signal for I heard that and I'm not going to pretend otherwise, unlike some people in this room.
 
 "Yusuf," Priya said, a little sharp, a warning wrapped around a single syllable, "don't."
 
