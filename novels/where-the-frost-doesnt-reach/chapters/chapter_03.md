@@ -10,7 +10,7 @@ So she stopped at the fence, and she looked at the crooked tree, third from the 
 
 That was when Caleb found her.
 
-She heard the truck before she saw him, the particular knock of an engine that needed a valve job, and then boots on dry grass, unhurried, a man walking toward something he wasn't sure he wanted to reach. She turned before he said anything. She'd have known his walk blind.
+She heard the truck before she saw him, that telltale knock of an engine that needed a valve job, and then boots on dry grass, unhurried, a man walking toward something he wasn't sure he wanted to reach. She turned before he said anything. She'd have known his walk blind.
 
 "You're on my side of the property line," he said, which might have been a joke if his voice had been lighter.
 
