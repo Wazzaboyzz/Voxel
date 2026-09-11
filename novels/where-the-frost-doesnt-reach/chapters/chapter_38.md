@@ -64,7 +64,7 @@ They didn't speak much on the drive back, the dark highway unspooling ahead of t
 
 "You think she's really out there. At the mill."
 
-"I think my grandfather spent ten years of his life chasing a hunch he never had proof for, and I've learned this summer that his hunches have an uncomfortable habit of turning out to be true." Mara's grip on Caleb's hand tightened slightly. "I think we need to talk to Wren tomorrow, carefully, about whether she'd be willing to try reading something of the mill's, or near it, the same controlled way she read the knife. Not tonight. Tonight she should get one more night of not knowing how much danger she might actually be standing in."
+"I think my grandfather spent forty years of his life chasing a hunch he never had proof for, and I've learned this summer that his hunches have an uncomfortable habit of turning out to be true." Mara's grip on Caleb's hand tightened slightly. "I think we need to talk to Wren tomorrow, carefully, about whether she'd be willing to try reading something of the mill's, or near it, the same controlled way she read the knife. Not tonight. Tonight she should get one more night of not knowing how much danger she might actually be standing in."
 
 "And Kell? If he's watching the investigation the way we think he is, watching to see how close it's actually getting."
 
