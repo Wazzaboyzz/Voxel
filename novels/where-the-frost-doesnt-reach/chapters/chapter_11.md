@@ -1,6 +1,6 @@
 # CHAPTER ELEVEN
 
-Odette left not long after that, walking back across the dark field toward her own house with the particular stiff-backed posture of a woman who had said more than she meant to and needed distance before she could look either of them in the eye again, and Mara watched her go, feeling the strange, unfinished weight of a confession that had answered some questions and opened up several new ones in their place.
+Odette left not long after that, walking back across the dark field toward her own house with the stiff-backed posture of a woman who had said more than she meant to and needed distance before she could look either of them in the eye again, and Mara watched her go, feeling the strange, unfinished weight of a confession that had answered some questions and opened up several new ones in their place.
 
 "She's not lying," Mara said, once the shape of Odette had disappeared into the tree line. "About any of it. I'd know if she were. I've spent a career learning to tell when somebody's smoothing over a flaw versus actually showing me one."
 
@@ -30,8 +30,10 @@ Mara thought about the ring in her grandmother's desk drawer, fourteen months ol
 
 "Maybe that's the part that matters," Caleb said, his voice low. "Not whether I'm the same man who did whatever he did during those two years. Whether whoever I am right now is somebody worth choosing anyway."
 
-Mara looked at his hand, close enough to hers that the space between them felt deliberate, charged with a significance neither of them was naming out loud, and thought about eight years of believing this man had simply stopped wanting her, and the ring in her grandmother's drawer, and the two years he'd lost without ever getting to choose what he lost them to, and the particular, fragile courage it must have taken him to say any of this tonight, on a porch, after everything they'd both just learned.
+Mara looked at his hand, close enough to hers that the space between them felt deliberate, charged with a significance neither of them was naming out loud, and thought about eight years of believing this man had simply stopped wanting her, and the ring in her grandmother's drawer, and the two years he'd lost without ever getting to choose what he lost them to, and the fragile courage it must have taken him to say any of this tonight, on a porch, after everything they'd both just learned.
 
 She moved her hand the last half inch and let it rest against his.
 
 Neither of them said anything else. The moths kept circling the porch light, and somewhere out past the orchard rows, in a house Mara had not yet learned to think of as dangerous, Ambrose Kell was, at that exact hour, sitting at his own kitchen table with a ledger that had nothing to do with money in it, doing an inventory of his own, his pen moving steadily across a page neither Mara nor Caleb would see for another two weeks, by which point the numbers written there would already have changed the shape of everything they thought they understood about how much time was left.
+
+Behind him, on the counter, a kettle he had forgotten he'd set to boil began, very quietly, to whistle, and Kell did not move to answer it for a long moment, sitting instead with his pen hovering over a name he had not yet decided whether he had the stomach to write down.
