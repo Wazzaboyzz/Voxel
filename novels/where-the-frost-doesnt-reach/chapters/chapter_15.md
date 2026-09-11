@@ -8,17 +8,17 @@ Yusuf remembered more than Priya expected, and less than either of them wanted.
 
 "Like a man who'd seen something he didn't want seen seeing him." Yusuf's jaw tightened. "I didn't think much of it at the time. Kell made a lot of people nervous. Still does. I chalked it up to Dev being young and easily rattled by anyone with that much county influence." He looked at Priya directly, something apologetic in his weathered face. "I should have asked. I've thought about that morning more than once over the years, wondering if I missed something that mattered."
 
-They left the feed store with little more than a confirmed unease, and Priya drove them out past the old family property afterward, a modest house on the edge of town that had sat empty since their mother passed, Dev's room preserved almost exactly as he'd left it, the particular museum stillness of a space nobody had the heart to change and nobody quite dared to disturb.
+They left the feed store with little more than a confirmed unease, and Priya drove them out past the old family property afterward, a modest house on the edge of town that had sat empty since their mother passed, Dev's room preserved almost exactly as he'd left it, museum-still in the way of a space nobody had the heart to change and nobody quite dared to disturb.
 
 "I haven't been in here in two years," Priya admitted, standing in the doorway like the threshold itself required permission. "Every time I thought about clearing it out, it felt like admitting he wasn't coming back to need it."
 
-Mara stayed near the door, giving Priya the room to move through her own memory at whatever pace it required, while Caleb crouched by an old bookshelf, running a careful finger along spines gone soft with dust. The room smelled faintly of cedar and old paper, the particular scent of a space that had been closed up carefully rather than abandoned carelessly, and Mara found herself moved, more than she expected, by the evidence everywhere of a sister who had refused to let this room become simply empty even while refusing to properly enter it herself.
+Mara stayed near the door, giving Priya the room to move through her own memory at whatever pace it required, while Caleb crouched by an old bookshelf, running a careful finger along spines gone soft with dust. The room smelled faintly of cedar and old paper, a scent that belonged to a space closed up carefully rather than abandoned carelessly, and Mara found herself moved, more than she expected, by the evidence everywhere of a sister who had refused to let this room become simply empty even while refusing to properly enter it herself.
 
 "He liked mysteries," Caleb said, tapping a spine gently. "Every single one of these is a detective novel. Local library sale stickers on half of them."
 
 "He used to say Finders and detectives had the same basic job. Notice what everyone else walked past." Priya managed a small, genuine smile at the memory. "I used to tell him that made me the detective in the family since I actually became one, and he'd say I only got the badge, he already had the instinct built in for free."
 
-"He kept notebooks," Priya said, opening a desk drawer that stuck on its track, the particular reluctant give of wood that had swollen and dried a dozen summers without anyone oiling it. "Field notes on his gift, I always assumed, though he never let me read them. Said some things a Finder learns aren't meant for people who don't carry the gift themselves, that it wasn't secrecy so much as translation, that some of it just didn't survive being explained to someone who couldn't feel what he felt."
+"He kept notebooks," Priya said, opening a desk drawer that stuck on its track, the wood swollen and dried by a dozen summers without anyone oiling it, giving up its grip only reluctantly. "Field notes on his gift, I always assumed, though he never let me read them. Said some things a Finder learns aren't meant for people who don't carry the gift themselves, that it wasn't secrecy so much as translation, that some of it just didn't survive being explained to someone who couldn't feel what he felt."
 
 She pulled out a slim, water-stained notebook, flipping through pages of cramped, careful handwriting, diagrams of objects with notes beside them, dates, brief descriptions Mara couldn't fully parse from across the room.
 
@@ -30,7 +30,7 @@ She read it aloud, slow, like she was translating a language she'd once known be
 
 "No." Priya closed the notebook with careful hands, holding it against her chest for a moment before setting it down on the desk, unwilling, Mara understood, to fully let go of it yet. "That's the entry of a man who'd just found out something dangerous and was trying to decide what to do about it before anyone could stop him from doing the right thing."
 
-Mara crossed the room and sat on the edge of the narrow bed, feeling the particular reverence a space like this demanded, a life paused mid-sentence, waiting for an ending nobody had written yet. She noticed, now that she was looking properly, the small details that told her more about the person who'd lived here than any notebook could, a shelf of paperback mysteries with cracked spines, a corkboard still pinned with photographs gone slightly curled at the edges, most of them featuring a much younger Priya in various states of exasperation or delight, one clearly taken at a county fair, both siblings holding up matching ribbons with matching grins.
+Mara crossed the room and sat on the edge of the narrow bed, feeling the quiet reverence a space like this demanded, a life paused mid-sentence, waiting for an ending nobody had written yet. She noticed, now that she was looking properly, the small details that told her more about the person who'd lived here than any notebook could, a shelf of paperback mysteries with cracked spines, a corkboard still pinned with photographs gone slightly curled at the edges, most of them featuring a much younger Priya in various states of exasperation or delight, one clearly taken at a county fair, both siblings holding up matching ribbons with matching grins.
 
 "You two were close," Mara said, not quite a question.
 
@@ -38,7 +38,7 @@ Mara crossed the room and sat on the edge of the narrow bed, feeling the particu
 
 "Do you think that's part of why this hurts more than an ordinary missing person case would," Mara asked, gently.
 
-"I think it's the only reason it hurts at all in the specific way it does. I've worked missing person cases as a deputy. I know the shape of that grief professionally, from the outside." Priya's voice cracked, just slightly, before she steadied it again. "This is different. This is the shape of a hole cut directly out of my own life, one I've spent four years pretending had scarred over instead of admitting it never actually closed."
+"I think it's the only reason it hurts the way it does at all. I've worked missing person cases as a deputy. I know the shape of that grief professionally, from the outside." Priya's voice cracked, just slightly, before she steadied it again. "This is different. This is the shape of a hole cut directly out of my own life, one I've spent four years pretending had scarred over instead of admitting it never actually closed."
 
 "Do you think he blamed himself," Mara asked, gently. "For whatever Kell showed him."
 
@@ -54,7 +54,7 @@ Priya paused at the threshold of her brother's room one more time before followi
 
 "Dev," she said quietly, to no one, or to the room itself, or to a brother who might, after everything, still be somewhere within reach of hearing it. "Hold on a little longer. I'm finally coming to find you properly."
 
-Outside, Caleb waited by the cruiser, giving the two of them the last private moment in that doorway without making a show of it, and Mara found herself lingering too, watching Priya lock the front door with the particular care of someone sealing a chapter rather than simply securing a house.
+Outside, Caleb waited by the cruiser, giving the two of them the last private moment in that doorway without making a show of it, and Mara found herself lingering too, watching Priya lock the front door with the care of someone sealing a chapter rather than simply securing a house.
 
 "You don't have to explain any of that back there," Mara said, once they were walking down the front path together. "The room. The notebook. Any of it."
 
