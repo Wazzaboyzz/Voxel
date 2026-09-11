@@ -26,7 +26,7 @@ Four pages. A timeline, dense with dates and small, precise annotations in her g
 
 "He was on the council in 1986 too, apparently." Mara ran her finger down the list of crossed-out names above the circled one, the ordinary weight of a small town's suspicion recorded in ink that had gone brown with age, most of the names unfamiliar to her, family names she didn't recognize or half recognized from the general store's bulletin board. Then Caleb went very still beside her, and she stopped moving her finger and looked up.
 
-"That's my grandfather's name," he said quietly, pointing to a line three names above Kell's, crossed out with the same decisive stroke as all the others. "Warren Reyes. My grandfather was on that list."
+"That's my grandfather's name," he said quietly, pointing to a line three names above Kell's, crossed out with the same decisive stroke as all the others. "Silas Reyes. My grandfather was on that list."
 
 "Crossed out," Mara said carefully, watching his face for what this information was doing to him. "Which means my grandfather looked at him and ruled him out. It doesn't mean anything happened to him."
 
