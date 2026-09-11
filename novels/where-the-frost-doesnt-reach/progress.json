@@ -1,9 +1,1 @@
-{
-  "DEPRECATED": true,
-  "note": "This file is stale as of Sept 2026 — it still used the OLD 24-chapter numbering and word counts, which no longer match the 45-chapter restructure. It also stated a 2500-2600 word target that conflicts with HANDOFF.md's 2000-2500 target. DO NOT USE THIS FILE FOR STATUS. The authoritative, verified chapter status is now the table in HANDOFF.md in this same folder, corrected Sept 2026 against the actual contents of chapters/. Zia still needs to pick one word-count target (2000-2500 or 2500-2600) and update HANDOFF.md accordingly.",
-  "book_title": "Where the Frost Doesn't Reach",
-  "series": "The Amity Falls Series",
-  "book_number": 1,
-  "target_total_chapters": 45,
-  "see_instead": "HANDOFF.md"
-}
+ewogICJERVBSRUNBVEVEIjogdHJ1ZSwKICAibm90ZSI6ICJUaGlzIGZpbGUgaXMgc3RhbGUgYXMgb2YgU2VwdCAyMDI2IOKAlCBpdCBzdGlsbCB1c2VkIHRoZSBPTEQgMjQtY2hhcHRlciBudW1iZXJpbmcgYW5kIHdvcmQgY291bnRzLCB3aGljaCBubyBsb25nZXIgbWF0Y2ggdGhlIDQ1LWNoYXB0ZXIgcmVzdHJ1Y3R1cmUuIERPIE5PVCBVU0UgVEhJUyBGSUxFIEZPUiBTVEFUVVMuIFRoZSBhdXRob3JpdGF0aXZlLCB2ZXJpZmllZCBjaGFwdGVyIHN0YXR1cyBpcyBub3cgdGhlIHRhYmxlIGluIEhBTkRPRkYubWQgaW4gdGhpcyBzYW1lIGZvbGRlciwgY29ycmVjdGVkIFNlcHQgMjAyNiBhZ2FpbnN0IHRoZSBhY3R1YWwgY29udGVudHMgb2YgY2hhcHRlcnMvLiBXb3JkLWNvdW50IHRhcmdldCBSRVNPTFZFRCBTZXB0IDIwMjY6IDIsMDAwXHUyMDEzMiw1MDAgd29yZHMgcGVyIGNoYXB0ZXIgKG1hdGNoZXMgSEFORE9GRi5tZCwgY29uZmlybWVkIGJ5IFppYSkuIFRoZSAyLDUwMC0yLDYwMCBmaWd1cmUgYmVsb3cgaXMgb2Jzb2xldGUsIGtlcHQgb25seSBmb3IgaGlzdG9yeS4iLAogICJib29rX3RpdGxlIjogIldoZXJlIHRoZSBGcm9zdCBEb2Vzbid0IFJlYWNoIiwKICAic2VyaWVzIjogIlRoZSBBbWl0eSBGYWxscyBTZXJpZXMiLAogICJib29rX251bWJlciI6IDEsCiAgInRhcmdldF90b3RhbF9jaGFwdGVycyI6IDQ1LAogICJ3b3JkX2NvdW50X3RhcmdldF9wZXJfY2hhcHRlciI6ICIyMDAwLTI1MDAgKFJFU09MVkVEIFNlcHQgMjAyNiAtIHNlZSBub3RlKSIsCiAgInNlZV9pbnN0ZWFkIjogIkhBTkRPRkYubWQiCn0K
