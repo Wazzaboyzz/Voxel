@@ -18,12 +18,12 @@ No other continuity issues found: the only other name mentioned in `architecture
 Prior open decisions:
 1. **Ch.3 em dashes** — RESOLVED (still holds). Zero em dashes confirmed across all 45 chapters, not just ch.3.
 2. **Ch.44 vs. beat map (closed-door vs. on-page intimacy)** — RESOLVED, no further action needed.
-3. **Chapters 1-3 version conflict** — STILL UNRESOLVED. Zia has not yet confirmed which version of ch.1-3 is final against the competing `Ch_1_to_10_expanded.zip` text. Needed before anyone finalizes ch.4-11 continuity.
+3. **Chapters 1-3 version conflict — RESOLVED this session.** Zia confirmed: whatever is currently saved on GitHub for chapters 1, 2, and 3 is final and canon. The competing `Ch_1_to_10_expanded.zip` text is dead — do not use it, do not reconcile against it, do not raise this as an open question again. Ch.4-11 continuity can now be finalized against ch.1-3 as they stand in the repo.
 
 ## Repo location
 All novel files live at `novels/where-the-frost-doesnt-reach/` in `Wazzaboyzz/Voxel`.
 - `chapters/` — chapter_NN.md, all lowercase. All 45 files exist as of this session.
-- `beat_map_45ch.md` — authoritative chapter mapping, old ch → new ch. NOTE: its "Written by" column also says "Not yet written" for chapters that are now written (35-45) — that column is stale in the same way this file's table was; trust the table below instead.
+- `beat_map_45ch.md` — authoritative chapter mapping, old ch → new ch. NOTE: its "Written by" column also says "Not yet written" for chapters that are now written (35-45) — that column is stale in the same way this file's table was; trust the table below instead. It also references the ch.1-3 zip conflict as still open — that conflict is now resolved (see above), ignore that note in the beat map.
 - `architecture.md` — worldbuilding/continuity reference, check before writing any chapter.
 - `HANDOFF.md` — this file.
 
@@ -31,7 +31,7 @@ All novel files live at `novels/where-the-frost-doesnt-reach/` in `Wazzaboyzz/Vo
 Proposed order:
 1. Fix ch.20 formatting bug — DONE (earlier session).
 2. Pick one word-count target and update both files to agree — DONE. Locked at 2,000-2,500.
-3. Read chapters 4-9 against final ch.3 for continuity, fix any mismatches — NOT STARTED.
+3. Read chapters 4-9 against final ch.3 for continuity, fix any mismatches — NOT STARTED. Can now proceed since ch.1-3 canon is settled.
 4. Expand every under-target chapter to the agreed range — NOT STARTED. Per the corrected table below, chapters currently BELOW 2,000 words: 2, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 31, 32, 35, 36, 37, 42, 45. Chapters currently ABOVE the 2,500 ceiling (need a trim pass instead): 38 (2,544), 44 (2,556).
 5. Full read-through for voice consistency and plot contradictions once everything is length-correct — NOT STARTED.
 
@@ -39,9 +39,9 @@ Proposed order:
 
 | New Ch | Status | Actual words | Notes |
 |---|---|---|---|
-| 1 | DONE | 2,534 | Zia's own text (funeral reunion). |
-| 2 | DONE | 1,817 | Zia's own text (ring found). Below target. |
-| 3 | DONE | 2,718 | Canon, confirmed by Zia. Zero em dashes. |
+| 1 | DONE | 2,534 | Zia's own text (funeral reunion). CANON — confirmed final, no other version. |
+| 2 | DONE | 1,817 | Zia's own text (ring found). CANON — confirmed final, no other version. Below target. |
+| 3 | DONE | 2,718 | CANON — confirmed final, no other version. Zero em dashes. |
 | 4 | DONE | 2,106 | NEW — Odette/store/orchard settling-in scene. In target. |
 | 5 | DONE | 2,023 | NEW — first Rosewood/Thomas visit. In target. |
 | 6 | DONE | 2,068 | Thomas's first tolling reveal. In target. |
@@ -85,7 +85,7 @@ Proposed order:
 | 44 | DONE | 2,556 | Weeks after, memory returns in pieces, Mara stays for good. Closed-door vs. beat-map conflict resolved: kept as written, on-page per beat map. Over the 2,500 ceiling — trim candidate. |
 | 45 | DONE | 1,977 | Wedding, Adelaide's letter, Whitlock/Book 2 hook. Below target. |
 
-**All 45 chapters are written, present in the repo, and confirmed zero em dashes throughout.** The only remaining structural gap is the unresolved ch.1-3 version conflict (see above) — not a missing-chapter problem.
+**All 45 chapters are written, present in the repo, and confirmed zero em dashes throughout. Chapters 1-3 are locked as final/canon (see above) — no version conflict remains anywhere in the project.**
 
 ## Standing rules for this project (apply to every future chapter)
 - Target 2,000–2,500 words per chapter. Chapters outside this range (see table above) are candidates for the expansion/trim pass, not errors requiring immediate action.
