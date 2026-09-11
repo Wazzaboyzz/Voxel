@@ -28,12 +28,15 @@ Before touching anything else, read `PRE_PUBLISH_CHECKLIST.md` in this same fold
 | 4 | DONE | Checked, no issues | Fixed prior session — 4 instances. |
 | 5 | DONE | Checked, no issues | Fixed prior session — 6 instances, pushed live. |
 | 6 | DONE | Checked, no issues | Fixed prior session — 5 instances, pushed live, tense-fix verified. |
-| 7 | DONE | Checked, no issues | Fixed this session — 7 instances of "the particular/specific X" cut or rephrased. Pushed and verified on GitHub (sha 85582efc...). Zero em dashes, zero remaining tics. |
-| 8 | DONE | Checked, no issues | Fixed this session — 4 instances of "the particular X" cut or rephrased. Pushed and verified on GitHub (sha b080b2a0...). Word count unchanged at 1,659 (below floor, not addressed this pass — that's Task in section 4 below, expansion, separate from Task 5). |
-| 9 | DONE | Checked, no issues | Fixed this session — 8 instances of "the particular/specific X" cut or rephrased. Pushed and verified on GitHub (sha c2d4f139...). |
-| 10–45 | NOT STARTED | NOT STARTED | Full remaining scope. Work sequentially, same method as above. Chapter 38 and 44 are also flagged in the main table above as over the 2,500-word ceiling — a trim pass on those two can happen in the same sitting as their AI-tell/continuity check, no need for a separate pass. |
+| 7 | DONE | Checked, no issues | Fixed this session — 7 instances of "the particular/specific X" cut or rephrased. Pushed and verified. Zero em dashes, zero remaining tics. |
+| 8 | DONE | Checked, no issues | Fixed this session — 4 instances. Pushed and verified. Word count unchanged at ~1,653 (below floor, flagged for separate expansion pass, not Task 5). |
+| 9 | DONE | Checked, no issues | Fixed this session — 8 instances. Pushed and verified. |
+| 10 | DONE | Checked, no issues | Fixed this session — 3 instances. Also expanded slightly (1,434 → 1,603 words) adding a closing beat where Odette reveals Kell may be inventorying Wren too — reinforces the beat map's ch.18 deduction rather than contradicting it. Pushed and verified. Still below the 1,800 floor, may need one more expansion pass later. |
+| 11 | DONE | Checked, no issues | Fixed this session — 2 instances. Minor closing-beat expansion (1,376 → 1,427 words) adding a short Kell POV sting at the end (ledger, kettle). Pushed and verified. Still below floor. |
+| 12 | DONE | Checked, no issues | Fixed this session — 4 instances. Pushed and verified. Word count 1,875, above floor. |
+| 13–45 | NOT STARTED (for Task 5) | NOT STARTED | Full remaining scope. Work sequentially, same method as above. Chapter 38 and 44 are also flagged in the main table above as over the 2,500-word ceiling — a trim pass on those two can happen in the same sitting as their AI-tell/continuity check, no need for a separate pass. |
 
-**Session budget note:** this session completed chapters 7, 8, 9. Start the next session at chapter 10, same method, no re-derivation needed.
+**Session budget note:** this session completed chapters 7 through 12. Start the next session at chapter 13, same method, no re-derivation needed.
 
 ## What this project is
 Expanding an original 24-chapter draft (~26,900 words) into a 45-chapter, ~112,500-word novel, per `beat_map_45ch.md` in this same folder (authoritative for chapter-by-chapter mapping).
@@ -55,8 +58,8 @@ All novel files live at `novels/where-the-frost-doesnt-reach/` in `Wazzaboyzz/Vo
 Proposed order:
 1. Fix ch.20 formatting bug — DONE.
 2. Pick one word-count target and update both files to agree — DONE. Locked at 2,000-2,500, with 1,800 as an acceptable floor per Zia.
-3. Read chapters 4-9 against final ch.3 for continuity, fix any mismatches — DONE for 4-9, all clean. Continue this check as part of Task 5 for 10 onward.
-4. Expand every under-target chapter to the agreed range — NOT STARTED. Chapters currently BELOW the 1,800 floor (real gaps, need expansion): 10 (1,434), 11 (1,376), 23 (1,444), 24 (1,655), 25 (1,740), 26 (1,451), 27 (1,293), 8 (1,659), 37 (1,472). Chapters currently ABOVE the 2,500 ceiling (need a trim pass instead): 38 (2,544), 44 (2,556).
+3. Read chapters 4-12 against final ch.3 for continuity, fix any mismatches — DONE for 4-12, all clean. Continue this check as part of Task 5 for 13 onward.
+4. Expand every under-target chapter to the agreed range — NOT STARTED as a dedicated pass, though chapters 10 and 11 got small expansions incidentally during Task 5 this session. Chapters currently BELOW the 1,800 floor (real gaps, still need expansion): 8 (~1,653), 9 (1,793), 10 (1,603), 11 (1,427), 23 (1,444), 24 (1,655), 25 (1,740), 26 (1,451), 27 (1,293), 37 (1,472). Chapters currently ABOVE the 2,500 ceiling (need a trim pass instead): 38 (2,544), 44 (2,556).
 5. Full read-through for voice consistency and plot contradictions once everything is length-correct — NOT STARTED. (Also tracked as Task 4 in PRE_PUBLISH_CHECKLIST.md.)
 
 ## Status: chapters completed in the new 45-chapter structure
@@ -69,45 +72,45 @@ Proposed order:
 | 4 | DONE | 2,106 | NEW — Odette/store/orchard settling-in scene. In target. |
 | 5 | DONE | 2,023 | NEW — first Rosewood/Thomas visit. In target. |
 | 6 | DONE | 2,068 | Thomas's first tolling reveal. In target. |
-| 7 | DONE | 1,958 | Continues reveal; Warren Reyes (Thomas's son) name established. Task 5 applied this session. Below target. |
-| 8 | DONE | ~1,653 | Records office, survey file found. Name-collision bug fixed (grandfather is Silas Reyes). Task 5 applied this session. Below floor, flagged for expansion. |
-| 9 | DONE | 1,793 | Task 5 applied this session. Just below floor. |
-| 10 | DONE | 1,434 | Well below floor — flag for expansion pass. Odette confession begins. |
-| 11 | DONE | 1,376 | Well below floor — flag for expansion pass. Porch hand-touch. |
-| 12 | DONE | 1,880 | Toll (the dog) arrives; ends on Wren's late-night arrival at the door, unsettled. Below target. |
-| 13 | DONE | 2,030 | Wren's barn-door touch, fragmented flash of Caleb's toll, Dev's name surfaces. In target. |
-| 14 | DONE | 1,993 | Priya's fear, Dev missing. Below target. |
-| 15 | DONE | 1,885 | Yusuf/Priya backstory scene. Below target. |
-| 16 | DONE | 1,944 | Dev found in the silo, initial confession. Below target. |
-| 17 | DONE | 1,811 | Dev's fuller confession, Priya vigil. Below target. |
-| 18 | DONE | 2,242 | Deducing Wren may be targeted next, store scene with Odette. In target. |
-| 19 | DONE | 1,947 | Odette thickened as red herring. Below target. |
-| 20 | DONE | 1,971 | Kell homestead confrontation pt.1. Below target. |
-| 21 | DONE | 1,819 | Confrontation pt.2, porch vulnerability. Below target. |
-| 22 | DONE | 1,807 | Odette red-herring peak then clears. Below target. |
-| 23 | DONE | 1,444 | Below floor. Weather station discovery begins. |
-| 24 | DONE | 1,655 | Below floor. Amplifier found, near-miss with Kell's car. |
-| 25 | DONE | 1,740 | Below floor. Yusuf agrees to file. |
-| 26 | DONE | 1,451 | Below floor. Threat text arrives. |
-| 27 | DONE | 1,293 | Well below floor. Wren's agency arc begins. |
-| 28 | DONE | 2,207 | Wren volunteers to read inert object; crooked-tree "falling twice" confession. In target. |
-| 29 | DONE | 2,063 | Corinne/Whitlock reveal. In target. |
-| 30 | DONE | 2,067 | **CHECKPOINT — first kiss.** Barn scene, interrupted by clerk break-in. In target. |
-| 31 | DONE | 1,954 | Case-building, nine days, formal inquiry opens. Below target. |
-| 32 | DONE | 1,983 | Door-to-door canvassing, found-family texture. Below target. |
-| 33 | DONE | 2,417 | Town backlash, Caleb's early doubt, Yusuf's tires slashed. In target. |
-| 34 | DONE | 2,333 | **CHECKPOINT — RUPTURE.** Kell's press attack; Caleb asks for space. In target. |
-| 35 | DONE | 1,867 | Days of distance. Below target. |
-| 36 | DONE | 1,890 | The hearing, partial win. Below target. |
-| 37 | DONE | 1,472 | Reconciliation at the fence line. Below floor. |
-| 38 | DONE | 2,544 | Hospital scene, Adelaide Whitlock named. Over ceiling — trim candidate. |
-| 39 | DONE | 2,386 | Wren kidnapped, Kell's confession re: Adelaide. In target. |
-| 40 | DONE | 2,065 | Descent into mill cellar, storm builds, Dev revealed as Priya's brother. In target. |
-| 41 | DONE | 2,104 | **CHECKPOINT — mill climax.** Dev's full confession, Wren's toll redirect, structural collapse. In target. |
-| 42 | DONE | 1,929 | Release sequence/aftermath, Kell and Dev taken into custody. Below target. |
-| 43 | DONE | 2,001 | **CHECKPOINT — resolution.** Harvest festival, Adelaide confirmed publicly, Kell's collapse/unnatural aging reveal, Caleb's ring memory surfaces. In target. |
-| 44 | DONE | 2,556 | Weeks after, memory returns in pieces, Mara stays for good. On-page per beat map. Over ceiling — trim candidate. |
-| 45 | DONE | 1,977 | Wedding, Adelaide's letter, Whitlock/Book 2 hook. Below target. |
+| 7 | DONE | 1,958 | Continues reveal; Warren Reyes (Thomas's son) name established. Task 5 applied. Below target. |
+| 8 | DONE | ~1,653 | Records office, survey file found. Name-collision bug fixed (grandfather is Silas Reyes). Task 5 applied. Below floor, flagged for expansion. |
+| 9 | DONE | 1,793 | Task 5 applied. Just below floor. |
+| 10 | DONE | 1,603 | Task 5 applied + minor expansion. Odette confession, Wren-as-target foreshadow added. Below floor. |
+| 11 | DONE | 1,427 | Task 5 applied + minor expansion. Porch hand-touch, Kell POV sting added. Below floor. |
+| 12 | DONE | 1,875 | Task 5 applied. Toll (the dog) arrives; ends on Wren's late-night arrival at the door, unsettled. In floor range. |
+| 13 | DONE | 2,030 | Wren's barn-door touch, fragmented flash of Caleb's toll, Dev's name surfaces. In target. Task 5 not yet applied. |
+| 14 | DONE | 1,993 | Priya's fear, Dev missing. Below target. Task 5 not yet applied. |
+| 15 | DONE | 1,885 | Yusuf/Priya backstory scene. Below target. Task 5 not yet applied. |
+| 16 | DONE | 1,944 | Dev found in the silo, initial confession. Below target. Task 5 not yet applied. |
+| 17 | DONE | 1,811 | Dev's fuller confession, Priya vigil. Below target. Task 5 not yet applied. |
+| 18 | DONE | 2,242 | Deducing Wren may be targeted next, store scene with Odette. In target. Task 5 not yet applied. |
+| 19 | DONE | 1,947 | Odette thickened as red herring. Below target. Task 5 not yet applied. |
+| 20 | DONE | 1,971 | Kell homestead confrontation pt.1. Below target. Task 5 not yet applied. |
+| 21 | DONE | 1,819 | Confrontation pt.2, porch vulnerability. Below target. Task 5 not yet applied. |
+| 22 | DONE | 1,807 | Odette red-herring peak then clears. Below target. Task 5 not yet applied. |
+| 23 | DONE | 1,444 | Below floor. Weather station discovery begins. Task 5 not yet applied. |
+| 24 | DONE | 1,655 | Below floor. Amplifier found, near-miss with Kell's car. Task 5 not yet applied. |
+| 25 | DONE | 1,740 | Below floor. Yusuf agrees to file. Task 5 not yet applied. |
+| 26 | DONE | 1,451 | Below floor. Threat text arrives. Task 5 not yet applied. |
+| 27 | DONE | 1,293 | Well below floor. Wren's agency arc begins. Task 5 not yet applied. |
+| 28 | DONE | 2,207 | Wren volunteers to read inert object; crooked-tree "falling twice" confession. In target. Task 5 not yet applied. |
+| 29 | DONE | 2,063 | Corinne/Whitlock reveal. In target. Task 5 not yet applied. |
+| 30 | DONE | 2,067 | **CHECKPOINT — first kiss.** Barn scene, interrupted by clerk break-in. In target. Task 5 not yet applied. |
+| 31 | DONE | 1,954 | Case-building, nine days, formal inquiry opens. Below target. Task 5 not yet applied. |
+| 32 | DONE | 1,983 | Door-to-door canvassing, found-family texture. Below target. Task 5 not yet applied. |
+| 33 | DONE | 2,417 | Town backlash, Caleb's early doubt, Yusuf's tires slashed. In target. Task 5 not yet applied. |
+| 34 | DONE | 2,333 | **CHECKPOINT — RUPTURE.** Kell's press attack; Caleb asks for space. In target. Task 5 not yet applied. |
+| 35 | DONE | 1,867 | Days of distance. Below target. Task 5 not yet applied. |
+| 36 | DONE | 1,890 | The hearing, partial win. Below target. Task 5 not yet applied. |
+| 37 | DONE | 1,472 | Reconciliation at the fence line. Below floor. Task 5 not yet applied. |
+| 38 | DONE | 2,544 | Hospital scene, Adelaide Whitlock named. Over ceiling — trim candidate. Task 5 not yet applied. |
+| 39 | DONE | 2,386 | Wren kidnapped, Kell's confession re: Adelaide. In target. Task 5 not yet applied. |
+| 40 | DONE | 2,065 | Descent into mill cellar, storm builds, Dev revealed as Priya's brother. In target. Task 5 not yet applied. |
+| 41 | DONE | 2,104 | **CHECKPOINT — mill climax.** Dev's full confession, Wren's toll redirect, structural collapse. In target. Task 5 not yet applied. |
+| 42 | DONE | 1,929 | Release sequence/aftermath, Kell and Dev taken into custody. Below target. Task 5 not yet applied. |
+| 43 | DONE | 2,001 | **CHECKPOINT — resolution.** Harvest festival, Adelaide confirmed publicly, Kell's collapse/unnatural aging reveal, Caleb's ring memory surfaces. In target. Task 5 not yet applied. |
+| 44 | DONE | 2,556 | Weeks after, memory returns in pieces, Mara stays for good. On-page per beat map. Over ceiling — trim candidate. Task 5 not yet applied. |
+| 45 | DONE | 1,977 | Wedding, Adelaide's letter, Whitlock/Book 2 hook. Below target. Task 5 not yet applied. |
 
 **All 45 chapters are written, present in the repo, and confirmed zero em dashes throughout. Chapters 1-3 are locked as final/canon.**
 
