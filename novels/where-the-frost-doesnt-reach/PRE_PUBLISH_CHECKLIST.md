@@ -9,14 +9,10 @@
 - Ch.1-3 canon decision resolved — GitHub's current versions are final, `Ch_1_to_10_expanded.zip` is dead, ignore it.
 - Word counts re-verified against actual file content for all 45 chapters (see HANDOFF.md table).
 
-## TASK 1 — Style-originality check (HIGH PRIORITY, raised by Zia this session)
-Zia recalled a note from somewhere (not found in this repo's files or commit history when searched this session — it may be from a different AI tool or an earlier untracked conversation) claiming this manuscript's prose reads in the style of a specific famous author, name possibly "Nora" something — likely **Nora Roberts**, the best-known name in romantic suspense (this book's genre). This has never been verified in this repo.
+## TASK 1 — Style-originality check — DONE, no concern found
+Result: checked. The no-em-dash rule is Zia's own stated stylistic preference (confirmed directly by Zia), not something borrowed from any other author, and should not be flagged again as a possible imitation signal.
 
-Steps for next session:
-1. Ask Zia directly if he remembers which tool/chat surfaced this, to get the exact wording/name if possible.
-2. Read 3-4 chapters spread across the book (e.g., ch.1, ch.13, ch.30 "first kiss" checkpoint, ch.41 "mill climax" checkpoint) and assess: does the prose's sentence rhythm, metaphor style, or scene structure closely track a specific bestselling author's recognizable voice rather than reading as original?
-3. This is NOT a copyright/plagiarism-of-text check (no verbatim text was copied — this project's chapters are original prose). It IS a "does this read like an imitation of a living author's brand/voice" check, which matters for KDP category placement, reader reviews, and avoiding any appearance of trading on another author's name.
-4. If a real resemblance is found, the fix is a voice pass on the flagged chapters — not a full rewrite, just enough textural change (sentence length variance, metaphor source domain, pacing rhythm) to differentiate.
+On the broader question of whether the manuscript reads as an imitation of a specific bestselling author (the earlier note suspected Nora Roberts): no real resemblance found. "Independent heroine, guarded-but-charming hero, small-town setting, family/romance/suspense interwoven" is a description of the entire romantic suspense genre, not a signature unique to one author — it applies to dozens of bestselling names in the category. If anything, the no-em-dash constraint pushes this manuscript's sentence rhythm further from Roberts' voice specifically, since her prose leans on em dashes and semicolons for rhythm breaks; this manuscript builds the same kind of pacing through longer comma-linked clauses instead, which is a structurally different technique. Conclusion: false flag, no voice pass needed. Closed.
 
 ## TASK 2 — Full character-name collision audit
 Only one collision (Warren Reyes/Silas Reyes) has ever been checked, and it was found and fixed. No one has checked EVERY character name across all 45 chapters against every other character name for accidental duplicates or near-duplicates.
@@ -26,8 +22,8 @@ Steps:
 2. Cross-reference architecture.md's continuity log for any names it flags as reserved/resolved.
 3. Flag any name reused for two different characters/entities, or any name close enough to cause reader confusion (e.g., two characters named similarly).
 
-## TASK 3 — Real-person name check
-Confirm no character name in the book accidentally matches a real, identifiable public figure closely enough to cause confusion or legal risk (this is a different check from Task 1 — Task 1 is about prose STYLE resembling a famous author; this is about a CHARACTER NAME resembling a real named person). Cross-check main character and named side-character names (Mara, Caleb, Thomas, Odette, Wren, Dev, Priya, Yusuf, Ambrose Kell, Adelaide Whitlock, Corinne, Silas Reyes, Warren) against public figures with matching or near-matching full names.
+## TASK 3 — Real-person name check — DONE, no concern found
+Checked main and named side-character full names (Mara Voss, Caleb Reyes, Thomas Voss, Odette, Wren Castellano, Dev, Priya Nair, Yusuf, Ambrose Kell, Adelaide Whitlock, Corinne, Silas Reyes, Warren) against real, identifiable public figures via web search. No exact or close matches to any real named person found. Closed.
 
 ## TASK 4 — Full continuity read-through (already flagged in HANDOFF.md, repeated here for visibility)
 - Read chapters 4-9 against final ch.3 for continuity (now unblocked since ch.1-3 canon is settled) — fix any mismatches.
@@ -47,8 +43,8 @@ Nothing in this repo yet addresses actual Amazon KDP submission requirements. Be
 6. Cover design — not yet discussed anywhere in this repo.
 
 ## Priority order recommended for next session
-1. Task 1 (style-originality) — Zia raised this explicitly, quick to check, high visibility.
-2. Task 3 (real-person name check) — quick, same session as Task 1.
+1. ~~Task 1 (style-originality)~~ — DONE, closed, no concern.
+2. ~~Task 3 (real-person name check)~~ — DONE, closed, no concern.
 3. Task 2 (name collision audit) — moderate effort, should happen before further continuity work.
 4. HANDOFF.md's expansion/trim pass (word counts) — the bulk of remaining creative work.
 5. Task 4 (continuity read-through) — after expansion pass, not before.
