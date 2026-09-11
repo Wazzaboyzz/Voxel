@@ -4,7 +4,7 @@ The dog showed up on a Thursday, which Mara would remember later mostly because 
 
 She heard the barking before she saw anything, a rangy, uncertain sound coming from somewhere near the property line, and found Caleb crouched at the edge of his own driveway with a scrawny brown mutt keeping a full car length of distance between them, ribs a little too visible under a coat the color of weak coffee, one ear standing up and the other flopped over like it had given up on the arrangement years ago.
 
-"She's been circling the orchard for two days," Caleb said, not looking up, his voice pitched low and even, the particular gentleness of a man trying not to spook something that had clearly already been spooked plenty. "I put food out yesterday. She ate it after I went inside. Won't come any closer than this."
+"She's been circling the orchard for two days," Caleb said, not looking up, his voice pitched low and even, the gentleness of a man trying not to spook something that had clearly already been spooked plenty. "I put food out yesterday. She ate it after I went inside. Won't come any closer than this."
 
 "No collar?"
 
@@ -20,7 +20,7 @@ Mara crouched down beside him, slower than he had, feeling the dog's dark eyes t
 
 Mara laughed before she could stop herself, the sound surprising her with how easy it came, and the dog's ears went up at the noise, considering it, before deciding it wasn't a threat either.
 
-They stayed there another twenty minutes, neither of them saying much, the morning going warm and gold around them the way September mornings in this valley always seemed to, birds working through the nearest row of trees with the particular unhurried business of a season not yet ready to turn, until the dog finally closed the last few feet on her own terms and pressed her nose, briefly, suspiciously, against the back of Caleb's still-patient hand.
+They stayed there another twenty minutes, neither of them saying much, the morning going warm and gold around them the way September mornings in this valley always seemed to, birds working through the nearest row of trees with the unhurried business of a season not yet ready to turn, until the dog finally closed the last few feet on her own terms and pressed her nose, briefly, suspiciously, against the back of Caleb's still-patient hand.
 
 "There," he said quietly, like he'd won something considerably larger than a dog's trust. "There we go."
 
@@ -44,9 +44,9 @@ Mara watched him for a long moment, understanding, not for the first time this w
 
 ---
 
-The days that followed fell into a rhythm neither of them named out loud but both seemed to be building toward, deliberately or not. Mara spent her mornings at her grandfather's desk, working through what remained of Eleanor's estate, the ordinary, unglamorous business of closing out a life, insurance forms and property deeds and a lawyer's careful, patient emails about probate timelines that had nothing supernatural in them at all. Caleb spent his running the orchard, the last stretch before harvest demanding attention Mara understood better now than she had at the start of the summer, having spent enough afternoons walking the rows with him to know the difference between a healthy tree and one that needed watching. She found, more than once, that she liked watching him work almost as much as she liked helping, the particular competence of a man moving through land he knew in his bones even when the rest of his history had been quietly taken from him.
+The days that followed fell into a rhythm neither of them named out loud but both seemed to be building toward, deliberately or not. Mara spent her mornings at her grandfather's desk, working through what remained of Eleanor's estate, the ordinary, unglamorous business of closing out a life, insurance forms and property deeds and a lawyer's careful, patient emails about probate timelines that had nothing supernatural in them at all. Caleb spent his running the orchard, the last stretch before harvest demanding attention Mara understood better now than she had at the start of the summer, having spent enough afternoons walking the rows with him to know the difference between a healthy tree and one that needed watching. She found, more than once, that she liked watching him work almost as much as she liked helping, the competence of a man moving through land he knew in his bones even when the rest of his history had been quietly taken from him.
 
-Toll came everywhere, unhurried, entirely certain of her welcome now, and there was something in her presence, Mara thought more than once, that kept the whole valley's slow-building dread from swallowing every ordinary hour whole. A dog didn't care about tolls or bargains or forty-year-old cover-ups. A dog cared about dinner, and a scratch behind the ears, and the particular patch of porch that caught the most afternoon sun, and having something that simple in the house made the rest of it, somehow, easier to carry.
+Toll came everywhere, unhurried, entirely certain of her welcome now, and there was something in her presence, Mara thought more than once, that kept the whole valley's slow-building dread from swallowing every ordinary hour whole. A dog didn't care about tolls or bargains or forty-year-old cover-ups. A dog cared about dinner, and a scratch behind the ears, and whichever patch of porch caught the most afternoon sun, and having something that simple in the house made the rest of it, somehow, easier to carry.
 
 "I keep waiting for this to feel strange," Mara admitted one evening, the three of them, Caleb and Toll and herself, sitting on the porch step while the light went long and gold over the orchard rows. "Being here. Doing this. Ordinary evenings with a dog and dinner and no crisis waiting in the next hour."
 
