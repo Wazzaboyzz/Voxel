@@ -4,7 +4,7 @@
 
 She'd read the folder three times before she brought it back to Rosewood Care, once the night Del gave it to her, once the following morning with coffee and a clearer head, and once more the night before this visit, when she couldn't sleep and found her hands reaching for it anyway. She knew the clippings almost by heart now, the drought, the crop failures, the town meeting where tempers ran high enough to call the sheriff. What she didn't have was the part that made any of it make sense, the part her grandfather's dense, cross-referenced pages only gestured toward without ever quite naming.
 
-The drive out to Rosewood had given her time to notice things about Caleb she hadn't fully let herself catalog before, the way his hands had gone quiet on the wheel somewhere around the county line, the particular set of his jaw that told her he'd been carrying his own version of dread about this visit without saying so out loud. She hadn't asked him to come. He'd simply shown up at the orchard house that morning with his truck keys already in hand, dressed like a man heading into something that required more than his usual work clothes, and neither of them had discussed it further than that.
+The drive out to Rosewood had given her time to notice things about Caleb she hadn't fully let herself catalog before, the way his hands had gone quiet on the wheel somewhere around the county line, the set of his jaw that told her he'd been carrying his own version of dread about this visit without saying so out loud. She hadn't asked him to come. He'd simply shown up at the orchard house that morning with his truck keys already in hand, dressed like a man heading into something that required more than his usual work clothes, and neither of them had discussed it further than that.
 
 "You don't have to be in the room for this part," she'd told him in the parking lot, giving him one last chance to step back from whatever her grandfather was about to hand them. "Whatever he says about the mechanism, I can bring it back to you afterward if you'd rather not sit through the explaining."
 
@@ -14,7 +14,7 @@ She hadn't argued further.
 
 Thomas Voss's room smelled like menthol and cut grass through the cracked window, and he was awake when she came in with Caleb beside her, which Del, meeting them in the hallway first, said was not a given anymore.
 
-"Twenty minutes," Del said, glancing at the oxygen monitor clipped to Thomas's finger with the practiced concern of someone who had learned exactly how much this particular patient could spend before the spending cost him something he couldn't get back. "He tires faster than he used to. I know you've got questions. Just watch his color."
+"Twenty minutes," Del said, glancing at the oxygen monitor clipped to Thomas's finger with the practiced concern of someone who had learned exactly how much this patient could spend before the spending cost him something he couldn't get back. "He tires faster than he used to. I know you've got questions. Just watch his color."
 
 Thomas watched Caleb cross the room with an expression Mara couldn't place at first, something between relief and grief arriving at the same time, an old man taking in the face of someone he'd clearly worried about for longer than either of them had known.
 
@@ -28,7 +28,7 @@ They sat. Caleb's knee was close enough to Mara's that she could feel the warmth
 
 "There's things about this valley I never told your mother," Thomas said to Mara, "because your mother left the way you did, angry and young, and I thought sparing her the weight was a kindness. I was wrong about that. I'm not going to be wrong about it twice." He turned his head toward Caleb, slow, deliberate, the motion of a man conserving every ounce of effort he had left to spend. "You're a Plain, son. Born into a Kindred family with no gift of your own. Most people in this town think that makes you safe from what the valley collects. I used to think so too."
 
-"Collects," Caleb repeated, and Mara heard, underneath the single word, the particular careful stillness he'd carried since the funeral, a man bracing for a sentence he suspected was going to cost him something before it finished.
+"Collects," Caleb repeated, and Mara heard, underneath the single word, the careful stillness he'd carried since the funeral, a man bracing for a sentence he suspected was going to cost him something before it finished.
 
 "I'll let your granddaughter explain the mechanism properly, once I've given her the shape of it. She's smarter than I am, and she's a Finder herself, whether she's used it enough to know it yet or not." Thomas's eyes moved to Mara, sharp despite everything else about him being tired, the same clarity she'd noticed the very first time she'd sat in this room. "You know what a toll is. You've heard the word your whole life, even if nobody in this family ever explained it to you properly."
 
@@ -46,7 +46,7 @@ The room went very quiet. Outside, a lawnmower started up somewhere on the facil
 
 "Now you understand why I circled a name in that file and never had the proof to say it out loud in a room that mattered." Thomas's eyes, exhausted but ferociously present, moved between the two of them. "And now you understand, Caleb, exactly what kind of thing has already happened to you once before, in a town that's had a hundred years of practice hiding it, and has clearly decided you're an easy enough target to try it on twice."
 
-Caleb had gone very quiet beside her during this part, and Mara felt, more than saw, the particular stillness settle over him, a man absorbing something that reframed an entire chapter of his own life he'd spent two years unable to properly grieve because he hadn't known there was anything specific to grieve at all. She resisted the urge to reach for his hand just yet, sensing he needed a moment to hold the shape of it himself before either of them tried to soften it.
+Caleb had gone very quiet beside her during this part, and Mara felt, more than saw, the stillness settle over him, a man absorbing something that reframed an entire chapter of his own life he'd spent two years unable to properly grieve because he hadn't known there was anything specific to grieve at all. She resisted the urge to reach for his hand just yet, sensing he needed a moment to hold the shape of it himself before either of them tried to soften it.
 
 "You said it happened before," Caleb said finally, his voice carefully even, the tone of a man choosing his words with more precision than usual. "Elias Frey. Does that mean whoever did it to him is the same person doing it now? Or could it be someone new who learned the trick secondhand?"
 
@@ -60,7 +60,7 @@ Del appeared in the doorway again, her expression apologetic but immovable, and 
 
 "Meaning whoever this is has gotten more dangerous since Elias Frey's time, not less. More confident, or more desperate, or both." Thomas's hand found the folder Mara had set beside him, resting on top of it without the strength left to actually lift it. "Elias was a Kindred with a gift of his own that could, at least in theory, generate the debt somebody redirected. You have no gift at all. Somebody found a way to spend a man who, by every rule of this valley's bargain, should have been impossible to spend in the first place."
 
-The room held that for a long moment, the weight of it settling over all three of them differently, and Mara found herself doing the arithmetic her whole career had trained her to do instinctively, the particular calculation of exactly how much worse a known flaw became once you understood it had already been engineered around once.
+The room held that for a long moment, the weight of it settling over all three of them differently, and Mara found herself doing the arithmetic her whole career had trained her to do instinctively, calculating exactly how much worse a known flaw becomes once you realize someone has already learned to work around it.
 
 "Then whoever it is," she said slowly, "isn't following the same rules the rest of this valley thinks are fixed. They've found a crack nobody else knows exists."
 
