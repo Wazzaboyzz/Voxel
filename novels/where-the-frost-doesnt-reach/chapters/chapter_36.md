@@ -12,7 +12,7 @@ Yusuf presented first, his voice steady in a way Mara knew had cost him consider
 
 Mara watched the board members' faces as Yusuf spoke, cataloguing each small shift the way she'd once catalogue stress fractures on a job site, looking for the point where doubt might finally give way to belief. Two of the five board members leaned forward slightly at the supplier records, the physical proof apparently doing more work than any of the softer suspicions ever could. A third, an older man near the end of the table, kept his arms crossed the entire time, his expression unreadable, and Mara found herself unable to guess whether that stillness meant skepticism or simply a lifetime of practiced neutrality.
 
-"This is a serious allegation," the board chair said, once Yusuf finished, an older woman named Constance Oakes whose face gave away nothing of what she actually believed. "Mr. Kell, your response."
+"This is a serious allegation," the board chair said, once Yusuf finished, an older woman named Marjorie Oakes whose face gave away nothing of what she actually believed. "Mr. Kell, your response."
 
 Kell's lawyer stood first, smooth and practiced, arguing chain of custody on the photographs, arguing that a supplier record proved nothing about who'd actually installed the device, arguing, at length, that the entire case rested on circumstantial connections a reasonable board should be wary of accepting without more direct evidence. Mara felt her stomach tighten with each careful, well-constructed objection, the particular helplessness of watching a true thing get picked apart by someone whose only job was making sure the truth sounded less certain than it actually was.
 
@@ -24,7 +24,7 @@ The room's temperature seemed to shift, subtly, and Mara felt it in the particul
 
 "Point of order," Yusuf said, standing again, his voice sharper now. "Mr. Kell's response has not addressed a single piece of physical evidence presented. It has addressed the character of the people presenting it. I'd ask the board to note the distinction."
 
-Constance Oakes studied both men for a long moment, her expression still giving nothing away, and Mara found herself holding her breath, the whole hearing balanced on a single woman's unreadable judgment.
+Marjorie Oakes studied both men for a long moment, her expression still giving nothing away, and Mara found herself holding her breath, the whole hearing balanced on a single woman's unreadable judgment.
 
 "Noted," Oakes said finally. "The board will take a recess to review the physical evidence submitted. Fifteen minutes."
 
@@ -42,7 +42,7 @@ Mara nodded, not trusting her voice, and it was in that fifteen minutes of waiti
 
 The board reconvened before Mara could answer properly, the fifteen minutes gone faster than either of them had tracked, and they filed back to their seats, Caleb's hand releasing hers with obvious reluctance, something unresolved but no longer entirely broken sitting warm in the space where his fingers had been. She caught herself, sitting back down between Priya and Yusuf, pressing her own fingers briefly against her palm, as if she could hold onto the shape of his hand a moment longer before the hearing demanded her full attention again.
 
-Constance Oakes read the board's decision in a flat, careful voice that gave no hint of relief or disappointment either way. "The board finds sufficient physical evidence to warrant a formal investigation into the allegations against council chair Ambrose Kell, to be conducted by an independent auditor from outside this county. Mr. Kell will remain in his position pending the outcome of that investigation, but will be recused from any council business touching weather monitoring, land use permits, or emergency response protocols until the investigation concludes."
+Marjorie Oakes read the board's decision in a flat, careful voice that gave no hint of relief or disappointment either way. "The board finds sufficient physical evidence to warrant a formal investigation into the allegations against council chair Ambrose Kell, to be conducted by an independent auditor from outside this county. Mr. Kell will remain in his position pending the outcome of that investigation, but will be recused from any council business touching weather monitoring, land use permits, or emergency response protocols until the investigation concludes."
 
 It was not the reckoning Mara had wanted, not Kell removed and exposed in front of the whole valley the way some deep, unreasonable part of her had been hoping for since the moment she'd read her grandfather's file. But it was real, official, on the record in a way even Kell's expensive lawyer couldn't quietly make disappear, an independent investigator now assigned to look at exactly the things Kell had spent four decades keeping carefully out of anyone's reach.
 
