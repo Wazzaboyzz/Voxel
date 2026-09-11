@@ -1,20 +1,20 @@
 # CHAPTER SEVEN
 
-Del was already moving before Thomas finished speaking, checking the monitor with the particular brisk efficiency of someone whose job required ending important conversations before they finished costing more than a patient had left to give. Caleb was on his feet without seeming to decide to stand, one hand under Thomas's elbow like it was instinct instead of information he'd learned an hour ago, the two of them briefly, unexpectedly, looking like family in a way neither of them had earned yet through blood.
+Del was already moving before Thomas finished speaking, checking the monitor with the brisk efficiency of someone whose job required ending important conversations before they finished costing more than a patient had left to give. Caleb was on his feet without seeming to decide to stand, one hand under Thomas's elbow like it was instinct instead of information he'd learned an hour ago, the two of them briefly, unexpectedly, looking like family in a way neither of them had earned yet through blood.
 
 Mara stood in the doorway and watched them, her dying grandfather and the man she used to be engaged to, and thought that somewhere in this valley there was a person who had been quietly spending Caleb Reyes like currency for two years, and was very likely, right now, watching to see what she and Caleb did next now that the folder in her bag had finally found its missing explanation.
 
-Caleb didn't speak on the walk down the hallway. Mara watched him instead of talking, cataloguing the particular way grief and fury sat together in a person's shoulders when neither one had found a place to land yet, the same silent overload she recognized from job sites right after a bad accident report, before anyone had decided yet whose fault it was, when all anyone could do was stand very still and let the fact of the thing finish arriving.
+Caleb didn't speak on the walk down the hallway. Mara watched him instead of talking, cataloguing the way grief and fury sat together in a person's shoulders when neither one had found a place to land yet, the same silent overload she recognized from job sites right after a bad accident report, before anyone had decided yet whose fault it was, when all anyone could do was stand very still and let the fact of the thing finish arriving.
 
 Odette was waiting by Caleb's truck when they came out of the building, which struck Mara as strange enough to notice before she'd even fully processed why, since nothing about Odette's schedule should have put her anywhere near Rosewood Care on an ordinary Tuesday afternoon.
 
 "I heard you were visiting your grandfather," Odette said, her tone light in a way that didn't quite match the careful watchfulness in her eyes. "Thought I'd stop by and see how he's doing. We go back a long way, your grandfather and I."
 
-"He's tired," Mara said, keeping her own voice equally light, though something in her had gone quietly alert, the particular instinct of noticing a beam positioned somewhere it had no obvious reason to be. "Getting worse, if I'm honest."
+"He's tired," Mara said, keeping her own voice equally light, though something in her had gone quietly alert, the instinct of noticing a beam positioned somewhere it had no obvious reason to be. "Getting worse, if I'm honest."
 
 "I'm sorry to hear that." Odette's eyes moved briefly to Caleb, something unreadable passing behind them before she smoothed it back into ordinary concern. "You two take care driving back. Roads get strange out this way once the light starts going."
 
-She left before either of them could ask anything further, and Mara watched her car pull out of the lot with the specific unease of a woman who had just watched a piece move on a board she hadn't fully realized was already in play. She filed the moment away without saying anything about it yet, the way she'd note a hairline crack in a wall she wasn't ready to open up in front of a client, not until she understood what was actually behind it.
+She left before either of them could ask anything further, and Mara watched her car pull out of the lot with the uneasy sense of a woman who had just watched a piece move on a board she hadn't fully realized was already in play. She filed the moment away without saying anything about it yet, the way she'd note a hairline crack in a wall she wasn't ready to open up in front of a client, not until she understood what was actually behind it.
 
 Caleb didn't start the truck right away. He sat with both hands on the wheel, not gripping it, just resting there, staring at nothing through the windshield, and Mara let the silence hold for as long as he needed it, understanding that whatever had just happened in that room required more processing than either of them could do out loud in a hospital parking lot.
 
@@ -26,7 +26,7 @@ Caleb didn't start the truck right away. He sat with both hands on the wheel, no
 
 "You're still a man who notices things." Mara said it simply, without performance, because she believed it. "You noticed the frost pattern before I even finished the sentence back at the records office. That instinct didn't get spent. Whatever they took, they didn't get all of it."
 
-He looked at her then, something raw moving behind his eyes that she was starting to recognize as the particular vulnerability of a man deciding, in real time, how much of himself he was willing to let someone else witness. "I keep thinking about your uncle Warren. Two summers, gone, and he doesn't even know to miss them. That's the part I can't stop turning over. It's not just what got taken. It's that the person it happened to doesn't get to grieve it properly, because grieving something requires knowing it existed in the first place."
+He looked at her then, something raw moving behind his eyes that she was starting to recognize as the vulnerability of a man deciding, in real time, how much of himself he was willing to let someone else witness. "I keep thinking about your uncle Warren. Two summers, gone, and he doesn't even know to miss them. That's the part I can't stop turning over. It's not just what got taken. It's that the person it happened to doesn't get to grieve it properly, because grieving something requires knowing it existed in the first place."
 
 "That's what happened to you," Mara said quietly. "Two years, and until eight months ago you didn't even know there was a hole there to grieve. You just had a life that didn't quite add up. A jacket that didn't fit. A ring receipt you couldn't explain."
 
@@ -64,9 +64,9 @@ He glanced at her, something shifting behind his eyes, and she wondered if he'd 
 
 "I don't want to be one more thing you have to forgive," he said quietly.
 
-"You haven't done anything yet that needs forgiving." Mara looked out the window at the fence lines sliding past, familiar and unfamiliar at once, the particular vertigo of a landscape that hadn't changed while everything she understood about it had. "You've spent two years being something that happened to you, Caleb. That's not the same as being something you did."
+"You haven't done anything yet that needs forgiving." Mara looked out the window at the fence lines sliding past, familiar and unfamiliar at once, that vertigo of a landscape that hadn't changed while everything she understood about it had. "You've spent two years being something that happened to you, Caleb. That's not the same as being something you did."
 
-They didn't speak again until the courthouse came into view, its limestone front gone the color of weak tea in the fading light, a building Mara had walked past a hundred times as a teenager without once wondering what might be filed away inside it under a heading nobody would think to check. She found herself doing the math on the drive automatically, the old habit of estimating a structure's age from its cornice work and window proportions, and understood, looking at it now, that the building itself was old enough to have quietly held this particular secret since before either of their parents had been born.
+They didn't speak again until the courthouse came into view, its limestone front gone the color of weak tea in the fading light, a building Mara had walked past a hundred times as a teenager without once wondering what might be filed away inside it under a heading nobody would think to check. She found herself doing the math on the drive automatically, the old habit of estimating a structure's age from its cornice work and window proportions, and understood, looking at it now, that the building itself was old enough to have quietly held this exact secret since before either of their parents had been born.
 
 "Whatever's in that file," Caleb said, pulling into a parking spot out front, "I want to see all of it. Not the version you think I can handle. All of it."
 
