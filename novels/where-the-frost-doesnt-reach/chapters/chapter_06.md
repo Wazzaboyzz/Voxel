@@ -60,8 +60,7 @@ Del appeared in the doorway again, her expression apologetic but immovable, and 
 
 "Meaning whoever this is has gotten more dangerous since Elias Frey's time, not less. More confident, or more desperate, or both." Thomas's hand found the folder Mara had set beside him, resting on top of it without the strength left to actually lift it. "Elias was a Kindred with a gift of his own that could, at least in theory, generate the debt somebody redirected. You have no gift at all. Somebody found a way to spend a man who, by every rule of this valley's bargain, should have been impossible to spend in the first place."
 
-The room held that for a long moment, the weight of it settling over all three of them differently, and Mara found herself doing the arithmetic her whole career had trained her to do instinctively, calculating exactly how much worse a known flaw becomes once you realize someone has already learned to work around it.
-
+The room held that for a long moment, the weight of it settling over all three of them differently, and Mara found herself doing the arithmetic her whole career had trained her to do instinctively, calculating exactly how much worse a known flaw became once she realized someone had already learned to work around it.
 "Then whoever it is," she said slowly, "isn't following the same rules the rest of this valley thinks are fixed. They've found a crack nobody else knows exists."
 
 "That's exactly what worries me," Thomas said, his voice fading now toward something closer to a whisper, "and exactly why I needed you both to understand it plainly, while I still had the breath left to say it plainly. Be careful what you assume is impossible in this valley. I made that mistake for sixty years, and it cost me more than I ever managed to get back."
