@@ -42,23 +42,23 @@ She didn't cross it today. She stood on her own side and looked at the orchard r
 
 Her phone rang while she was still standing at the fence line, her firm's number lighting up the screen, and Mara answered it mostly out of reflex, the old muscle memory of a woman who had never once in six years let a call from the office go to voicemail during business hours.
 
-"You're supposed to be on bereavement leave," said Priti, her project lead, without preamble, which was as close as Priti ever came to expressing concern. "Why does the Halvorsen site keep emailing me instead of you?"
+"You're supposed to be on bereavement leave," said Renata, her project lead, without preamble, which was as close as Renata ever came to expressing concern. "Why does the Halvorsen site keep emailing me instead of you?"
 
 "Because I forwarded everything before I left and apparently forgot to tell them I did." Mara pressed the phone between her shoulder and her ear, rubbing at her eyes with her free hand. "Tell them the load calculations on the west retaining wall are fine as submitted. I already flagged the soil report inconsistency in my notes, they just need to actually read past page one."
 
 "You sound tired."
 
-"I buried my grandmother two days ago, Priti."
+"I buried my grandmother two days ago, Renata."
 
 "Right. Sorry." A pause, papers shuffling somewhere on the other end, the familiar sound of a life Mara had built specifically because it required no explanations, no history, no town remembering things about her that she'd rather forget. "How long are you thinking you'll be out there?"
 
 Mara looked out at the orchard rows, at the fence posts leaning at angles she used to know without counting, and found she didn't actually have an answer that felt true. "I don't know yet. There's more to sort out than I expected."
 
-"Take the time you need. The Halvorsen thing isn't going anywhere, and frankly neither is anything else on my desk this week." Priti's voice softened, just slightly, the closest thing to real warmth she allowed herself during work hours. "You okay, Mara? Really?"
+"Take the time you need. The Halvorsen thing isn't going anywhere, and frankly neither is anything else on my desk this week." Renata's voice softened, just slightly, the closest thing to real warmth she allowed herself during work hours. "You okay, Mara? Really?"
 
 It was such an ordinary question, and Mara found she had no ordinary answer for it, standing at a fence line in a town that had started feeling less like the place she'd grown up and more like a structure she hadn't been given the full blueprints for.
 
-"I will be," she said, which wasn't quite a lie, and ended the call before Priti could ask anything else that required a truer answer.
+"I will be," she said, which wasn't quite a lie, and ended the call before Renata could ask anything else that required a truer answer.
 
 She stood there a while longer after hanging up, watching the light fade gold to gray over trees that seemed, the longer she looked at them, to be holding something in their silence, and thought that for the first time in eight years, the city felt like the unreal place and this valley, whatever it actually was underneath its ordinary face, felt uncomfortably, undeniably real.
 
