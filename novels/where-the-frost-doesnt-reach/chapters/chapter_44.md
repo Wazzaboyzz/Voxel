@@ -36,7 +36,7 @@ Mara felt something in her chest that had been carefully braced for eight years,
 
 ---
 
-She moved the last of her things out of the Chicago apartment in the first week of November, a decision that had arrived less like a single choice and more like a slow accumulation of smaller ones, the way a wall doesn't fail all at once so much as it gives, quietly, load by load, until one day the crack you'd been ignoring is simply the whole story. Priti hadn't been surprised, not really, had simply asked when Mara wanted her resignation to take effect and whether she'd consider consulting remotely on the Halvorsen project through its close, and Mara had said yes to the second question before she'd fully processed saying yes to the first.
+She moved the last of her things out of the Chicago apartment in the first week of November, a decision that had arrived less like a single choice and more like a slow accumulation of smaller ones, the way a wall doesn't fail all at once so much as it gives, quietly, load by load, until one day the crack you'd been ignoring is simply the whole story. Renata hadn't been surprised, not really, had simply asked when Mara wanted her resignation to take effect and whether she'd consider consulting remotely on the Halvorsen project through its close, and Mara had said yes to the second question before she'd fully processed saying yes to the first.
 
 She kept her tools. She kept her license, current and active, because some part of her suspected this valley, once she understood the full shape of what it actually needed, might have use for someone who knew exactly how to read a structure for the places where the truth had been quietly load-bearing all along.
 
