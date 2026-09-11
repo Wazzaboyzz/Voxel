@@ -12,7 +12,7 @@ The silo's access door hung slightly ajar, rust bleeding down the seam in long o
 
 "Dev." Priya's voice broke on the name, and she was moving before anyone could stop her, crossing the silo's dirt floor at a near run.
 
-He was alive. Mara registered that first, the specific relief of it landing before anything else could, a man thinner than his photograph, older around the eyes than four missing years alone should account for, wrists bound in front of him with zip ties gone tight enough to have left deep, angry grooves in the skin beneath. His eyes opened slowly at the sound of his sister's voice, unfocused at first, then sharpening with a disbelief that looked almost painful to hold.
+He was alive. Mara registered that first, relief landing before anything else could, a man thinner than his photograph, older around the eyes than four missing years alone should account for, wrists bound in front of him with zip ties gone tight enough to have left deep, angry grooves in the skin beneath. His eyes opened slowly at the sound of his sister's voice, unfocused at first, then sharpening with a disbelief that looked almost painful to hold.
 
 "Priya." His voice came out cracked, disused. "You shouldn't be here. If he finds out you came looking."
 
@@ -52,7 +52,7 @@ Dev looked at her, something raw and grateful passing across his face, and then 
 
 "You're not leaving me here at all. I'm coming with you." Dev pushed himself up, unsteady, refusing Caleb's offered hand at first out of what looked like pure stubborn shame before finally, visibly, letting himself accept the help. "But we need to move fast, and quietly, because if he realizes I've told you any of this before I'm ready to tell you all of it properly, he's not going to give any of us a second chance to walk out of whatever room we're standing in next."
 
-They half carried him between them, out into the gray afternoon light, and Mara found herself glancing back once at the silo's dark opening, feeling the specific, cold certainty that whatever they'd just started here was far from finished, and that the fuller truth Dev had promised was going to cost all of them considerably more than this first fragment already had.
+They half carried him between them, out into the gray afternoon light, and Mara found herself glancing back once at the silo's dark opening, feeling a cold certainty that whatever they'd just started here was far from finished, and that the fuller truth Dev had promised was going to cost all of them considerably more than this first fragment already had.
 
 The walk back to the cruiser felt longer than the walk in, Dev's weight heavier against Caleb's shoulder with every step, his bare feet stumbling over ground he clearly hadn't the strength to navigate cleanly on his own. Priya kept up a low, steady stream of talk beside him, nothing important, just the sound of her voice filling the space where silence might otherwise let fear back in, updates on people he hadn't seen in years, a running account of small, ordinary town gossip meant, Mara understood, less to inform him than to remind him what an ordinary conversation was supposed to sound like again.
 
