@@ -24,9 +24,15 @@ Four pages. A timeline, dense with dates and small, precise annotations in her g
 
 "Kell," Caleb said, his voice gone flat and careful, the particular flatness of a man deliberately keeping something enormous from cracking his voice open. "Ambrose Kell. He's council chair now."
 
-"He was on the council in 1986 too, apparently." Mara flipped to the last page, where her grandfather's handwriting, younger, steadier, less shaky than the man she'd just left an hour earlier, had added a final line in pen, like he'd come back to the file after typing it and needed to say one more thing the typewriter hadn't let him say properly, something too raw for the deliberate distance of a machine, something that needed the immediacy of his own hand.
+"He was on the council in 1986 too, apparently." Mara ran her finger down the list of crossed-out names above the circled one, the ordinary weight of a small town's suspicion recorded in ink that had gone brown with age, most of the names unfamiliar to her, family names she didn't recognize or half recognized from the general store's bulletin board. Then Caleb went very still beside her, and she stopped moving her finger and looked up.
 
-*If I'm right and I can't prove it, God help the next person he needs to spend.*
+"That's my grandfather's name," he said quietly, pointing to a line three names above Kell's, crossed out with the same decisive stroke as all the others. "Warren Reyes. My grandfather was on that list."
+
+"Crossed out," Mara said carefully, watching his face for what this information was doing to him. "Which means my grandfather looked at him and ruled him out. It doesn't mean anything happened to him."
+
+"Or it means my grandfather was close enough to whatever was going on that Thomas thought to check him at all." Caleb's jaw had tightened, the old bracing tell she'd learned to recognize. "Nobody in my family's ever mentioned this. Not once. My father never said a word about his own father being investigated for something like this, and my father wasn't a man who kept secrets easily. If he didn't know, that means whatever happened here, it stayed buried even from the people it touched."
+
+"Or your grandfather knew, and decided the same thing Odette's been deciding for you. That not knowing was safer." Mara closed the folder gently over the list, feeling the weight of exactly how many families in this valley might be quietly sitting on some version of this same silence, layered generation over generation like sediment nobody ever bothered to dig back through. "This town doesn't just have one secret, Caleb. It has a whole architecture of them, load-bearing walls built out of things nobody agreed to say out loud, and I think we've only just found the first crack in it."
 
 Neither of them said anything for a moment. Outside the window, the town's one traffic light cycled through its colors for nobody, the street empty at this hour, the kind of empty that in a normal town would just mean small and quiet and in this one, Mara was starting to understand, might mean something was being kept out of sight on purpose. She found herself scanning the parking lot through the window without quite deciding to, an old habit from job sites where you learned to notice who was watching a building and from where, cataloguing exits and sightlines the way she'd once catalogued them for insurance inspections, and saw nothing, which didn't make the feeling of being watched go away so much as relocate it somewhere she couldn't point to, a low hum of unease sitting just under her ribs.
 
@@ -41,23 +47,3 @@ Neither of them said anything for a moment. Outside the window, the town's one t
 She watched something shift in Caleb's face as the sentence landed, a slow-dawning recognition that had nothing to do with memory and everything to do with a man doing his own version of the math she'd just described, running his own life back through a lens he hadn't had access to an hour ago, his jaw working slightly as though physically chewing on the implication before he could bring himself to say it out loud.
 
 "There's a pattern," he said slowly, the words coming out careful, deliberate, a man testing the weight of a bridge before committing his full weight to crossing it. "I know there's a pattern. I've been standing inside it for two years and calling it good luck."
-
-The clerk appeared at the end of the aisle then, a heavyset woman with reading glasses pushed up into gray hair, the kind of person who'd clearly spent decades learning exactly which questions to ask and which to let slide. "You two about done back there? I've got a dentist appointment at five-thirty and my replacement called in sick."
-
-"Almost," Mara said, sliding the folder fully into her bag before the woman could get close enough to see what was in it. "Sorry to keep you. We're just finishing up some old family paperwork."
-
-"Voss-Reyes water rights, is it." The clerk's eyes moved between them with an assessing curiosity Mara didn't love the feel of, the specific attention of a small-town gatekeeper who noticed everything and forgot nothing, filed away for whatever purpose the town's particular economy of information required. "Haven't had anybody pull that file in years. Your grandmother used to come in every so often and just sit with it a while. Never checked anything else out alongside it. Always thought that was strange for a woman who didn't strike me as sentimental."
-
-Mara felt something cold move through her at that, the specific unease of learning her grandmother's careful hiding place had not, in fact, been as invisible as Eleanor had likely believed. "Did she ever say why?"
-
-"Eleanor Voss wasn't a woman who explained herself to county clerks." The woman said it without malice, an simple statement of fact about a woman she'd apparently respected. "But I'll tell you what I told her once, years back, when she asked me an odd question about how long records got kept before they were destroyed. I said some things in this office go back to the founding, and some things get quietly lost long before their retention date, if the right person decides they ought to be. She thanked me for that information like it mattered a great deal more than a simple filing policy question should have."
-
-"Did she say who might do the losing?"
-
-The clerk's expression shuttered, the careful blankness Mara had started recognizing as the specific tell of everyone in this town who knew more than they were willing to volunteer without being asked directly and specifically. "I really do need to lock up now. You two drive safe."
-
-She left them there in the aisle, and Caleb glanced at Mara with an expression that mirrored exactly what she was thinking.
-
-"She just told us Kell has the authority to make records disappear," he said quietly, once the clerk's footsteps had receded toward the front desk. "Without saying his name once."
-
-"Everyone in this town talks like that." Mara shouldered her bag, feeling the folder's slight, stubborn weight against her hip. "It's like they've all agreed on a vocabulary that lets them warn each other without technically breaking whatever silence they're all still keeping. I don't know if that's cowardice or self-preservation anymore. Maybe there's no difference, this far into it."
