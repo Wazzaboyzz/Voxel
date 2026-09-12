@@ -16,7 +16,7 @@ Mara felt the old, familiar instinct rise in her, the urge to soften the convers
 
 "I mean, if I'm going to be a target either way, because apparently I already am one whether I do anything or not, I'd rather spend my energy getting good at controlling this instead of getting good at hiding from it." Wren finally took a sip of her coffee, some of the tension in her shoulders easing slightly now that she'd said the thing out loud without being immediately talked out of it. "Dev's had years of practice and he still got taken by surprise. I've had a summer. If there's a controlled way to build up what I can actually handle before another crisis forces me to find out the hard way, I want that. I don't want the next silo to be the first time I've ever really tried."
 
-Mara thought of every apprentice she'd ever supervised who'd asked for exactly this, more responsibility before they felt ready for it, and understood, watching Wren's face, the particular difference between a request born of recklessness and one born of clear-eyed preparation. This wasn't a girl chasing danger. This was someone trying to make sure the next time danger found her, it wouldn't find her defenseless.
+Mara thought of every apprentice she'd ever supervised who'd asked for exactly this, more responsibility before they felt ready for it, and understood, watching Wren's face, the difference between a request born of recklessness and one born of clear-eyed preparation. This wasn't a girl chasing danger. This was someone trying to make sure the next time danger found her, it wouldn't find her defenseless.
 
 "I can't make that decision for you," Mara said slowly, "and I don't think I should try to. But I also don't think it's fair to just say no because it's easier for the rest of us to feel like we're protecting you. If we're going to do this, it needs structure. Small steps. Someone experienced watching every single time. And the second it feels wrong, we stop, no negotiating."
 
@@ -40,7 +40,7 @@ They sat with that for a while, the coffee going lukewarm in their hands, Toll s
 
 Mara considered the question seriously, the way it deserved. "Little of both, honestly. You get better at knowing which fear is telling you something useful and which fear is just noise. And you get better at not needing the fear to go away completely before you act, because it mostly doesn't, not really, not for the things that are actually worth being scared of." She looked at Wren, at the careful, determined set of her young face. "But no, it doesn't stop being scary. I don't think it's supposed to. I think the scary is how you know it still matters."
 
-Wren nodded slowly, filing that away the way Mara had watched her file away everything else this summer, with the particular seriousness of someone determined to grow into whatever this valley was about to ask of her, whether or not she'd chosen the timeline for it.
+Wren nodded slowly, filing that away the way Mara had watched her file away everything else this summer, with the seriousness of someone determined to grow into whatever this valley was about to ask of her, whether or not she'd chosen the timeline for it.
 
 "Talk to Priya today," Mara said, standing, offering a hand to pull Wren up from the step. "And Caleb, when he's back from the grove. If we're building this, we build it properly, together, with everyone actually on board. I meant that part."
 
