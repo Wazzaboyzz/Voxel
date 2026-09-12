@@ -20,7 +20,7 @@ That evening, Priya confirmed what Mara had already begun to suspect on her own,
 
 "That's what I thought too." Priya's jaw was tight. "I'm not saying she's working with Kell. I genuinely don't think that's it. But she's hiding something, and she's hiding it carefully enough that it's starting to look a lot like the kind of careful Kell himself is capable of."
 
-Mara felt the accusation settle over the room like a weight she didn't want to hold, the particular sickness of suspecting someone who had, up to this point, been one of the only steady, trustworthy presences in a town full of careful lies. She thought of Odette's hand on hers over the store counter weeks ago, the unexpected tenderness of it, and hated how easily her mind now reached for the possibility that the tenderness had been a performance all along.
+Mara felt the accusation settle over the room like a weight she didn't want to hold, sickness at suspecting someone who had, up to this point, been one of the only steady, trustworthy presences in a town full of careful lies. She thought of Odette's hand on hers over the store counter weeks ago, the unexpected tenderness of it, and hated how easily her mind now reached for the possibility that the tenderness had been a performance all along.
 
 "I want to be wrong about this," Mara said quietly.
 
@@ -30,7 +30,7 @@ Mara felt the accusation settle over the room like a weight she didn't want to h
 
 They confronted her three days later, at the store, after closing, the three of them, Mara, Caleb, and Priya, standing in the small back office where Odette had been locking herself away all week, surrounded by the store's ordinary clutter of invoices and inventory sheets, the fluorescent light overhead humming faintly in the silence that followed the question.
 
-Odette didn't deny the calls. She didn't do much of anything at first except sit very still behind her desk, her hands folded in front of her with a stillness that reminded Mara, uncomfortably, of Kell's own composure the night at his kitchen table, the specific stillness of someone deciding how much of the truth a room could survive hearing.
+Odette didn't deny the calls. She didn't do much of anything at first except sit very still behind her desk, her hands folded in front of her with a stillness that reminded Mara, uncomfortably, of Kell's own composure the night at his kitchen table, the stillness of someone deciding how much of the truth a room could survive hearing.
 
 "You think I'm working with him," Odette said finally, and it wasn't a question.
 
@@ -56,11 +56,11 @@ Caleb, who had been quiet through most of it, finally spoke, something gentler i
 
 "Most of it. Enough, Thomas says, that if something happens to him before you finish this, it won't die with him." Odette wiped at her eyes with the back of her wrist, composing herself with visible effort. "I should have trusted you both to understand why I was being careful instead of letting you spend three days suspecting the worst of me. That's the part I'm actually sorry for."
 
-Mara squeezed her hand, feeling the last of the suspicion drain out of her, replaced by something that ached in an entirely different way, the specific tenderness of watching an old woman try to protect a dying man's legacy the only way she knew how. "I'm glad it's this," she said quietly. "I'm sorry I doubted you. I don't know how to not chase every shadow right now."
+Mara squeezed her hand, feeling the last of the suspicion drain out of her, replaced by something that ached in an entirely different way, tenderness at watching an old woman try to protect a dying man's legacy the only way she knew how. "I'm glad it's this," she said quietly. "I'm sorry I doubted you. I don't know how to not chase every shadow right now."
 
 "Don't apologize for that. Not in this valley, not with what you're both up against." Odette managed a small, tired smile, the first genuine one Mara had seen from her all week. "Chase every shadow you need to. Just leave room, when you find one, to be glad it turned out to be me and not him."
 
-Outside, the evening had settled into the particular gold-blue hush that came right before true dark, ordinary and undramatic, and Mara walked out of the store with Caleb's hand in hers, lighter by one suspicion and heavier by the reminder, freshly delivered, of exactly how little time her grandfather had left to finish what he'd started.
+Outside, the evening had settled into a gold-blue hush that came right before true dark, ordinary and undramatic, and Mara walked out of the store with Caleb's hand in hers, lighter by one suspicion and heavier by the reminder, freshly delivered, of exactly how little time her grandfather had left to finish what he'd started.
 
 "We should go see him," Caleb said quietly, once they were outside, the evening air cool after the closeness of the back office. "Tonight, if his aide will allow it. I don't think either of us wants to sit with this news until morning."
 
