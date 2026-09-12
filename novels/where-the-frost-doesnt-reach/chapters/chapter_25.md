@@ -1,6 +1,6 @@
 # CHAPTER TWENTY-FIVE
 
-Dev met them at Priya's kitchen table at six the next morning, still moving carefully, still bruised along one wrist where the zip ties had bitten deep, but steadier now, the steadiness of a man who has decided being useful is the only apology he has left to offer. The kitchen smelled like burnt coffee and toast nobody had gotten around to eating, and Priya's dog, a much older and calmer animal than Toll, lay under the table with its chin resting on someone's foot, entirely unbothered by the tension radiating off every person seated above it. Mara sat with her hands wrapped around a mug she wasn't drinking from, more for the warmth than the coffee, watching the early light climb the kitchen wall in slow increments while Dev worked through his photos.
+Dev met them at Priya's kitchen table at six the next morning, still moving carefully, still bruised along one wrist where the zip ties had bitten deep, but steadier now, a man who had decided being useful was the only apology he had left to offer. The kitchen smelled like burnt coffee and toast nobody had gotten around to eating, and Priya's dog, a much older and calmer animal than Toll, lay under the table with its chin resting on someone's foot, entirely unbothered by the tension radiating off every person seated above it. Mara sat with her hands wrapped around a mug she wasn't drinking from, more for the warmth than the coffee, watching the early light climb the kitchen wall in slow increments while Dev worked through his photos.
 
 "It's a redirect amplifier," he said, turning Mara's photos over on the table, zooming in with two fingers on his phone screen, the early light through the kitchen window catching the exhaustion still etched under his eyes. "Crude one, but functional. It's designed to take whatever Kell's gift produces locally and broadcast it as if it's naturally occurring across a wider radius. That's how he's been faking system-wide frost patterns and rain anomalies without anyone questioning why the effect only ever seems to center on his own rotation schedule. The station reports what he wants it to report, and the county extension office just takes it as gospel because why wouldn't they."
 
@@ -28,7 +28,13 @@ Nobody said anything for a moment. Outside, a truck rumbled past on the road, or
 
 "One thing at a time," Priya said finally, the deputy in her reasserting itself over the exhausted sister. "We get the amplifier evidence to Yusuf today. We file today, before Kell has more time to prepare a story or make evidence disappear. The older mystery, whoever else has been involved, however far back this goes, that's a fight for after we've actually stopped the bleeding in front of us."
 
-Dev nodded slowly, rubbing at his bruised wrist without seeming to notice he was doing it, and Mara watched Priya's hand find her brother's shoulder briefly, a small, wordless gesture of forgiveness that neither of them acknowledged out loud, the kind of thing siblings communicated in a language older than the crisis currently forcing them to use it.
+Dev nodded slowly, rubbing at his bruised wrist without seeming to notice he was doing it, and Mara watched Priya's hand find her brother's shoulder briefly, a small, wordless gesture of forgiveness that neither of them acknowledged out loud, the sort of thing siblings communicated in a language older than the crisis currently forcing them to use it.
+
+"There's something else I want to say, while we're all sitting here," Dev said, setting his phone down and looking around the table properly for the first time that morning. "I know some of you are still deciding how much to trust me, after everything. I don't blame you. I let that man use me for months before Priya found me. I just want you to know that whatever's left of my judgment, I'm putting it entirely behind this. Not because I owe anyone an apology, though I do. Because I finally understand what he actually is, and I can't unknow it."
+
+"Nobody's questioning that," Mara said, meaning it. "You didn't have to bring us the amplifier analysis this fast. You didn't have to fly a technician in on your own dime. Whatever debt you think you're paying off, I think you've already more than covered it."
+
+Dev managed something close to a smile, tired but genuine. "Feels different from the inside. But thank you."
 
 Before they left, Priya walked Mara out to the porch, out of earshot of the others, her arms crossed against the morning chill. "I need to say something, and I need you not to take it the wrong way," she said. "I've known Dev my whole life. I watched him get in over his head with Kell and I didn't see it happening until it was almost too late. I'm asking you to be careful the same way, both of you, because this town has a way of making people think they're the exception right up until they're not."
 
@@ -38,7 +44,7 @@ Before they left, Priya walked Mara out to the porch, out of earshot of the othe
 
 ---
 
-Yusuf listened to the whole account standing in the back room of his store, arms folded, jaw tight, the smell of feed and fertilizer thick in the small storage space around him, and when Mara finished, he didn't ask a single skeptical question, which told her more clearly than anything else how much weight his earlier warning at the counter had actually been carrying. Stacked feed bags rose around him on every side, and Mara found herself thinking, absurdly, of a man standing at the center of his own small fortress, one he'd apparently been quietly building toward this exact conversation for six patient years.
+Yusuf listened to the whole account standing in the back room of his store, arms folded, jaw tight, the smell of feed and fertilizer thick in the small storage space around him, and when Mara finished, he didn't ask a single skeptical question, which told her more clearly than anything else how much weight his earlier warning at the counter had actually been carrying. Stacked feed bags rose around him on every side, and Mara thought, absurdly, of a man standing at the center of his own small fortress, one he'd apparently been quietly building toward this exact conversation for six patient years.
 
 "I've suspected something for six years," he said quietly. "Never had proof. Never had anyone willing to look hard enough to find it." He took the photos from Dev's phone, studying them with the focus of a man who'd clearly been waiting a long time for exactly this, turning the screen slightly to catch the light better. "I'll file this morning. Formally, on the record, with my name attached, which means Kell will know exactly where it came from within the hour."
 
@@ -57,3 +63,9 @@ Mara understood the sense in it even as it stung a little, one more small precau
 "He's risking more than he's saying," Caleb said quietly, once they were back at the truck.
 
 "I know." Mara looked back at the store, at Yusuf's silhouette already visible through the window, phone to his ear. "I think that's exactly why I trust him."
+
+They drove the rest of the way home mostly in silence, the town waking slowly around them, storefronts opening, an elderly couple walking their dog along the river path with no idea what was quietly being set in motion three streets over. Mara watched it all pass the window with a strange, doubled vision, the ordinary morning and the extraordinary danger underneath it existing in the same frame without either canceling the other out.
+
+"Do you think it'll actually work," she asked, once they'd pulled into the orchard drive. "The complaint. Do you think it holds."
+
+"I think it's the first real crack anyone's managed to put in him in forty years," Caleb said, cutting the engine. "Whether it holds depends on how much he's willing to risk to keep it from spreading. I don't think we know that yet. I think we're about to find out."
