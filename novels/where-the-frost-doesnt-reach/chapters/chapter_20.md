@@ -4,7 +4,7 @@ The Kell homestead sat up on the ridge with its lights on, ordinary and warm-loo
 
 They found Wren's bicycle abandoned at the bottom of the drive, wheel still spinning, the small, mechanical tick of it the only sound besides the wind, and something about that detail, the bike still moving like its rider had only just stepped away, made the whole scene feel more urgent than anything else could have.
 
-Mara felt her pulse spike at the sight of it, the particular certainty of arriving somewhere seconds too late layered over the equally sharp fear that they might be arriving exactly on time, into something they weren't ready for.
+Mara felt her pulse spike at the sight of it, certainty that they'd arrived somewhere seconds too late layered over the equally sharp fear that they might be arriving exactly on time, into something they weren't ready for.
 
 "She's inside," Caleb said, already moving, and Mara caught his arm before he could get further, some old engineer's instinct screaming at her that charging in without understanding the structure of what they were walking into was how people got hurt, the same instinct that had kept her alive on job sites where impatience killed faster than any design flaw.
 
@@ -14,7 +14,7 @@ Mara felt her pulse spike at the sight of it, the particular certainty of arrivi
 
 "We go in like we don't know anything's wrong yet. Like I came to talk to him about the council seat, about my grandfather's records, anything that gives us thirty seconds inside before he decides we're a threat instead of an inconvenience." Mara's heart was going hard enough that she could feel it in her throat, but her voice came out steady, the same steadiness she used on job sites when a beam was groaning in a way it shouldn't. "Thirty seconds, Caleb. That's all I need to see where she is and what he's already gotten her to agree to."
 
-He looked at her for a long moment, torn between every instinct telling him to move fast and the specific trust he'd been building toward her for a week, one that asked him to do the harder thing instead of the obvious one, his jaw working once, the old tell, before he answered.
+He looked at her for a long moment, torn between every instinct telling him to move fast and the trust he'd been building toward her for a week, one that asked him to do the harder thing instead of the obvious one, his jaw working once, the old tell, before he answered.
 
 "Thirty seconds," he said. "Then I'm done being careful."
 
@@ -40,13 +40,13 @@ Kell's composed expression didn't crack so much as settle, the mask coming off n
 
 "You have no idea what's actually at stake," he said quietly. "None of you do. I have spent forty years holding this valley together with methods I am not proud of, and I would do every single one of them again, because the alternative is watching this town die the way it nearly did in nineteen eighty-six, and I will not let that happen again for the sake of everyone's comfortable ignorance about how the sausage gets made."
 
-Mara found herself, despite everything, almost believing him for a half second, the particular danger of a man who had clearly told himself this story so many times that it had stopped sounding like a justification and started sounding, to his own ears at least, like simple fact.
+Mara found herself, despite everything, almost believing him for a half second, the danger of a man who had clearly told himself this story so many times that it had stopped sounding like a justification and started sounding, to his own ears at least, like simple fact.
 
 "Then tell us," Caleb said, low and hard. "Tell us what's actually wrong instead of spending people to hide it."
 
 Kell's eyes moved to him, and for just a moment, something almost like grief crossed the older man's face, an expression Mara hadn't expected and found she didn't know how to file away neatly into the shape of a villain. "The bargain is failing, Mr. Reyes. Has been for longer than anyone realizes. Not because of anything anyone did wrong, but because bargains this old have a cost that compounds, and compounding costs eventually come due whether or not anyone's ready to pay them." He looked past them both, out at the wind bending the trees at the edge of his property, restless and wrong, branches whipping in a pattern that had nothing natural left in it. "I have been the only thing standing between this valley and a reckoning for forty years, and I am so tired, and I am not finished yet, and I am not going to let a girl who barely understands her own gift and a granddaughter with unresolved feelings about her own inheritance stop me before I've found a way to actually fix it."
 
-Mara felt the barb land exactly where he'd aimed it, the specific precision of a man who had clearly spent decades learning how to locate other people's soft spots with surgical accuracy, and refused to let it show on her face even as it settled somewhere deep and uncomfortable.
+Mara felt the barb land exactly where he'd aimed it, precision from a man who had clearly spent decades learning how to locate other people's soft spots with surgical accuracy, and refused to let it show on her face even as it settled somewhere deep and uncomfortable.
 
 Behind him, Wren had gone very still, and Mara watched her hands, flat on the table, begin very slightly to shake, a tremor small enough that anyone not specifically watching for structural weakness might have missed it entirely.
 
@@ -56,7 +56,7 @@ Mara's whole focus narrowed to that tremor, everything else in the room, Kell's 
 
 "He said it would only take a little," Wren whispered, her voice small and young in a way that made Mara's chest ache. "He said it would just be like the flash, the one with Caleb, except bigger, on purpose, and that it would fix the weather before the frost hits the whole valley this week, and that everyone's harvest depends on it, and I."
 
-Mara felt a fresh wave of fury at Kell rise up under her ribs, colder and more focused than the fear had been, the specific anger of watching a grown man weaponize a teenager's decency against her.
+Mara felt a fresh wave of fury at Kell rise up under her ribs, colder and more focused than the fear had been, anger at watching a grown man weaponize a teenager's decency against her.
 
 "You don't have to fix his forty years of mistakes with your own life," Caleb said, and something in his voice, steady and certain in a way it hadn't been all week, cut through the room like the one true thing in it, a certainty that seemed to draw on some older, more settled part of himself, the parts the last two years hadn't managed to touch. "Trust me. I know exactly what it costs to be the one somebody else decides is expendable enough to spend."
 
