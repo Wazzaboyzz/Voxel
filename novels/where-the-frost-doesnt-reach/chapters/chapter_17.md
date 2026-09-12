@@ -36,7 +36,7 @@ The room went very quiet, and Mara felt the sentence land in her chest like some
 
 "Because your family's bloodline runs old in this valley, same as the Vosses, same as the founding families the original bargain was struck between. Kell's spent decades worried that if the two lines ever properly reconciled, if a Reyes and a Voss actually built the kind of life together that generations before you never got the chance to, it would create something he couldn't predict or control. A concentration of old blood and old loyalty strong enough to actually challenge him, instead of just enough people scattered too thin to organize." Dev's voice had gone rough with the effort of saying it plainly. "He didn't take your years because he needed them randomly. He took them because breaking your engagement served him twice over. Time, and insurance."
 
-Mara felt Caleb's hand find hers, gripping hard enough that she understood, without needing to look at his face, exactly how much this particular truth cost him to hear.
+Mara felt Caleb's hand find hers, gripping hard enough that she understood, without needing to look at his face, exactly how much this truth cost him to hear.
 
 "So this was never only about the debt," Mara said slowly, the shape of the whole design finally, fully visible. "It was also about making sure Caleb and I never became whatever he was afraid we'd become together."
 
