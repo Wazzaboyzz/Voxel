@@ -26,14 +26,18 @@ Checked all named characters against real public figures. No matches. Closed.
 - Cross-checked "eight years"/"two years" figures for consistency — no contradictions found.
 - **STILL OPEN, needs a dedicated session:** full line-by-line read of chapters 4-9 against final ch.3 canon, plus a full 45-chapter read purely for voice consistency and subtler plot contradictions (tone drift, a character knowing something too early, small prop/detail inconsistencies). ~88,000+ words — needs unhurried sequential reading, not a grep-based pass. Do this AFTER Task 5's rewrite is complete, so newly-touched prose gets checked too, not before.
 
-## TASK 5 — AI-authorship tell check — IN PROGRESS, chapters 1-26 fixed, 27-45 remaining
-Diagnostic (earlier session) found "the particular ___" / "the specific ___" as the dominant tell — ~189 combined occurrences across the manuscript, heaviest in ch.18 (8), ch.14 (7), ch.29/31/32 (6 each). Fix approach: read each chapter, replace or cut each instance individually so the sentence still reads naturally — this is a line-edit, NOT a find-and-replace. **A regex/script fix was considered and explicitly rejected**: mechanically stripping "the particular "/"the specific " breaks sentence grammar in many cases (confirmed by testing on ch.15's drawer sentence, which needed restructuring, not deletion). Every fix in ch.1-26 was written and reviewed individually. Any future session should keep doing this by hand, chapter by chapter — do not attempt a scripted bulk replace across the remaining chapters. (A pure detection/audit script — no rewriting — was also tried to speed up scoping; it failed on a 403 from GitHub's API due to lacking authentication in the sandbox environment. Not worth re-attempting: the actual bottleneck is the line-edit judgment per instance, not finding the instances, which a manual grep-per-chapter already does reliably.) Note: not every chapter has instances — ch.24 was found clean (0 instances) on inspection, which is expected and fine; log it as DONE/0, don't skip logging it.
+## TASK 5 — AI-authorship tell check — IN PROGRESS, chapters 1-27 fixed/verified, 28-45 remaining
+Diagnostic (earlier session) found "the particular ___" / "the specific ___" as the dominant tell — ~189 combined occurrences across the manuscript, heaviest in ch.18 (8), ch.14 (7), ch.29/31/32 (6 each). Fix approach: read each chapter, replace or cut each instance individually so the sentence still reads naturally — this is a line-edit, NOT a find-and-replace. **A regex/script fix was considered and explicitly rejected**: mechanically stripping "the particular "/"the specific " breaks sentence grammar in many cases (confirmed by testing on ch.15's drawer sentence, which needed restructuring, not deletion). Every fix in ch.1-27 was written and reviewed individually. Any future session should keep doing this by hand, chapter by chapter — do not attempt a scripted bulk replace across the remaining chapters. (A pure detection/audit script — no rewriting — was also tried to speed up scoping; it failed on a 403 from GitHub's API due to lacking authentication in the sandbox environment. Not worth re-attempting: the actual bottleneck is the line-edit judgment per instance, not finding the instances, which a manual grep-per-chapter already does reliably.) Note: not every chapter has instances — ch.10 and ch.24 were both found clean (0 instances) on inspection, which is expected and fine; log a chapter as DONE/0 rather than skipping it.
+
+**IMPORTANT — the "1-13 not itemized, spot-check if in doubt" note from an earlier version of this file was a real risk, not just caution-language: ch.8 was individually spot-checked this session and DID have one missed instance ("that specific hush") that the original prior-session pass overlooked. It's fixed now, but this proves the un-itemized range cannot be assumed clean. Chapters 1-7, 9, and 11-13 have NOT yet been individually re-verified — they were part of the original "prior session" claim but have not been spot-checked the way 8 and 10 just were. Treat that range as unverified, not confirmed, until someone actually re-checks each one.**
 
 **Progress log (update this table as you go — don't just say "done," log the count per chapter so nobody re-scans a clean chapter):**
 
 | Chapter | Status | Instances fixed |
 |---|---|---|
-| 1-13 | DONE (prior session) | not itemized — spot-check if in doubt |
+| 1-7, 9, 11-13 | UNVERIFIED — claimed done in an earlier, un-itemized session note, but not individually re-checked. Do not assume clean. | unknown |
+| 8 | DONE — re-verified this session, found and fixed 1 additional missed instance ("that specific hush") beyond the original prior-session pass | 1 (this session) + unknown prior |
+| 10 | DONE — spot-checked this session, confirmed genuinely clean | 0 |
 | 14 | DONE (prior session) | 7 |
 | 15 | DONE | 6 |
 | 16 | DONE | 2 |
@@ -47,9 +51,10 @@ Diagnostic (earlier session) found "the particular ___" / "the specific ___" as 
 | 24 | DONE | 0 (already clean, no edit needed) |
 | 25 | DONE | 2 |
 | 26 | DONE | 2 |
-| 27-45 | NOT STARTED | — start here, at chapter 27 |
+| 27 | DONE | 2 |
+| 28-45 | NOT STARTED | — continue here, at chapter 28 |
 
-**Next session: continue at chapter 27, work forward sequentially through 45, same method as ch.15-26 above (fetch chapter → grep for "the particular"/"the specific" → rewrite each instance for natural phrasing → push with a commit message noting the count fixed → update this table).** Do not skip ahead or sample-check; go in order so the progress log stays trustworthy.
+**Next session: two things need doing, not just one.** (1) Continue the primary pass forward at chapter 28 through 45, same method as ch.15-27 (fetch chapter → grep for "the particular"/"the specific" → rewrite each instance for natural phrasing → push with a commit message noting the count fixed → update this table). (2) Go back and individually spot-check chapters 1-7, 9, and 11-13 the same way ch.8 and ch.10 just were — don't trust the old "prior session" claim at face value, since ch.8 already proved it was incomplete once.
 
 Also worth checking once the "the particular/specific" pass is complete: the other tells found in the original diagnostic ("the kind of ___" 69 occurrences, "found herself/himself" 45, "in a way that" 41, "something in her/his [face/voice/eyes]" 32, "understood that" 12) were NOT in scope for this pass and remain fully unaddressed — flag as a possible Task 5b if Zia wants the manuscript further cleaned after the primary pass finishes.
 
@@ -62,7 +67,7 @@ Also worth checking once the "the particular/specific" pass is complete: the oth
 6. Cover design — not yet started in this repo. Track in a new `cover_design.md` in this same folder if that work begins.
 
 ## Priority order recommended for next session
-1. **Task 5 — continue the AI-tell rewrite pass starting at chapter 27** (this is the single actionable, well-defined, in-progress task — pick this up first).
+1. **Task 5 — continue the AI-tell rewrite pass starting at chapter 28, AND go back to spot-check chapters 1-7, 9, 11-13** (this is the single actionable, well-defined, in-progress task — pick this up first, do the forward pass and the backward spot-check both).
 2. Task 4's full continuity/voice read-through — after Task 5 is fully complete.
 3. HANDOFF.md's expansion/trim pass (word counts) — can run in parallel with Task 5/4 since it's independent chapter-level work, but don't let it distract from finishing Task 5 once started.
 4. Task 6 (KDP formatting) — last, once text is final. Cover design can proceed in parallel since it doesn't depend on final interior text.
