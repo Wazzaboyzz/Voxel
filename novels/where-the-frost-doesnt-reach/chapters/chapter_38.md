@@ -2,7 +2,7 @@
 
 The call came at eleven at night, four days after the hearing, and Mara knew before she'd even fully answered it that whatever Del was about to say had been building toward this for longer than either of them had let themselves say out loud.
 
-"He's had a bad turn," Del said, her voice carrying the particular calm of someone who had delivered this exact kind of news too many times to let panic show in it anymore, though Mara could hear, underneath the calm, something rawer than the professional register usually allowed. "They've taken him to County General. I think you should come, Mara. I think you should come tonight, not tomorrow."
+"He's had a bad turn," Del said, her voice carrying the same worn calm of someone who had delivered this exact kind of news too many times to let panic show in it anymore, though Mara could hear, underneath the calm, something rawer than the professional register usually allowed. "They've taken him to County General. I think you should come, Mara. I think you should come tonight, not tomorrow."
 
 She was in the car within four minutes, Caleb answering on the second ring when she called him from the driveway, and he didn't ask a single unnecessary question, just said he'd meet her there, and the fact that he didn't need to be asked twice settled something in her chest even in the middle of the fear.
 
@@ -14,7 +14,7 @@ Mara felt the words land somewhere she'd been carefully not looking, a part of h
 
 "Can I see him?"
 
-"He's been asking for you since they brought him in. Kept trying to sit up and pull the oxygen mask off to say something, until they got him settled enough to stop fighting it." Del's eyes were tired, kind, carrying the specific weight of someone who did this work because she was good at holding other people's fear so they didn't have to hold all of it alone. "He said your name. And another one I didn't recognize. Adelaide. Does that mean anything to you?"
+"He's been asking for you since they brought him in. Kept trying to sit up and pull the oxygen mask off to say something, until they got him settled enough to stop fighting it." Del's eyes were tired, kind, carrying the plain weight of someone who did this work because she was good at holding other people's fear so they didn't have to hold all of it alone. "He said your name. And another one I didn't recognize. Adelaide. Does that mean anything to you?"
 
 Mara felt something cold move through her, a name she'd never heard in all her grandfather's careful, decades-long circling of what he knew and wouldn't yet say. "No. It doesn't."
 
@@ -40,7 +40,7 @@ Caleb had gone very still beside her, and Mara understood, without needing to lo
 
 "Because I'm not going to get another chance to, and because Wren's the only other person in this valley with a gift sharp enough to find what I never could, and I need you to protect her better than this town ever protected me." Thomas's eyes, exhausted but fiercely clear, held hers. "Kell already knows how close you're getting. A man who's buried one inconvenient woman before won't hesitate long over a second, if he decides the investigation is finally cornering him enough to need it."
 
-The machines beside his bed beeped their steady, indifferent rhythm, and somewhere down the hall a nurse's cart rattled past, ordinary hospital sounds continuing exactly as they would have on any other night, entirely unaware of the shape of what had just been handed across this particular bed.
+The machines beside his bed beeped their steady, indifferent rhythm, and somewhere down the hall a nurse's cart rattled past, ordinary hospital sounds continuing exactly as they would have on any other night, entirely unaware of the shape of what had just been handed across this bed.
 
 "I'll protect her," Mara said, her voice steadier than she felt. "I promise you that."
 
@@ -52,7 +52,7 @@ The machines beside his bed beeped their steady, indifferent rhythm, and somewhe
 
 "I will," Caleb said, quiet, certain, and Mara felt the promise land in the room like something solid finally set down after being carried too long.
 
-Del appeared in the doorway a few minutes later, gentle but firm, the particular firmness of someone whose job required interrupting even the most important conversations when a patient's body demanded rest, and Mara kissed her grandfather's forehead before she let herself be ushered out, the name Adelaide Whitlock settling into her chest alongside grief and fear and a fierce, urgent need to warn Wren before Kell decided the investigation had finally left him with nothing left to lose.
+Del appeared in the doorway a few minutes later, gentle but firm, the kind of firmness of someone whose job required interrupting even the most important conversations when a patient's body demanded rest, and Mara kissed her grandfather's forehead before she let herself be ushered out, the name Adelaide Whitlock settling into her chest alongside grief and fear and a fierce, urgent need to warn Wren before Kell decided the investigation had finally left him with nothing left to lose.
 
 ---
 
@@ -72,13 +72,13 @@ They didn't speak much on the drive back, the dark highway unspooling ahead of t
 
 "Maybe it's just true," Caleb said quietly. "Doesn't have to be either one on its own. It can just be a fact about you, the way it's a fact that apples need a certain number of cold nights before they'll set fruit properly. Doesn't make the cold a punishment. It's just what the tree needs to do the thing it's built to do."
 
-Mara looked over at him, at the tired, steady line of his profile in the dashboard light, and felt something in her chest ease slightly despite everything the night had handed her. "That's a very specific metaphor for eleven-thirty at night."
+Mara looked over at him, at the tired, steady line of his profile in the dashboard light, and felt something in her chest ease slightly despite everything the night had handed her. "That's a strange metaphor for eleven-thirty at night."
 
 "I've had a lot of time this summer to think about what things need to hold weight properly." He glanced at her, brief, warm, before returning his eyes to the road. "Turns out I learned it from you, mostly, without either of us noticing when it happened."
 
 They drove the rest of the way in a quiet that felt less like exhaustion now and more like two people bracing together for whatever the valley still had left to ask of them, and Mara thought, watching the dark orchard rows finally rise up along the roadside as they neared home, that her grandfather had given her more than a name and a warning tonight. He'd given her, without quite meaning to, one more reason to believe that whatever came next, she wouldn't be facing it as the only person left holding up the weight.
 
-Priya called before either of them had managed more than a few hours of sleep, her voice carrying the particular briskness of someone who had already decided how the morning needed to go before making the call.
+Priya called before either of them had managed more than a few hours of sleep, her voice carrying the same clipped briskness of someone who had already decided how the morning needed to go before making the call.
 
 "Del phoned me an hour ago," she said. "Told me what Thomas said. Mara, I need you to let me loop in the independent investigator on this, carefully, before we do anything with Wren. If there's any chance Adelaide Whitlock is actually out at that mill property, that's not just our fight anymore. That's evidence in an active investigation, and if we go poking around it ourselves first, we risk contaminating exactly the kind of proof that could finally end this properly."
 
@@ -86,7 +86,7 @@ Priya called before either of them had managed more than a few hours of sleep, h
 
 "Agreed. Tell her today. Just tell her carefully, and tell her we're bringing in official channels before anyone goes near that property in person." Priya's voice softened slightly. "How's Thomas?"
 
-"Stable. For now." Mara felt the word catch in her throat, the specific ache of describing someone she loved in the clinical, temporary language hospitals required. "Del says days, not weeks."
+"Stable. For now." Mara felt the word catch in her throat, the quiet ache of describing someone she loved in the clinical, temporary language hospitals required. "Del says days, not weeks."
 
 "I'm sorry, Mara." A pause, the sound of Priya deciding whether to say the next thing. "For what it's worth, whatever he just handed you, he chose to hand it to you instead of taking it to his grave the way this town usually does. That's not nothing. That's the opposite of everything Kell's spent a century doing."
 
