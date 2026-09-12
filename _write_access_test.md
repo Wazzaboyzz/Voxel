@@ -1,3 +1,1 @@
-# Where the Frost Doesn't Reach — Story Bible (test write)
-
-Verifying write access before pushing the full architecture + chapters.
+write access test - re-verified 2026-09-13
