@@ -8,7 +8,7 @@ It was Priya who finally called her on it, showing up at the house on the third 
 
 "I'm being thorough."
 
-"You're avoiding your own porch." Priya pulled out a chair and sat, unbothered by Mara's silence, the particular patience of someone who'd known her long enough to wait out a stubborn mood rather than fight it head on. "How are you actually doing. Not the version you'd give the county board."
+"You're avoiding your own porch." Priya pulled out a chair and sat, unbothered by Mara's silence, the settled patience of someone who'd known her long enough to wait out a stubborn mood rather than fight it head on. "How are you actually doing. Not the version you'd give the county board."
 
 Mara set down the folder she'd been holding, feeling, for the first time in three days, the actual weight of the question rather than the busy work she'd built specifically to avoid it. "I keep replaying the conversation. Looking for the moment I could have said something different and changed how it ended. There isn't one. I've checked from every angle I can think of."
 
