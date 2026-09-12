@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-content_provider.py - single shared entry point for all Nemotron/OpenRouter
-content generation across Voxel. Every script that needs an outline (slide
-deck), a manuscript (page-by-page book), or a novel chapter calls into this
+content_provider.py - single shared entry point for all LLM-based content
+generation across Voxel. Every script that needs an outline (slide deck),
+a manuscript (page-by-page book), or a novel chapter calls into this
 module instead of rolling its own HTTP call + JSON parsing.
 
 This is Phase 1 of ARCHITECTURE.md: removing duplicated content-generation
@@ -12,6 +12,12 @@ Phase 8 addendum (one-command publishing pipeline, see HANDOFF.md):
 added generate_novel_chapter() and call_raw() for prose-chapter generation
 (novels aren't a fixed-field JSON list like picture-book pages), used by
 voxel_cli.py and humanizer.py.
+
+Phase 8b addendum: added direct NVIDIA API support as an alternative to
+OpenRouter. If NVIDIA_API_KEY is set, it's used (direct NVIDIA NIM
+endpoint, no OpenRouter middleman/rate limits). Otherwise falls back to
+OPENROUTER_API_KEY exactly as before - existing workflows/notebooks that
+only set OPENROUTER_API_KEY keep working unchanged.
 """
 
 import os
@@ -21,29 +27,49 @@ import requests
 
 
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
-NEMOTRON_MODEL = "nvidia/nemotron-3-ultra-550b-a55b:free"
+NVIDIA_API_KEY = os.environ.get("NVIDIA_API_KEY", "")
+
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
+OPENROUTER_MODEL = "nvidia/nemotron-3-ultra-550b-a55b:free"
+
+# Direct NVIDIA NIM endpoint (build.nvidia.com), OpenAI-compatible.
+# NVIDIA_MODEL can be overridden via env var if this default is renamed/
+# retired - check https://build.nvidia.com for the current model catalog
+# and matching model id if generation starts failing with a 404.
+NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
+NVIDIA_MODEL = os.environ.get("NVIDIA_MODEL", "nvidia/llama-3.1-nemotron-70b-instruct")
+
+
+def _active_provider():
+    """NVIDIA direct takes priority when its key is present, since it's a
+    paid/direct key with no OpenRouter free-tier rate limits."""
+    if NVIDIA_API_KEY:
+        return NVIDIA_URL, NVIDIA_MODEL, NVIDIA_API_KEY
+    if OPENROUTER_API_KEY:
+        return OPENROUTER_URL, OPENROUTER_MODEL, OPENROUTER_API_KEY
+    return None, None, None
 
 
 def _require_key():
-    if not OPENROUTER_API_KEY:
+    if not NVIDIA_API_KEY and not OPENROUTER_API_KEY:
         raise RuntimeError(
-            "OPENROUTER_API_KEY is not set. Export it before running:\n"
-            "  export OPENROUTER_API_KEY=your_key_here"
+            "No LLM API key is set. Export ONE of these before running:\n"
+            "  export NVIDIA_API_KEY=your_key_here      (direct, no rate limit)\n"
+            "  export OPENROUTER_API_KEY=your_key_here  (free tier, rate limited)"
         )
 
 
-def _call_nemotron(system_prompt, user_content, timeout=120):
+def _post(system_prompt, user_content, timeout):
     _require_key()
-
+    url, model, key = _active_provider()
     response = requests.post(
-        OPENROUTER_URL,
+        url,
         headers={
-            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+            "Authorization": f"Bearer {key}",
             "Content-Type": "application/json",
         },
         json={
-            "model": NEMOTRON_MODEL,
+            "model": model,
             "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_content},
@@ -52,8 +78,11 @@ def _call_nemotron(system_prompt, user_content, timeout=120):
         timeout=timeout,
     )
     response.raise_for_status()
-    data = response.json()
-    raw_text = data["choices"][0]["message"]["content"].strip()
+    return response.json()["choices"][0]["message"]["content"].strip()
+
+
+def _call_nemotron(system_prompt, user_content, timeout=120):
+    raw_text = _post(system_prompt, user_content, timeout)
 
     if raw_text.startswith("```"):
         raw_text = raw_text.strip("`")
@@ -64,7 +93,7 @@ def _call_nemotron(system_prompt, user_content, timeout=120):
         return json.loads(raw_text)
     except json.JSONDecodeError as e:
         raise RuntimeError(
-            f"Nemotron did not return valid JSON. Raw response was:\n{raw_text}"
+            f"Model did not return valid JSON. Raw response was:\n{raw_text}"
         ) from e
 
 
@@ -74,24 +103,7 @@ def call_raw(system_prompt, user_content, timeout=120):
     generate_novel_chapter, which need free-form prose back, not a JSON
     object.
     """
-    _require_key()
-    response = requests.post(
-        OPENROUTER_URL,
-        headers={
-            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-            "Content-Type": "application/json",
-        },
-        json={
-            "model": NEMOTRON_MODEL,
-            "messages": [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_content},
-            ],
-        },
-        timeout=timeout,
-    )
-    response.raise_for_status()
-    return response.json()["choices"][0]["message"]["content"].strip()
+    return _post(system_prompt, user_content, timeout)
 
 
 def generate_outline(topic):
