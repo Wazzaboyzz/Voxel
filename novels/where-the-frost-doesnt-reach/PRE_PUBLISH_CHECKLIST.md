@@ -26,8 +26,8 @@ Checked all named characters against real public figures. No matches. Closed.
 - Cross-checked "eight years"/"two years" figures for consistency — no contradictions found.
 - **STILL OPEN, needs a dedicated session:** full line-by-line read of chapters 4-9 against final ch.3 canon, plus a full 45-chapter read purely for voice consistency and subtler plot contradictions (tone drift, a character knowing something too early, small prop/detail inconsistencies). ~88,000+ words — needs unhurried sequential reading, not a grep-based pass. Do this AFTER Task 5's rewrite is complete, so newly-touched prose gets checked too, not before.
 
-## TASK 5 — AI-authorship tell check — IN PROGRESS, chapters 1-18 fixed, 19-45 remaining
-Diagnostic (earlier session) found "the particular ___" / "the specific ___" as the dominant tell — ~189 combined occurrences across the manuscript, heaviest in ch.18 (8), ch.14 (7), ch.29/31/32 (6 each). Fix approach: read each chapter, replace or cut each instance individually so the sentence still reads naturally — this is a line-edit, NOT a find-and-replace. **A regex/script fix was considered and explicitly rejected**: mechanically stripping "the particular "/"the specific " breaks sentence grammar in many cases (confirmed by testing on ch.15's drawer sentence, which needed restructuring, not deletion). Every fix in ch.1-18 was written and reviewed individually. Any future session should keep doing this by hand, chapter by chapter — do not attempt a scripted bulk replace across the remaining chapters.
+## TASK 5 — AI-authorship tell check — IN PROGRESS, chapters 1-20 fixed, 21-45 remaining
+Diagnostic (earlier session) found "the particular ___" / "the specific ___" as the dominant tell — ~189 combined occurrences across the manuscript, heaviest in ch.18 (8), ch.14 (7), ch.29/31/32 (6 each). Fix approach: read each chapter, replace or cut each instance individually so the sentence still reads naturally — this is a line-edit, NOT a find-and-replace. **A regex/script fix was considered and explicitly rejected**: mechanically stripping "the particular "/"the specific " breaks sentence grammar in many cases (confirmed by testing on ch.15's drawer sentence, which needed restructuring, not deletion). Every fix in ch.1-20 was written and reviewed individually. Any future session should keep doing this by hand, chapter by chapter — do not attempt a scripted bulk replace across the remaining chapters. (A pure detection/audit script — no rewriting — was also tried this session to speed up scoping; it failed on a 403 from GitHub's API due to lacking authentication in the sandbox environment. Not worth re-attempting for this task: the actual bottleneck is the line-edit judgment per instance, not finding the instances, which a manual grep-per-chapter already does reliably.)
 
 **Progress log (update this table as you go — don't just say "done," log the count per chapter so nobody re-scans a clean chapter):**
 
@@ -35,15 +35,15 @@ Diagnostic (earlier session) found "the particular ___" / "the specific ___" as 
 |---|---|---|
 | 1-13 | DONE (prior session) | not itemized — spot-check if in doubt |
 | 14 | DONE (prior session) | 7 |
-| 15 | DONE (this session) | 6 |
-| 16 | DONE (this session) | 2 |
-| 17 | DONE (this session) | 2 |
-| 18 | DONE (this session) | 8 |
-| 19 | NOT STARTED | — start here |
-| 20 | NOT STARTED | — |
-| 21-45 | NOT STARTED | — |
+| 15 | DONE | 6 |
+| 16 | DONE | 2 |
+| 17 | DONE | 2 |
+| 18 | DONE | 8 |
+| 19 | DONE | 4 |
+| 20 | DONE | 5 |
+| 21-45 | NOT STARTED | — start here, at chapter 21 |
 
-**Next session: continue at chapter 19, work forward sequentially through 45, same method as ch.15-18 above (fetch chapter → grep for "the particular"/"the specific" → rewrite each instance for natural phrasing → push with a commit message noting the count fixed → update this table).** Do not skip ahead or sample-check; go in order so the progress log stays trustworthy.
+**Next session: continue at chapter 21, work forward sequentially through 45, same method as ch.15-20 above (fetch chapter → grep for "the particular"/"the specific" → rewrite each instance for natural phrasing → push with a commit message noting the count fixed → update this table).** Do not skip ahead or sample-check; go in order so the progress log stays trustworthy.
 
 Also worth checking once the "the particular/specific" pass is complete: the other tells found in the original diagnostic ("the kind of ___" 69 occurrences, "found herself/himself" 45, "in a way that" 41, "something in her/his [face/voice/eyes]" 32, "understood that" 12) were NOT in scope for this pass and remain fully unaddressed — flag as a possible Task 5b if Zia wants the manuscript further cleaned after the primary pass finishes.
 
@@ -56,7 +56,7 @@ Also worth checking once the "the particular/specific" pass is complete: the oth
 6. Cover design — not yet started in this repo. Track in a new `cover_design.md` in this same folder if that work begins.
 
 ## Priority order recommended for next session
-1. **Task 5 — continue the AI-tell rewrite pass starting at chapter 19** (this is the single actionable, well-defined, in-progress task — pick this up first).
+1. **Task 5 — continue the AI-tell rewrite pass starting at chapter 21** (this is the single actionable, well-defined, in-progress task — pick this up first).
 2. Task 4's full continuity/voice read-through — after Task 5 is fully complete.
 3. HANDOFF.md's expansion/trim pass (word counts) — can run in parallel with Task 5/4 since it's independent chapter-level work, but don't let it distract from finishing Task 5 once started.
 4. Task 6 (KDP formatting) — last, once text is final. Cover design can proceed in parallel since it doesn't depend on final interior text.
