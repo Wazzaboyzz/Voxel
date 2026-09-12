@@ -2,11 +2,16 @@
 """
 content_provider.py - single shared entry point for all Nemotron/OpenRouter
 content generation across Voxel. Every script that needs an outline (slide
-deck) or a manuscript (page-by-page book) calls into this module instead of
-rolling its own HTTP call + JSON parsing.
+deck), a manuscript (page-by-page book), or a novel chapter calls into this
+module instead of rolling its own HTTP call + JSON parsing.
 
 This is Phase 1 of ARCHITECTURE.md: removing duplicated content-generation
 code from make_lesson.py, build_book.py, and generate_images.py.
+
+Phase 8 addendum (one-command publishing pipeline, see HANDOFF.md):
+added generate_novel_chapter() and call_raw() for prose-chapter generation
+(novels aren't a fixed-field JSON list like picture-book pages), used by
+voxel_cli.py and humanizer.py.
 """
 
 import os
@@ -20,12 +25,16 @@ NEMOTRON_MODEL = "nvidia/nemotron-3-ultra-550b-a55b:free"
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 
-def _call_nemotron(system_prompt, user_content, timeout=120):
+def _require_key():
     if not OPENROUTER_API_KEY:
         raise RuntimeError(
             "OPENROUTER_API_KEY is not set. Export it before running:\n"
             "  export OPENROUTER_API_KEY=your_key_here"
         )
+
+
+def _call_nemotron(system_prompt, user_content, timeout=120):
+    _require_key()
 
     response = requests.post(
         OPENROUTER_URL,
@@ -59,6 +68,32 @@ def _call_nemotron(system_prompt, user_content, timeout=120):
         ) from e
 
 
+def call_raw(system_prompt, user_content, timeout=120):
+    """
+    Plain-text (non-JSON) LLM call. Exposed for humanizer.rewrite_pass and
+    generate_novel_chapter, which need free-form prose back, not a JSON
+    object.
+    """
+    _require_key()
+    response = requests.post(
+        OPENROUTER_URL,
+        headers={
+            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "model": NEMOTRON_MODEL,
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_content},
+            ],
+        },
+        timeout=timeout,
+    )
+    response.raise_for_status()
+    return response.json()["choices"][0]["message"]["content"].strip()
+
+
 def generate_outline(topic):
     """
     Slide-deck outline for make_lesson.py / generate_images.py.
@@ -84,10 +119,13 @@ def generate_outline(topic):
     return _call_nemotron(system_prompt, f"Topic: {topic}")
 
 
-def generate_manuscript(concept, page_count):
+def generate_manuscript(concept, page_count, continuity_block=""):
     """
     Page-by-page book manuscript for build_book.py.
     Returns a list of page dicts: page_number, text, image_prompt.
+
+    continuity_block: optional text from story_bible.continuity_prompt_block()
+    to keep a sequel's characters/style/plot consistent with prior books.
     """
     system_prompt = (
         f"You are a children's book author and illustrator's art director. "
@@ -104,8 +142,33 @@ def generate_manuscript(concept, page_count):
         "or a very short caption, and image_prompt should describe a "
         "clean line-art scene suitable for coloring. If it's a story, "
         "text should carry the narrative forward page by page and "
-        "image_prompt should illustrate that page's specific moment."
+        "image_prompt should illustrate that page's specific moment. "
+        "Avoid AI-writing tells: no rule-of-three lists, no stock phrases, "
+        "vary sentence length naturally, write like a human author."
     )
-    return _call_nemotron(
-        system_prompt, f"Book concept: {concept}", timeout=180
+    user_content = f"Book concept: {concept}"
+    if continuity_block:
+        user_content = f"{continuity_block}\n\n{user_content}"
+    return _call_nemotron(system_prompt, user_content, timeout=180)
+
+
+def generate_novel_chapter(chapter_number, chapter_brief, continuity_block=""):
+    """
+    One prose chapter for a novel-length work (e.g. Amity Falls series).
+    Unlike generate_manuscript, this returns plain prose text, not JSON,
+    since a novel chapter isn't a fixed-field list.
+    """
+    system_prompt = (
+        "You are a novelist continuing an existing series. Write chapter "
+        f"{chapter_number} in full prose, matching the tone and voice of "
+        "the existing chapters. Write the actual chapter text, several "
+        "pages long - do not summarize. Do not include a chapter title "
+        "header unless the brief asks for one. Avoid AI-writing tells: no "
+        "rule-of-three lists, no stock phrases like 'a testament to' or "
+        "'in the tapestry of', vary sentence length naturally, no em-dash "
+        "overuse."
     )
+    user_content = f"Chapter {chapter_number} brief:\n{chapter_brief}"
+    if continuity_block:
+        user_content = f"{continuity_block}\n\n{user_content}"
+    return call_raw(system_prompt, user_content, timeout=240)
