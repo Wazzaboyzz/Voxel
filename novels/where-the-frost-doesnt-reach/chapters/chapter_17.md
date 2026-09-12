@@ -14,7 +14,7 @@ Priya's grip on the bed rail tightened. "What do you mean, circling."
 
 "He tests people before he uses them properly. Small asks first, favors that seem harmless, building trust and obligation slowly enough that by the time he asks for something real, refusing feels impossible." Dev's voice had gone hard with old, bitter knowledge. "He started with me the same way. Little errands. A reading here, a favor there, nothing that felt like it cost anything, until suddenly I owed him enough small favors that the big one felt like the only way to settle the account."
 
-Mara felt something cold settle in her stomach, the particular dread of watching a pattern reveal itself a step ahead of where they'd caught up to it. "Has he approached Wren directly yet?"
+Mara felt something cold settle in her stomach, a dread at watching a pattern reveal itself a step ahead of where they'd caught up to it. "Has he approached Wren directly yet?"
 
 "I don't know for certain. I've been in that silo for days, and before that I was too careful to let myself get close enough to watch him operate without him noticing me watching." Dev's jaw tightened. "But he mentioned her, once, when he came to check on me. Said something about how nice it was that the valley kept producing young Finders right when he needed one, like the timing was providence instead of exactly the kind of thing a careful man arranges for himself."
 
@@ -48,7 +48,7 @@ Mara felt Caleb's hand find hers, gripping hard enough that she understood, with
 
 "Maybe you don't reconcile them," Caleb said, something unexpectedly gentle in his voice given everything he'd just learned about his own two stolen years. "Maybe you just let both of them be true. The man who found it, and the man who got scared enough to help hide it. People aren't required to be only one version of themselves to be worth saving."
 
-Dev looked at him for a long moment, something in his exhausted face shifting, the particular relief of being told, by the person with every right to hate him most, that redemption wasn't already foreclosed.
+Dev looked at him for a long moment, something in his exhausted face shifting, relief at being told, by the person with every right to hate him most, that redemption wasn't already foreclosed.
 
 Priya finally spoke again, her voice steadier now, the deputy reasserting herself over the sister with visible, deliberate effort. "Then we stop treating this like an investigation into one man's corruption and start treating it like what it actually is. A system he's been running for a century, built to survive exactly this kind of exposure by making sure nobody ever has enough proof, or enough courage, to bring the whole thing down at once."
 
