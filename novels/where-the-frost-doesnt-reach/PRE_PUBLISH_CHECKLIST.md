@@ -21,33 +21,40 @@ No further collisions found. Closed.
 ## TASK 3 — Real-person name check — DONE, no concern found
 Checked all named characters against real public figures. No matches. Closed.
 
-## TASK 4 — Full continuity read-through — PARTIALLY DONE, and a REAL PLOT CONTRADICTION FOUND this session, not yet fixed
+## TASK 4 — Full continuity read-through — PARTIALLY DONE, and a REAL PLOT CONTRADICTION FOUND, not yet fixed
 - **FIXED (earlier):** ch.38 said "ten years" for a timespan every other chapter (ch.23, 32, 33, 39) establishes as "forty years." Corrected to match canon.
 - Cross-checked "eight years"/"two years" figures for consistency — no contradictions found.
-- **NEW FINDING, UNFIXED — the central mystery's own mechanics contradict themselves across ch.38, ch.39, and ch.43:**
+- **UNFIXED, still awaiting Zia's decision — the central mystery's own mechanics contradict themselves across ch.38, ch.39, and ch.43:**
   - Ch.38: Thomas calls Adelaide "Adelaide Whitlock... Ambrose's wife," directly identifying present-day Kell as the same person who was Adelaide's husband a century ago (an immortal who's worn other names, per the "wearing other names the way other men wear coats" line in the same chapter).
   - Ch.39: Kell speaks in the first person about Adelaide coming to *him* directly and *him* being the one who let her disappear — again, Kell IS the century-old husband.
   - Ch.43: Kell says the burden "was simply handed to me" after Ambrose Whitlock "finally disappeared" — now describing Whitlock in the third person as a *different, earlier person* Kell only later succeeded, not a name Kell himself once wore.
-  - **These two versions of who Kell is cannot both be true as written.** This needs an editorial decision, not just a wording tweak: either (a) Kell IS Ambrose Whitlock, one immortal man across a century — in which case ch.43's "handed to me" language needs rewriting to stop describing Whitlock in the third person as someone else, or (b) Kell is a successor who inherited the role after the original Whitlock vanished — in which case ch.38 and ch.39 need rewriting to stop having Thomas and Kell both speak as if Kell was literally Adelaide's own husband. **Do not silently pick one and patch the wording without flagging the choice to Zia first** — this changes what kind of villain/mystery the book actually is (one immortal manipulator vs. a chain of successors), so it's a story decision, not a copyedit. As of this session Zia has NOT yet answered which one he wants — still genuinely open.
-- **STILL OPEN, needs a dedicated session:** full line-by-line read of chapters 4-9 against final ch.3 canon, plus a full 45-chapter read purely for voice consistency and subtler plot contradictions (tone drift, a character knowing something too early, small prop/detail inconsistencies). The Whitlock/Kell contradiction above was found via a partial, targeted check (ch.29, 38, 39, 43 only) — a full sequential read of the other 41 chapters has NOT happened yet and could easily surface more of this same kind of thing. ~88,000+ words — needs unhurried sequential reading, not a grep-based pass. Do this AFTER Task 5's rewrite is complete, so newly-touched prose gets checked too, not before.
+  - **These two versions of who Kell is cannot both be true as written.** Needs an editorial decision, not just a wording tweak: (a) Kell IS Ambrose Whitlock, one immortal man across a century — rewrite ch.43's "handed to me" language; or (b) Kell is a successor — rewrite ch.38/ch.39 so Thomas and Kell stop speaking as if Kell was literally Adelaide's husband. **Ask Zia which one before touching any of these three chapters again** — still genuinely unanswered as of this session.
+- **STILL OPEN, needs a dedicated session:** full line-by-line read of chapters 4-9 against final ch.3 canon, plus a full 45-chapter read purely for voice consistency and subtler plot contradictions. Do this AFTER Task 5's rewrite is complete.
 
-## TASK 5 — AI-authorship tell check — IN PROGRESS, chapters 1, 8, 10, 14-27 fixed/verified, 2-7, 9, 11-13, 28-45 remaining
-Diagnostic (earlier session) found "the particular ___" / "the specific ___" as the dominant tell — ~189 combined occurrences across the manuscript, heaviest in ch.18 (8), ch.14 (7), ch.29/31/32 (6 each). Fix approach: read each chapter, replace or cut each instance individually so the sentence still reads naturally — this is a line-edit, NOT a find-and-replace.
+## TASK 5 — AI-authorship tell check — IN PROGRESS, chapters 1-27 fully verified, 28-45 remaining
+Diagnostic found "the particular ___" / "the specific ___" as the dominant tell. Fix approach: read each chapter, replace or cut each instance individually so the sentence still reads naturally — a line-edit, not a find-and-replace. **Regex/script fixes are explicitly rejected** — mechanical stripping breaks grammar in many cases. Every fix has been written and reviewed individually, chapter by chapter. Do not attempt a scripted bulk replace on the remaining chapters.
 
-**IMPORTANT CONTEXT, discovered this session — read before continuing:** ch.1 (Zia's own hand-written text, not AI-generated) turned out to ALSO use "this/that/a particular/specific X" repeatedly (4 instances found). This means the phrase is likely Zia's own authorial habit, not proof of AI authorship on its own — the AI-written expansion chapters may simply have picked up and continued an established voice from his own ch.1-3, which is actually good continuity, not a flaw. **Zia was told this explicitly and, after considering it, decided to proceed with removing the phrase anyway, including from his own ch.1-3.** Ch.1 has now been fixed on that basis (3 narration instances removed; the phrase was left alone in ch.1's one line of dialogue, and left alone where it was being used as an ordinary, non-repetitive adjective rather than the flagged pattern — e.g. "a specific sound" naming an actual sound stayed as-is). Apply this same judgment across the rest of the book: fix the narration pattern, leave dialogue and genuinely natural uses of "specific"/"particular" alone. Ch.2 and ch.3 have NOT yet been checked under this newly-expanded scope — check them like any other chapter, don't assume "Zia's own text" means skip them anymore.
+**Scope note (settled this session, no longer open for debate):** ch.1 (Zia's own hand-written text) also used this phrase repeatedly, meaning it's likely Zia's own authorial habit rather than proof of AI authorship. Zia was told this directly and decided to proceed with removing it anyway, everywhere, including his own ch.1-3. So: **the whole manuscript is in scope, "Zia wrote this chapter" is not an exemption.** Standing rule for every chapter: fix the repetitive narration pattern ("the/this/that/a particular/specific X" used as a scene-setting descriptor), leave dialogue lines alone, and leave genuinely natural, non-repetitive uses alone (e.g. "a specific sound" naming an actual sound, "trained specifically to notice" as a plain adverb) — these aren't the tell, they're just normal English.
 
-**A regex/script fix was considered and explicitly rejected**: mechanically stripping "the particular "/"the specific " breaks sentence grammar in many cases (confirmed by testing on ch.15's drawer sentence, which needed restructuring, not deletion). Every fix so far was written and reviewed individually. Any future session should keep doing this by hand, chapter by chapter — do not attempt a scripted bulk replace across the remaining chapters. (A pure detection/audit script — no rewriting — was also tried to speed up scoping; it failed on a 403 from GitHub's API due to lacking authentication in the sandbox environment. Not worth re-attempting: the actual bottleneck is the line-edit judgment per instance, not finding the instances, which a manual grep-per-chapter already does reliably.) Note: not every chapter has instances — ch.10 and ch.24 were both found clean (0 instances) on inspection, which is expected and fine; log a chapter as DONE/0 rather than skipping it.
-
-**Chapters 2-7, 9, and 11-13 have NOT yet been individually re-verified under any version of this task** — they were part of an original "prior session, not itemized" claim that already proved incomplete once (ch.8 had a missed instance). Treat that range as unverified, not confirmed, until someone actually checks each one — now including ch.2-3 specifically for the reason above.
+**Chapters 1-13 are now FULLY verified** (a change from earlier in this session, when 2-7/9/11-13 were still an open question) — every one of them has been individually checked under the current scope:
 
 **Progress log (update this table as you go — don't just say "done," log the count per chapter so nobody re-scans a clean chapter):**
 
 | Chapter | Status | Instances fixed |
 |---|---|---|
-| 1 | DONE — re-checked this session under the expanded scope (Zia's own text included), 3 narration instances fixed | 3 |
-| 2-7, 9, 11-13 | UNVERIFIED — not yet individually checked under the current (expanded) scope. Do not assume clean, and do not assume "Zia's own text" is exempt anymore. | unknown |
-| 8 | DONE — re-verified, found and fixed 1 additional missed instance ("that specific hush") beyond the original prior-session pass | 1 (this session) + unknown prior |
-| 10 | DONE — spot-checked, confirmed genuinely clean | 0 |
+| 1 | DONE | 3 |
+| 2 | DONE — checked, genuinely clean | 0 |
+| 3 | DONE | 3 |
+| 4 | DONE — checked, clean (1 dialogue instance left alone) | 0 |
+| 5 | DONE — checked, genuinely clean | 0 |
+| 6 | DONE — checked, genuinely clean | 0 |
+| 7 | DONE — checked, genuinely clean | 0 |
+| 8 | DONE | 1 (plus unknown prior) |
+| 9 | DONE — checked, genuinely clean | 0 |
+| 10 | DONE — checked, genuinely clean | 0 |
+| 11 | DONE — checked, clean (2 dialogue instances left alone) | 0 |
+| 12 | DONE — checked, clean (1 dialogue instance left alone) | 0 |
+| 13 | DONE — checked, genuinely clean | 0 |
 | 14 | DONE (prior session) | 7 |
 | 15 | DONE | 6 |
 | 16 | DONE | 2 |
@@ -58,13 +65,13 @@ Diagnostic (earlier session) found "the particular ___" / "the specific ___" as 
 | 21 | DONE | 5 |
 | 22 | DONE | 4 |
 | 23 | DONE | 6 |
-| 24 | DONE | 0 (already clean, no edit needed) |
+| 24 | DONE | 0 |
 | 25 | DONE | 2 |
 | 26 | DONE | 2 |
 | 27 | DONE | 2 |
 | 28-45 | NOT STARTED | — continue here, at chapter 28 |
 
-**Next session: three things need doing, not just one.** (1) Continue the primary pass forward at chapter 28 through 45, same method as ch.1/15-27 above (fetch chapter → grep for "the particular"/"the specific" → rewrite each narration instance for natural phrasing, leaving dialogue and genuinely natural uses alone → push with a commit message noting the count fixed → update this table). (2) Go back and check chapters 2-7, 9, and 11-13 the same way — including ch.2 and ch.3, which are Zia's own text but are now confirmed in-scope too. (3) Resolve the Whitlock/Kell contradiction in Task 4 above before doing further prose work in ch.38/39/43's vicinity.
+**All of chapters 1-27 are now fully done. Next session (or continuing this one): pick up at chapter 28 and go straight through to 45**, same method as above (fetch chapter → check for "the particular"/"the specific" narration → rewrite each instance, leave dialogue/natural uses → push with a commit message noting the count → update this table).
 
 Also worth checking once the "the particular/specific" pass is complete: the other tells found in the original diagnostic ("the kind of ___" 69 occurrences, "found herself/himself" 45, "in a way that" 41, "something in her/his [face/voice/eyes]" 32, "understood that" 12) were NOT in scope for this pass and remain fully unaddressed — flag as a possible Task 5b if Zia wants the manuscript further cleaned after the primary pass finishes.
 
@@ -77,11 +84,11 @@ Also worth checking once the "the particular/specific" pass is complete: the oth
 6. Cover design — not yet started in this repo. Track in a new `cover_design.md` in this same folder if that work begins.
 
 ## Priority order recommended for next session
-1. **Ask Zia the Whitlock/Kell identity question (Task 4 finding above) before writing anything** — this determines which chapters need rewriting and how, so it should be resolved before more prose work happens in ch.38/39/43's vicinity.
-2. **Task 5 — continue the AI-tell rewrite pass starting at chapter 28, AND check chapters 2-7, 9, 11-13 (including Zia's own ch.2-3, per the updated scope above).**
+1. **Ask Zia the Whitlock/Kell identity question (Task 4 finding above) before writing anything** in ch.38/39/43's vicinity.
+2. **Task 5 — continue the AI-tell rewrite pass starting at chapter 28** through 45. Chapters 1-27 are fully done, no need to revisit.
 3. Task 4's full continuity/voice read-through — after Task 5 is fully complete, and after the Whitlock/Kell decision above is made and applied.
-4. HANDOFF.md's expansion/trim pass (word counts) — can run in parallel with Task 5/4 since it's independent chapter-level work.
-5. Task 6 (KDP formatting) — last, once text is final. Cover design can proceed in parallel since it doesn't depend on final interior text.
+4. HANDOFF.md's expansion/trim pass (word counts) — can run in parallel with Task 5/4.
+5. Task 6 (KDP formatting) — last, once text is final.
 
 ## Update this file
 Whoever picks up any task above should mark it DONE with a one-line result summary and update the Task 5 progress table above as they go — don't just delete the task, log the outcome so it isn't re-run from scratch next time.
