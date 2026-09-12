@@ -40,7 +40,7 @@ Mara nodded, sliding the phone into her pocket with hands that had gone, without
 
 "Or he's had someone watching the store since we walked in." Caleb's jaw was tight, his eyes scanning the street in a way she hadn't seen from him since the night at the mill parking lot, an old instinct clearly resurfacing despite two years of not remembering where it had come from. "Either way. However he found out this fast, it means we're not moving as quietly as we thought we were."
 
-They reached the truck in silence, Mara's earlier lightness gone entirely now, replaced by the familiar, cold clarity she'd learned to rely on this summer, the specific focus that let her set fear aside long enough to actually think. She looked at the message one more time before pocketing the phone, four words that told her almost nothing and everything at once, proof, if she'd needed any, that filing that complaint had done exactly what they'd hoped it would.
+They reached the truck in silence, Mara's earlier lightness gone entirely now, replaced by the familiar, cold clarity she'd learned to rely on this summer, the focus that let her set fear aside long enough to actually think. She looked at the message one more time before pocketing the phone, four words that told her almost nothing and everything at once, proof, if she'd needed any, that filing that complaint had done exactly what they'd hoped it would.
 
 It had gotten his attention.
 
@@ -54,7 +54,7 @@ They found Priya at the station twenty minutes later, and she took the phone fro
 
 "If." Priya looked up, something careful in her expression. "I want it to be him too. But I've learned this summer not to assume the obvious answer just because it's the one that lets me stop looking. Could be Kell himself. Could be somebody he's asked to do his dirty work so his own hands stay clean if this ever actually reaches a courtroom. Either way, I want both of you being more careful than you have been. No more solo trips out to weather stations at night. No more walking into that man's house without me or someone else knowing exactly where you are and when to expect you back."
 
-Mara felt the reasonableness of it even through her own restlessness, the particular frustration of being told to slow down at the exact moment she finally felt like they were gaining ground. "We hear you."
+Mara felt the reasonableness of it even through her own restlessness, frustrated at being told to slow down at the exact moment she finally felt like they were gaining ground. "We hear you."
 
 "I mean it, Mara." Priya's voice softened slightly, the deputy giving way, briefly, to the friend underneath it. "I already almost lost my brother to this man's version of caution running out. I'd rather annoy you both with extra precautions than have either of you be the next person this town quietly decides not to talk about."
 
