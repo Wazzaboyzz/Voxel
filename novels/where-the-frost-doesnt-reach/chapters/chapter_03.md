@@ -16,7 +16,7 @@ She heard the truck before she saw him, that telltale knock of an engine that ne
 
 "Sorry." She didn't move. "I used to know exactly where the line was. I'm apparently a little rusty."
 
-He stopped a few feet off, close enough that she could see the day on him: dust on his forearms, a streak of something dark, oil maybe, along the side of his jaw where he'd wiped his face with the back of his wrist. He had his father's build, she noted, the kind of frame the orchard made out of a man over years of hauling ladders and crates, but he moved like someone who hadn't fully settled into it yet, like he was still getting used to occupying this particular body in this particular place. Two years, she thought. Two years of being a stranger to your own life would do that.
+He stopped a few feet off, close enough that she could see the day on him: dust on his forearms, a streak of something dark, oil maybe, along the side of his jaw where he'd wiped his face with the back of his wrist. He had his father's build, she noted, the kind of frame the orchard made out of a man over years of hauling ladders and crates, but he moved like someone who hadn't fully settled into it yet, like he was still getting used to occupying this body in this place. Two years, she thought. Two years of being a stranger to your own life would do that.
 
 "You used to spend a lot of time out here?"
 
@@ -28,7 +28,7 @@ It was such an ordinary question, asked by a man with no memory of the answer, t
 
 "Yes."
 
-He didn't say anything for a while. Wind moved through the rows, that particular sound apples make in early fall, dry and papery, nothing like the sound they'd make once they were heavy enough to bow the branches. Mara watched him not-ask the next question for almost thirty seconds, watched him turn it over, decide against it, and then decide for it anyway, the way she remembered him deciding things: slow, and then all at once, no visible seam between the two states.
+He didn't say anything for a while. Wind moved through the rows, the sound apples make in early fall, dry and papery, nothing like the sound they'd make once they were heavy enough to bow the branches. Mara watched him not-ask the next question for almost thirty seconds, watched him turn it over, decide against it, and then decide for it anyway, the way she remembered him deciding things: slow, and then all at once, no visible seam between the two states.
 
 She used the silence to catalogue him the way she used to catalogue exits in unfamiliar rooms, an old habit she'd never bothered to unlearn because it had never once felt like paranoia, just diligence. He'd cut his hair shorter than he used to wear it. There was a new scar along his left forearm, thin and pale, the kind you got from an unguarded blade in a packing shed, not the kind you got from anything dramatic. He still stood with his weight slightly forward, like a man perpetually one step from being needed somewhere else, a posture she'd once found frustrating and now found unbearably familiar. Eight years should have made him a stranger. It hadn't. It had only made the strangeness sit in the wrong places, not in how he stood or how he held his shoulders, but in the two-year gap behind his eyes where something she used to be able to read simply wasn't there to read anymore.
 
