@@ -1,6 +1,6 @@
 # CHAPTER TWENTY-FIVE
 
-Dev met them at Priya's kitchen table at six the next morning, still moving carefully, still bruised along one wrist where the zip ties had bitten deep, but steadier now, the particular steadiness of a man who has decided being useful is the only apology he has left to offer. The kitchen smelled like burnt coffee and toast nobody had gotten around to eating, and Priya's dog, a much older and calmer animal than Toll, lay under the table with its chin resting on someone's foot, entirely unbothered by the tension radiating off every person seated above it. Mara sat with her hands wrapped around a mug she wasn't drinking from, more for the warmth than the coffee, watching the early light climb the kitchen wall in slow increments while Dev worked through his photos.
+Dev met them at Priya's kitchen table at six the next morning, still moving carefully, still bruised along one wrist where the zip ties had bitten deep, but steadier now, the steadiness of a man who has decided being useful is the only apology he has left to offer. The kitchen smelled like burnt coffee and toast nobody had gotten around to eating, and Priya's dog, a much older and calmer animal than Toll, lay under the table with its chin resting on someone's foot, entirely unbothered by the tension radiating off every person seated above it. Mara sat with her hands wrapped around a mug she wasn't drinking from, more for the warmth than the coffee, watching the early light climb the kitchen wall in slow increments while Dev worked through his photos.
 
 "It's a redirect amplifier," he said, turning Mara's photos over on the table, zooming in with two fingers on his phone screen, the early light through the kitchen window catching the exhaustion still etched under his eyes. "Crude one, but functional. It's designed to take whatever Kell's gift produces locally and broadcast it as if it's naturally occurring across a wider radius. That's how he's been faking system-wide frost patterns and rain anomalies without anyone questioning why the effect only ever seems to center on his own rotation schedule. The station reports what he wants it to report, and the county extension office just takes it as gospel because why wouldn't they."
 
@@ -14,7 +14,7 @@ Priya, arms crossed, leaning against the counter with dark circles under her eye
 
 "He'll do it," Dev said immediately. "I've heard him argue with Kell in closed session more than once. He thinks the council's been rotting from a culture of silence for years. He just needed something solid enough to actually act on."
 
-Caleb had been quiet through most of this, watching the exchange with the particular stillness Mara had learned meant he was working something through before he said it out loud, his arms crossed and his gaze fixed somewhere past all of them, on the middle distance of his own thoughts.
+Caleb had been quiet through most of this, watching the exchange with a stillness Mara had learned meant he was working something through before he said it out loud, his arms crossed and his gaze fixed somewhere past all of them, on the middle distance of his own thoughts.
 
 "There's a piece we're missing," he said finally. "Dev, you said there was at least one case before Frey. Before the eighties. How far back."
 
