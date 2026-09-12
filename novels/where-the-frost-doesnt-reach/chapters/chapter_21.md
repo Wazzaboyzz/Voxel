@@ -6,7 +6,7 @@ Mara had expected, on some level she was embarrassed to admit now, that a direct
 
 Mara watched him recompose himself in real time, the transformation almost clinical in its precision, and thought that whatever else Ambrose Kell was, he had clearly survived forty years in this town's politics by being extraordinarily good at exactly this, the art of looking entirely reasonable while standing in the wreckage of his own exposed lie.
 
-"She's not going anywhere until you tell us what you were about to make her do," Caleb said, his voice low, and Mara felt the tension radiating off him from a foot away, the particular stillness that had become, over the last week, her clearest warning sign of how close he was to the edge of his own patience.
+"She's not going anywhere until you tell us what you were about to make her do," Caleb said, his voice low, and Mara felt the tension radiating off him from a foot away, a stillness that had become, over the last week, her clearest warning sign of how close he was to the edge of his own patience.
 
 "I wasn't going to make her do anything. She came to me, concerned about the frost forecast, same as half this town's been concerned all week, and we were discussing options." Kell's eyes moved between them, calm, immovable, a man who had spent four decades learning exactly how much truth to hand over so that the rest could stay buried. "I understand you've built quite a theory tonight. Dev's disappearance, some old file of your grandfather's, Thomas Voss was a good man but a bitter one by the end, Ms. Voss, and bitterness makes for creative reading of old weather records."
 
@@ -16,7 +16,7 @@ Something flickered, there and gone, behind Kell's composed face, so brief Mara 
 
 "You're going to make him the villain."
 
-"I'm going to let the truth sort itself out through proper channels, Ms. Voss, which is more than I can say for whatever you and Mr. Reyes have been doing, breaking into a man's home at night, making accusations you can't prove, frightening a teenage girl half to death." Kell's voice hadn't risen once, and that, more than anything he'd said, told Mara exactly how dangerous he actually was, the specific menace of a man who had never once needed to raise his voice to get exactly what he wanted from a room. "I'd think carefully about which story this town is more inclined to believe. A council chair with forty years of service, or a woman who left eight years ago and came back angry, dragging a grieving man who can't even remember his own engagement into a conspiracy theory about missing memories."
+"I'm going to let the truth sort itself out through proper channels, Ms. Voss, which is more than I can say for whatever you and Mr. Reyes have been doing, breaking into a man's home at night, making accusations you can't prove, frightening a teenage girl half to death." Kell's voice hadn't risen once, and that, more than anything he'd said, told Mara exactly how dangerous he actually was, menace from a man who had never once needed to raise his voice to get exactly what he wanted from a room. "I'd think carefully about which story this town is more inclined to believe. A council chair with forty years of service, or a woman who left eight years ago and came back angry, dragging a grieving man who can't even remember his own engagement into a conspiracy theory about missing memories."
 
 The wind outside had settled, as suddenly as it had risen, the branches beyond the window going still in a way that felt almost obscene given how violently they'd been thrashing only a minute before, and Mara understood, with a cold clarity, that he'd let it settle on purpose, a small demonstration of exactly what he could do and exactly how easily he could make it look like nothing had happened at all.
 
@@ -26,9 +26,9 @@ They didn't speak again until they were back in the truck, Wren silent and shaki
 
 "I almost did it," she said, voice cracking. "He made it sound so reasonable. Just a little, he said, just enough to smooth the frost line for one more week, and everyone's harvest would be safe, and nobody would even know what it cost me because it would be so small. I believed him. For like ten whole minutes tonight, I actually believed him."
 
-"That's not weakness," Mara said, turning in her seat to look at her properly, her voice softening in a way she rarely let it, the specific gentleness she reserved for moments when precision would only make things worse. "That's exactly how manipulation is supposed to work. He's had forty years of practice making the wrong thing sound like the responsible one. You're nineteen. You didn't stand a chance against that alone, and it wasn't your job to."
+"That's not weakness," Mara said, turning in her seat to look at her properly, her voice softening in a way she rarely let it, a gentleness she reserved for moments when precision would only make things worse. "That's exactly how manipulation is supposed to work. He's had forty years of practice making the wrong thing sound like the responsible one. You're nineteen. You didn't stand a chance against that alone, and it wasn't your job to."
 
-Wren wiped at her eyes with the back of her sleeve, a gesture so young it made Mara's chest tighten, and for a moment nobody in the truck said anything, the three of them sitting with the particular exhausted silence that follows a danger that's passed but hasn't yet finished making itself known in the body.
+Wren wiped at her eyes with the back of her sleeve, a gesture so young it made Mara's chest tighten, and for a moment nobody in the truck said anything, the three of them sitting with the exhausted silence that follows a danger that's passed but hasn't yet finished making itself known in the body.
 
 "What do we do now? He's just going to walk around like nothing happened."
 
@@ -38,7 +38,7 @@ They dropped Wren at her mother's house first, waiting in the driveway until a l
 
 ---
 
-Mara didn't go home. Caleb didn't ask her to, and she didn't offer an explanation, and somewhere in the unspoken agreement of it she found herself back on his porch an hour later, Toll asleep across both their feet, warm and heavy and entirely unbothered by the night's events, a bottle of something Odette had left behind months ago sitting mostly untouched between them, its label gone soft with humidity from sitting out here through more than one season already. The adrenaline of the last few hours had finally started to drain out of her, leaving behind the particular hollow exhaustion that always followed it, her hands still faintly unsteady around a glass she hadn't actually poured anything into yet.
+Mara didn't go home. Caleb didn't ask her to, and she didn't offer an explanation, and somewhere in the unspoken agreement of it she found herself back on his porch an hour later, Toll asleep across both their feet, warm and heavy and entirely unbothered by the night's events, a bottle of something Odette had left behind months ago sitting mostly untouched between them, its label gone soft with humidity from sitting out here through more than one season already. The adrenaline of the last few hours had finally started to drain out of her, leaving behind the hollow exhaustion that always followed it, her hands still faintly unsteady around a glass she hadn't actually poured anything into yet.
 
 "I keep thinking about what he said," Caleb said finally, staring out at the dark orchard rows, the moon just bright enough to silver the tops of the nearest trees. "About me not remembering my own engagement. He said it to hurt you, I could see that, but it's also just true, and I hate how much it's still true even after everything tonight."
 
