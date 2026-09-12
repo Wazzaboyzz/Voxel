@@ -1,6 +1,6 @@
 # CHAPTER EIGHTEEN
 
-They found Wren at the store the next morning, restocking a shelf of canned goods with Odette a few feet away, and Mara watched the girl's face light up at the sight of them before catching, almost immediately, on the particular grimness none of them had managed to fully shake off since the silo.
+They found Wren at the store the next morning, restocking a shelf of canned goods with Odette a few feet away, and Mara watched the girl's face light up at the sight of them before catching, almost immediately, on a grimness none of them had managed to fully shake off since the silo.
 
 "What happened," Wren asked, setting down the can in her hand. "You all look like you've been up all night."
 
@@ -22,13 +22,13 @@ Wren went very still, the color draining slowly from her face. "He asked me to h
 
 "Two asks, at least," Priya said, jotting a note despite herself, old habits surfacing even in a conversation that had nothing to do with an official report. "Probably more we don't know about yet."
 
-"I thought I was just being helpful." Wren's voice had gone thin, the particular shame of realizing, after the fact, that kindness had been quietly weaponized against her own good nature. "I thought it made me useful. Important, even. He made it feel like being asked meant something good about me."
+"I thought I was just being helpful." Wren's voice had gone thin with the shame of realizing, after the fact, that kindness had been quietly weaponized against her own good nature. "I thought it made me useful. Important, even. He made it feel like being asked meant something good about me."
 
 "It does mean something good about you," Caleb said firmly. "That's exactly why it worked. He doesn't target people who don't care about being helpful. He targets the ones who do, because that's the lever he knows how to pull."
 
 Odette, who had been listening from the doorway with her arms crossed, finally spoke, something tight and unreadable in her expression. "I should have seen this coming sooner. I've watched that man operate for forty years. I know exactly what the early stages look like, and I still didn't put it together until you all walked in here looking like you'd seen a ghost."
 
-"None of us saw it until Dev told us directly," Mara said, though she noted, filing it away without comment, the particular defensiveness in Odette's voice, sharper than the moment strictly required.
+"None of us saw it until Dev told us directly," Mara said, though she noted, filing it away without comment, a defensiveness in Odette's voice sharper than the moment strictly required.
 
 "I've known Ambrose Kell since before any of you were born," Odette went on, something old and tired in her voice now. "I've watched him charm this whole valley for four decades while quietly making sure nobody ever had quite enough proof to challenge him properly. I hate that I still find myself second-guessing what I actually saw versus what he wanted me to see, even now, even knowing what I know."
 
@@ -50,7 +50,7 @@ Mara considered the question seriously, understanding it deserved more than easy
 
 "I spent a career learning to trust exactly that kind of instinct on job sites," Mara said. "The feeling that something's wrong before you can point to the specific crack. It's saved more lives than waiting for concrete proof ever has."
 
-Wren nodded, though her hands had begun to tremble slightly against the edge of the desk, the particular fear of a nineteen year old being asked to walk deliberately closer to a danger everyone else in the room understood far better than she did.
+Wren nodded, though her hands had begun to tremble slightly against the edge of the desk, the fear of a nineteen year old being asked to walk deliberately closer to a danger everyone else in the room understood far better than she did.
 
 "I'm scared," she admitted, quiet enough that Mara had to lean in to catch it fully.
 
@@ -90,14 +90,14 @@ The truck rolled on toward the orchard, the day gone gray and heavy overhead in 
 
 "I'll ask him tonight," Priya said. "Gently. He's still fragile, and I don't want to turn every conversation with my own brother into an interrogation just because we're in a hurry."
 
-"Understood." Mara looked back at the store shrinking in the side mirror, thinking of Wren's small, determined nod, the particular bravery of a teenager choosing to walk directly toward danger because the alternative, waiting passively for it to arrive, felt worse. "I just hope we're faster than he is. He's had forty years of practice being patient. We've had about a week."
+"Understood." Mara looked back at the store shrinking in the side mirror, thinking of Wren's small, determined nod, the bravery of a teenager choosing to walk directly toward danger because the alternative, waiting passively for it to arrive, felt worse. "I just hope we're faster than he is. He's had forty years of practice being patient. We've had about a week."
 
-"Then we make the week count," Caleb said, his hands steady on the wheel despite everything, the particular resolve of a man who had already lost two years to this exact kind of patience and had no intention of losing anything else to it without a fight.
+"Then we make the week count," Caleb said, his hands steady on the wheel despite everything, the resolve of a man who had already lost two years to this exact kind of patience and had no intention of losing anything else to it without a fight.
 
-Mara let the silence settle over the cab for a while after that, watching the orchard rows blur past the window, gold and heavy with the last of the season's fruit, ordinary and beautiful in a way that felt almost defiant against everything they now understood was moving underneath this valley's calm surface. She found herself thinking of Wren's face when Caleb had promised her this time would be different, the particular fragile hope of someone choosing to believe a thing because the alternative was unbearable, and hoped, fiercely, that they would manage to deserve that hope rather than simply borrow against it.
+Mara let the silence settle over the cab for a while after that, watching the orchard rows blur past the window, gold and heavy with the last of the season's fruit, ordinary and beautiful in a way that felt almost defiant against everything they now understood was moving underneath this valley's calm surface. She found herself thinking of Wren's face when Caleb had promised her this time would be different, the fragile hope of someone choosing to believe a thing because the alternative was unbearable, and hoped, fiercely, that they would manage to deserve that hope rather than simply borrow against it.
 
 "We're going to need more than good intentions," she said finally. "We need the ledger Dev mentioned. We need a plan for Wren that doesn't depend entirely on her own nerve holding steady under pressure. And we need to figure out, soon, whether Odette's help is exactly what it looks like or something we should be watching more carefully."
 
 "One thing at a time," Priya said from the back seat, though her voice carried the same underlying unease Mara had been sitting with all morning. "Tonight, Dev. Tomorrow, everything else."
 
-Caleb turned into the orchard drive, the house coming into view through the trees, and for a moment none of them said anything else, each of them alone with the particular private math of exactly how much time they thought they actually had left before Kell's patience ran out and forced all of their hands at once.
+Caleb turned into the orchard drive, the house coming into view through the trees, and for a moment none of them said anything else, each of them alone with their own private math of exactly how much time they thought they actually had left before Kell's patience ran out and forced all of their hands at once.
