@@ -8,7 +8,7 @@ Mara sat with the engine off, feeling faintly absurd, a grown woman conducting s
 
 She waited, telling herself she was being paranoid, that a woman who had spent forty years managing a store alone was entitled to step away without accounting for her time to anyone, and then watched Odette emerge from the alley behind the building fifteen minutes later, walking briskly toward the old feed store lot where a car Mara didn't recognize sat idling, windows tinted just enough to obscure whoever waited inside.
 
-The conversation, from this distance, lasted less than three minutes. Odette leaned toward the driver's window, said something Mara couldn't begin to guess at, and straightened again with the particular stiffness of someone who had just agreed to something she didn't want to agree to. The car pulled away before Mara could get close enough to note so much as a partial plate, and Odette walked back into the store without once glancing toward the lot where Mara sat watching, her posture carefully, deliberately ordinary in a way that felt, to Mara's practiced eye, like its own kind of tell.
+The conversation, from this distance, lasted less than three minutes. Odette leaned toward the driver's window, said something Mara couldn't begin to guess at, and straightened again with the stiffness of someone who had just agreed to something she didn't want to agree to. The car pulled away before Mara could get close enough to note so much as a partial plate, and Odette walked back into the store without once glancing toward the lot where Mara sat watching, her posture carefully, deliberately ordinary in a way that felt, to Mara's practiced eye, like its own kind of tell.
 
 She told Caleb and Priya that evening, gathered again at the orchard house, and watched the same unease she'd been carrying settle visibly onto both their faces.
 
@@ -46,11 +46,11 @@ It felt thin, and dangerous, and none of them had a better idea, so the next mor
 
 "There's more," Wren said, twisting her hands together in her lap. "She asked me, right after, whether any of you had mentioned a ledger specifically. Not records in general. The exact word. I told her no, that I'd just heard the term somewhere and gotten curious, and she looked at me for a long moment before she let it go. It felt like she was checking whether I actually knew something or was just fishing."
 
-Mara felt the small hairs rise on her arms at that detail, the specific unease of watching a theory gain a piece of supporting evidence she hadn't wanted to find. "That's not an innocent reaction. An innocent person doesn't check whether you know a specific word. They just answer the question you actually asked."
+Mara felt the small hairs rise on her arms at that detail, an unease at watching a theory gain a piece of supporting evidence she hadn't wanted to find. "That's not an innocent reaction. An innocent person doesn't check whether you know a specific word. They just answer the question you actually asked."
 
 Priya, quiet through most of the discussion, finally spoke, her voice careful, the deputy weighing evidence rather than letting suspicion run ahead of what they actually knew. "I want to be fair to her. She's been kind to all of us this summer, kinder than this town usually manages to be to outsiders. If we're wrong about her, I don't want to have treated her like a suspect for weeks over nothing more than a locked door and an old family rumor."
 
-"I don't want that either," Mara said, meaning it, feeling the particular discomfort of holding two truths at once, gratitude for real kindness and suspicion about what that kindness might be covering. "But I also don't think we can afford to give anyone the benefit of the doubt right now, not with what's already happened to Caleb and Dev both. We watch. Carefully. We don't accuse her of anything until we actually know something, but we also don't stop watching just because watching feels unkind."
+"I don't want that either," Mara said, meaning it, feeling the discomfort of holding two truths at once, gratitude for real kindness and suspicion about what that kindness might be covering. "But I also don't think we can afford to give anyone the benefit of the doubt right now, not with what's already happened to Caleb and Dev both. We watch. Carefully. We don't accuse her of anything until we actually know something, but we also don't stop watching just because watching feels unkind."
 
 "What does watching actually look like," Wren asked. "I'm the one who has to be in that store with her most days. I need to know what I'm supposed to be noticing without turning every conversation into an audition for evidence."
 
@@ -62,7 +62,7 @@ Priya, quiet through most of the discussion, finally spoke, her voice careful, t
 
 Caleb reached for Mara's hand, some of the day's tension finally easing slightly now that a plan, however uncomfortable, had settled into place. "Careful is the only speed we've got left to move at right now. I'd rather be careful and wrong about Odette than careless and right too late about something worse."
 
-Outside, the evening had gone still and heavy, the particular stillness that Mara had learned, this summer, to read as something other than peace, and she found herself hoping, without much confidence, that whatever Odette was hiding turned out to be smaller and more forgivable than the shape their fear had already begun building it into.
+Outside, the evening had gone still and heavy, a stillness that Mara had learned, this summer, to read as something other than peace, and she found herself hoping, without much confidence, that whatever Odette was hiding turned out to be smaller and more forgivable than the shape their fear had already begun building it into.
 
 She thought, lying awake that night in the orchard house's quiet, of every kindness Odette had shown her this summer, the coffee, the steady counsel, the hand reaching across the store counter when Mara had needed to believe someone in this valley was simply, uncomplicatedly good. She didn't want the woman who'd offered those things to also be the woman quietly feeding Kell information, or worse, actively protecting whatever machinery he'd built to keep this valley compliant. But wanting a thing untrue had never once made it so, not in her professional life and not, she suspected, in this one either.
 
