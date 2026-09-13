@@ -9,79 +9,80 @@ where things stand and how to not break what's already here.
 2. `ARCHITECTURE.md` — the phased build plan.
 3. This file — process rules and current status.
 
-## START HERE — Phase 8c, 2026-09-13 session (first real end-to-end run)
+## START HERE — Phase 8d, 2026-09-13 session (image blocker fixed via manual-image workflow)
 
 **This is the most current section. Read this before anything else below.**
 
-The one-command pipeline (`voxel_cli.py book`) was run for real for the
-first time ever this session, via the `voxel-book.yml` GitHub Actions
-workflow (browser-triggered — see the browser-only rule further down).
-Two bugs were found and one is fixed; one needs Zia's decision before
-anyone continues.
+Phase 8c (below) found that Gemini's image API 429s on every call for a
+free-tier key with no billing linked, and billing is permanently off the
+table (see the standing rule further down). Zia's own call: since he can
+generate high-quality images by hand in VEO3 / Google Flow anyway, the
+pipeline should support that directly instead of chasing another
+automated free image API.
 
-**FIXED, confirmed live in code (not yet re-verified by a real run):**
-- `content_provider.py`: `NVIDIA_MODEL` default
-  (`nvidia/llama-3.1-nemotron-70b-instruct`) was 404ing — retired from
-  NVIDIA's catalog. Swapped default to `nvidia/nemotron-3-super-120b-a12b`
-  (commit `29c2ec5`). **This got the manuscript generation stage working
-  end-to-end for the first time** — a real 26-page manuscript was
-  generated and passed through the humanizer, and print-ready PDFs +
-  `project.json` were produced and uploaded as a workflow artifact.
-  Not yet re-run since the fix to double-confirm the new model id holds.
-- `.github/workflows/voxel-book.yml`: added `permissions: contents:
-  write` at the workflow level (commit landed via Zia pasting into the
-  GitHub web editor — **the GitHub App/OAuth connector used by AI
-  assistants in this session could NOT write to anything under
-  `.github/workflows/` directly, even though it had full write access
-  everywhere else in the repo — that path needs GitHub's separate
-  `workflow` OAuth scope, which this connector doesn't have. Any future
-  change to a workflow YAML file will hit the same 403 and must go
-  through Zia pasting it into the browser editor, not a direct API
-  write.** This fixes the `git push` 403 seen in the "Commit updated
-  story bible" step (was denied to `github-actions[bot]` before this).
+**Built this session (code, verified live on GitHub, NOT yet run for
+real):**
+- `image_provider.py`: two new functions, `write_image_prompts_file()`
+  and `load_manual_images()`. Zero API calls, zero cost, zero network for
+  either. `generate_image()`/`generate_all_images()` (the Gemini path)
+  are kept as-is for `make_lesson.py` and as a future fallback, but are
+  no longer the primary path for `build_book.py`/`voxel_cli.py book`.
+- `build_book.py` and `voxel_cli.py book` both gained two new,
+  mutually-exclusive flags:
+  - `--manual-images` — skips image generation entirely, writes
+    `output_books/<name>/image_prompts.md` (one prompt per page, plus
+    the EXACT filename to save each finished image as, e.g.
+    `page_001.png`), and still produces a text-only PDF immediately so
+    the manuscript itself can be checked without waiting on images.
+  - `--images-dir PATH` — loads images already sitting at PATH (named
+    per `image_prompts.md`) and assembles the real illustrated PDF, with
+    zero image-API calls.
+  - With neither flag, it still tries Gemini and will still 429 today —
+    kept only so a future genuinely-free automated source has somewhere
+    to plug in without touching the CLI surface again.
 
-**NOT FIXED — decision needed before continuing, DO NOT set up billing
-without asking Zia first:**
-- Every single image generation call (all 26/26) failed with `429 Too
-  Many Requests` against `generativelanguage.googleapis.com`'s
-  `gemini-2.5-flash-image` model, on the very first attempt, despite
-  `image_provider.py` already having a 2s polite delay between calls.
-  100%-immediate-failure across every call (not intermittent) points to
-  a hard block, not real rate limiting. Checked live in Google AI
-  Studio (aistudio.google.com/api-keys): the `GEMINI_API_KEY` in use
-  (labelled "VOXEL ON WAZZABOYZZ") is on **Free tier with no billing
-  set up**. `gemini-2.5-flash-image` most likely requires a linked
-  billing account to serve any requests at all, even at near-zero
-  actual cost.
-- **Zia's explicit standing rule (confirmed this session, matches the
-  cross-pipeline Atlas Frame rule): strictly free tier only, no billing,
-  no paid elements, anywhere.** So linking billing is OFF THE TABLE —
-  do not suggest it again, do not set it up even if asked casually.
-- **The actual right fix**: switch `image_provider.py` back to a truly
-  free image source. This also finally reconciles a stale-doc mismatch
-  that's been flagged for a while (see below) — README.md,
-  `build_book.py`, and `make_lesson.py` already (incorrectly) claim
-  images come from "Pollinations.ai, free, no key required," but the
-  real code calls Gemini. Making that true again (swap
-  `image_provider.py`'s implementation to actually call Pollinations,
-  or another genuinely-free-tier image API) is the next concrete task —
-  not attempted yet this session, ran out of context budget.
-- Once that's done, re-run `voxel-book.yml` (small page count, e.g. 4,
-  for a fast test) and confirm images actually generate before trusting
-  a full 26-page run.
+**The real two-run workflow this unlocks (all browser-only, no
+terminal):**
+1. Trigger `voxel-book.yml` with the new `manual_images` input checked
+   (see the workflow YAML change below — **this one has to be pasted in
+   by Zia**, the connector can't write to `.github/workflows/*` — see the
+   rule further down). Download `image_prompts.md` from the run's
+   Artifacts.
+2. Generate each image by hand in VEO3/Google Flow using those prompts,
+   save each with the exact filename shown, upload them all into one
+   folder in the repo via GitHub's web "Add file > Upload files" (e.g.
+   `manual_images/<book-name>/page_001.png` etc).
+3. Trigger `voxel-book.yml` again, this time with the new `images_dir`
+   input set to that folder's path. Download the real illustrated PDFs
+   from Artifacts.
 
-## Where things actually stand (Phase 8, dating below may be inaccurate — see Phase 8c above for what's current)
+**NOT YET DONE — next session should do this first:**
+- `voxel-book.yml` needs two new `workflow_dispatch` inputs
+  (`manual_images` boolean, `images_dir` string) and the `run:` step's
+  arg-building needs to pass them through. Drafted, not yet pasted in by
+  Zia (workflow-file-write 403, see rule below).
+- Neither `--manual-images` nor `--images-dir` has been exercised by a
+  real run yet — only read back and confirmed matching what was written,
+  not executed. Treat the first real run of each the same as any other
+  first run: check the output by eye.
+- README.md / `make_lesson.py`'s comments still say images come from
+  "Pollinations.ai" — still stale (see "Known doc/repo mismatches"
+  below), lower priority now since manual images are the working path
+  for books; `make_lesson.py` doesn't use this manual mode and still
+  hits Gemini directly for lesson decks.
+
+## Where things actually stand (Phase 8, dating below may be inaccurate — see Phase 8c/8d above for what's current)
 
 **Note on this file's own dating:** the header above previously said
 "updated 2026-09-13" for the whole Phase 8 write-up below, but Zia has
 since said the original Phase 8 handoff was actually written roughly two
-months before today (2026-09-13) — only the Phase 8b and 8c edits
-(NVIDIA key section, and the section above) genuinely happened today.
-Nobody has reconciled which internal dates in the Phase 8 section itself
-are accurate. Don't trust "2026-09-13" elsewhere in this file as the
-actual authorship date for anything except the Phase 8b/8c additions —
-verify against git commit history if the exact date of a specific
-change ever matters.
+months before today (2026-09-13) — only the Phase 8b/8c/8d edits (NVIDIA
+key section, the real-run section, and the manual-image section above)
+genuinely happened today. Nobody has reconciled which internal dates in
+the Phase 8 section itself are accurate. Don't trust "2026-09-13"
+elsewhere in this file as the actual authorship date for anything except
+the Phase 8b/8c/8d additions — verify against git commit history if the
+exact date of a specific change ever matters.
 
 - **Phases 1–3 are done.** `content_provider.py`, `image_provider.py`,
   `project_provider.py` are shared modules, tested, used by both
@@ -106,19 +107,24 @@ change ever matters.
   reference it) or as a local environment variable. If the model id
   `NVIDIA_MODEL` defaults to ever 404s again, check
   https://build.nvidia.com for the current catalog and override via the
-  `NVIDIA_MODEL` env var (see Phase 8c above — this already happened
+  `NVIDIA_MODEL` env var (see Phase 8c below — this already happened
   once).
-- **Phase 8c: see the section above — first real end-to-end run,
-  NVIDIA/permissions fixes landed, image generation blocked pending a
-  genuinely-free image source.**
+- **Phase 8c: first real end-to-end run.** NVIDIA model-id 404 and a
+  workflow-permissions 403 both fixed; manuscript generation + humanizer
+  confirmed working for real. Image generation blocked by Gemini 429s on
+  a no-billing free-tier key.
+- **Phase 8d: manual-image workflow (see START HERE above).** Fixes the
+  Phase 8c image blocker by supporting hand-generated images (VEO3,
+  Google Flow) instead of chasing another automated free API.
 
 ### Files added in Phase 8
 
 - **`voxel_cli.py`** — the single command Zia asked for.
-  - `python voxel_cli.py book --concept "..." --pages 26 --series luna`
+  - `python voxel_cli.py book --concept "..." --pages 26 --series luna [--manual-images | --images-dir PATH]`
     generates a full illustrated picture book: manuscript → humanizer
-    pass → images → print-ready interior/cover PDFs → project.json.
-    Wraps `build_book.py`'s existing pipeline rather than duplicating it.
+    pass → images (Gemini, or manual per Phase 8d) → print-ready
+    interior/cover PDFs → project.json. Wraps `build_book.py`'s existing
+    pipeline rather than duplicating it.
   - `python voxel_cli.py novel --series amity-falls --book "Book 2" --chapters 45 --brief "..."`
     generates a chapter-by-chapter prose novel/sequel, one `.md` file per
     chapter plus a compiled manuscript, under `novels/<series>/<book-slug>/`.
@@ -148,6 +154,8 @@ change ever matters.
   takes an optional `continuity_block` param. (Also added the
   `NVIDIA_API_KEY` support under Phase 8b, and the model-id fix under
   Phase 8c.)
+- **`image_provider.py`** — added `write_image_prompts_file()` and
+  `load_manual_images()` under Phase 8d (see above).
 
 ### What was deliberately NOT built (know these before extending)
 
@@ -162,38 +170,42 @@ change ever matters.
   auto-decision.
 - **Novels have no cover-art generation wired in.** `voxel_cli.py novel`
   produces text only. If a novel needs a cover, that's still a separate
-  manual step (or a follow-up addition to the CLI).
+  manual step (or a follow-up addition to the CLI) — the new manual-image
+  workflow (Phase 8d) could extend here too, not done yet.
 - **The `humanizer.py` pattern list is a starting set (~20 words/phrases),
   not exhaustive.** The researched repos claim 43-55 patterns; this
   session shipped a smaller, testable set rather than porting a huge
   list unverified. Expanding it is low-risk, additive work for a future
   session — just extend `BANNED_WORDS`/`BANNED_PHRASES` in `humanizer.py`.
-- **No automated tests added for `humanizer.py`, `story_bible.py`, or
-  `voxel_cli.py`.** Per the standing rule below ("add or update a test
-  when you change shared logic"), this is a gap — `humanizer.py`'s
-  `scan()` function especially is pure and easy to unit test (no mocking
-  needed), and should get one before it's trusted on Book 2 of Amity
-  Falls or a new Luna sequel.
+- **No automated tests added for `humanizer.py`, `story_bible.py`,
+  `voxel_cli.py`, or the new manual-image functions in
+  `image_provider.py`.** Per the standing rule below ("add or update a
+  test when you change shared logic"), this is a gap — all of these are
+  pure/offline logic, easy to unit test with no mocking needed, and
+  should get tests before being trusted on Book 2 of Amity Falls or a
+  new Luna sequel.
 
 ## Known doc/repo mismatches not yet fixed (flagged, not resolved)
 
 - **`ARCHITECTURE.md`'s "Current state" section is stale.** It still
   says Phase 4 is "NOT STARTED," contradicting this file's own account
   above that Phase 4 shipped (as Luna, off-pipeline). Needs reconciling.
-- **README.md, `build_book.py`, and `make_lesson.py` still describe
-  images as coming from "Pollinations.ai, free, no key required."**
-  `image_provider.py`'s actual code calls Google Gemini
-  (`GEMINI_API_KEY` required), not Pollinations — **and per Phase 8c
-  above, Gemini's image model needs billing Zia has explicitly ruled
-  out, so the fix here is now to make the code match the docs (switch
-  to real Pollinations/another free source), not just fix the comment.**
+- **README.md and `make_lesson.py` still describe images as coming from
+  "Pollinations.ai, free, no key required."** `image_provider.py`'s
+  Gemini functions are the real (currently 429ing) code path for
+  `make_lesson.py`; `build_book.py`/`voxel_cli.py book` now default to
+  manual images per Phase 8d instead. Comment/doc text is stale in both
+  places — lower priority than it was, since manual images are now the
+  working path for books, but `make_lesson.py` lesson decks still hit
+  Gemini directly and will still 429.
 - **`generate_images.py` is a second, disconnected image pipeline.**
   It's a GitHub-Actions-only script (Gemini → Cloudflare/FLUX → hosted
   FLUX fallback chain) that isn't called by `image_provider.py` or
   `voxel_cli.py` at all — only by `.github/workflows/test-image-secret.yml`.
   Worth checking whether its FLUX fallback chain is itself a genuinely
-  free path that `image_provider.py` could reuse instead of building a
-  third image pipeline from scratch.
+  free path — `CLOUDFLARE_ACCOUNT_ID`/`CLOUDFLARE_API_TOKEN` are already
+  configured as repo secrets, so this may already be usable without any
+  new setup. Not investigated this session.
 - **`video_output.py` (Chatterbox-TTS narrated marketing video) is built
   but never wired into `voxel_cli.py`** and isn't mentioned elsewhere in
   this file. It's a standalone module waiting to be called from
@@ -201,7 +213,8 @@ change ever matters.
 - **`build-book.yml` is redundant with `voxel-book.yml`.** The former
   calls `build_book.py` directly (bypassing humanizer/story-bible); the
   latter calls `voxel_cli.py book`. Worth deciding whether to keep both
-  or retire the older one.
+  or retire the older one. Note: the former also doesn't have the new
+  `--manual-images`/`--images-dir` inputs wired up either, if kept.
 - **`_workflows_scope_test.md` and `_write_access_test.md`** in the repo
   root are leftover connectivity-check files, safe to delete whenever
   someone's in there anyway.
@@ -221,7 +234,8 @@ change ever matters.
   up or suggest setting up billing on any API key used by this repo,
   even if it would unblock something and stay near-zero cost. If a
   provider requires billing to work at all, treat that provider as not
-  usable here and find a genuinely free alternative instead.
+  usable here and find a genuinely free alternative instead — or, per
+  Phase 8d, a manual-generation path that needs no API at all.
 - **This repo owner (Zia) works browser-only, including from his phone.
   He does NOT run a terminal/shell/CLI** — he will copy-paste any command
   or file content into a browser interface, but a local-clone terminal
@@ -237,12 +251,13 @@ change ever matters.
   403 this session (`Resource not accessible by integration`) when
   attempting to edit `voxel-book.yml` directly, despite the same
   connector successfully writing to `content_provider.py` and
-  `HANDOFF.md` moments earlier. Any workflow YAML change must be handed
-  to Zia as a full file to paste into the GitHub web editor
-  (`github.com/Wazzaboyzz/Voxel/edit/main/<path>`), the same as the
-  historical repo-wide-403 workaround, but this one is scoped
-  specifically to `.github/workflows/*` regardless of the connector's
-  general repo permissions.
+  `HANDOFF.md` moments earlier, and again when attempting to push a new
+  workflow file (`auto-changelog.yml`) — same 403, confirming this is a
+  path-level restriction, not something specific to editing an existing
+  file. Any workflow YAML change must be handed to Zia as a full file to
+  paste into the GitHub web editor
+  (`github.com/Wazzaboyzz/Voxel/edit/main/<path>` for an existing file,
+  or the "Add file > Create new file" button for a new one).
 - **Before attempting any write to this or any other repo, an AI
   assistant must call whatever "get authenticated user" tool it has and
   confirm out loud which GitHub account is currently connected**, then
@@ -263,8 +278,9 @@ change ever matters.
    steps — that becomes future scope.
 6. Come back and scope further automation based on what step 5 surfaced.
 
-`voxel_cli.py book` now automates steps 1-3 into one command. Steps 4-5
-are still manual and still the right place to learn what to automate next.
+`voxel_cli.py book` now automates steps 1-3 into one command (with a
+manual step for images per Phase 8d). Steps 4-5 are still manual and
+still the right place to learn what to automate next.
 
 ## Footer
 
