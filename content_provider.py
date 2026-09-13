@@ -18,6 +18,16 @@ OpenRouter. If NVIDIA_API_KEY is set, it's used (direct NVIDIA NIM
 endpoint, no OpenRouter middleman/rate limits). Otherwise falls back to
 OPENROUTER_API_KEY exactly as before - existing workflows/notebooks that
 only set OPENROUTER_API_KEY keep working unchanged.
+
+Phase 8c fix (2026-09-13): the original NVIDIA_MODEL default,
+"nvidia/llama-3.1-nemotron-70b-instruct", was returning 404 Not Found on
+the live NVIDIA NIM endpoint (confirmed via a real Actions run) - the
+model id was retired from the catalog. Swapped default to
+"nvidia/nemotron-3-super-120b-a12b", which current NVIDIA-catalog
+documentation lists as a live free-tier model as of this fix. This has
+NOT yet been re-verified against a real run - the doc's own advice
+still applies: check https://build.nvidia.com if this id 404s too, and
+override via the NVIDIA_MODEL env var.
 """
 
 import os
@@ -37,7 +47,7 @@ OPENROUTER_MODEL = "nvidia/nemotron-3-ultra-550b-a55b:free"
 # retired - check https://build.nvidia.com for the current model catalog
 # and matching model id if generation starts failing with a 404.
 NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
-NVIDIA_MODEL = os.environ.get("NVIDIA_MODEL", "nvidia/llama-3.1-nemotron-70b-instruct")
+NVIDIA_MODEL = os.environ.get("NVIDIA_MODEL", "nvidia/nemotron-3-super-120b-a12b")
 
 
 def _active_provider():
