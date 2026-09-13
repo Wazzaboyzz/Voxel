@@ -24,7 +24,21 @@ This is what "one command, one book ready" means in practice:
     python voxel_cli.py novel \
         --series amity-falls --book "Amity Falls Book 2" \
         --chapters 45 \
-        --brief "Book 2 picks up two years after the wedding in Book 1..."
+        --brief "Book 2 picks up two years after the wedding in Book 1..." \
+        --beat-map story_bibles/beatmaps/amity-falls__amity-falls-book-2.json
+
+    Phase 9 (2026-09-13): the --beat-map flag is the actual missing piece
+    identified after auditing how "Where the Frost Doesn't Reach" was
+    really written (by hand, chapter by chapter) versus what this CLI's
+    `novel` command was doing (a bare one-line brief, nothing else).
+    A beat map is a book-scoped JSON file (see story_bible.py's Phase 9
+    docstring for the schema) giving each chapter its beat, marking
+    checkpoint chapters that must not move, per-character voice profiles,
+    a word-count band, and a zero-em-dash hard rule. It's optional -
+    without it, `novel` still works exactly as before (brief-only), so
+    this is additive, not a breaking change. Zia is browser-only, so the
+    beat-map file itself is uploaded by hand via GitHub's web "Add file"
+    button before running this command against it.
 
 What it does NOT do yet (see HANDOFF.md "Known gaps"):
   - It does not auto-decide the story concept for you. You give it a
@@ -33,9 +47,11 @@ What it does NOT do yet (see HANDOFF.md "Known gaps"):
     build_book.py's original HANDOFF.md steps 4-5.
   - Image generation for novels (cover art) is not wired in here; novels
     are text-only output (.md chapter files + a compiled manuscript).
+  - A beat map itself is never invented by this pipeline - Zia supplies
+    it, same as the concept/brief.
 
 Required environment variables (same as before, nothing new):
-    OPENROUTER_API_KEY
+    OPENROUTER_API_KEY  or  NVIDIA_API_KEY
     GEMINI_API_KEY   (only needed if the 'book' command uses the default/
                       Gemini image mode instead of --manual-images/--images-dir)
 
@@ -45,10 +61,14 @@ Required local packages (same as before, nothing new):
 This script assumes it's run from inside a local clone of this repo (so
 relative imports of content_provider/image_provider/build_book work, and
 so the git commands below can commit+push using your machine's own git
-login - no GitHub token is handled by this script).
+login - no GitHub token is handled by this script). Zia himself doesn't
+run this locally - he triggers it via the voxel-book.yml/voxel-novel.yml
+GitHub Actions workflows in the browser; this docstring's examples are
+for whoever (human or AI) maintains the code.
 """
 
 import argparse
+import json
 import subprocess
 from pathlib import Path
 
@@ -142,23 +162,63 @@ def cmd_book(args):
 def cmd_novel(args):
     """Generate N chapters of a novel/sequel, one file per chapter under
     novels/<series>/<book-slug>/, plus a compiled single manuscript file.
-    Runs the humanizer pass per chapter. Commits+pushes at the end if
-    --commit is passed (uses your machine's own git credentials)."""
+    Runs the humanizer pass per chapter. Phase 9: if a beat map has been
+    uploaded (--beat-map or one already saved under story_bibles/beatmaps/
+    matching this series+book), each chapter is generated against its own
+    beat, checkpoint-chapter lock, voice profiles, word-count band, and
+    zero-em-dash rule - the same things that actually made Where the Frost
+    Doesn't Reach work, previously done by hand and never wired in here.
+    Without a beat map, behaves exactly as before (brief-only).
+    Commits+pushes at the end if --commit is passed (uses your machine's
+    own git credentials)."""
     continuity = story_bible.continuity_prompt_block(args.series)
     book_slug = "".join(c if c.isalnum() or c in " -_" else "" for c in args.book).strip().replace(" ", "-").lower()
     out_dir = NOVELS_DIR / args.series / book_slug
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    beat_map = None
+    if args.beat_map:
+        with open(args.beat_map, "r") as f:
+            beat_map = json.load(f)
+        story_bible.save_beat_map(args.series, book_slug, beat_map)
+        print(f"[voxel] Loaded beat map from {args.beat_map} "
+              f"({len(beat_map.get('chapters', {}))} chapter beats, "
+              f"{len(beat_map.get('checkpoint_chapters', {}))} checkpoint(s)).")
+    else:
+        beat_map = story_bible.load_beat_map(args.series, book_slug)
+        if beat_map:
+            print(f"[voxel] Found an existing beat map for {args.series}/{book_slug}, using it.")
+        else:
+            print("[voxel] No beat map for this book - generating from --brief only "
+                  "(pass --beat-map to use one, see story_bible.py's Phase 9 docstring for the schema).")
+
+    tracker = []  # mirrors the old HANDOFF.md per-chapter status table
     compiled = []
     for n in range(1, args.chapters + 1):
         print(f"[voxel] Writing chapter {n}/{args.chapters}...")
+        beat_block = story_bible.beat_prompt_block(beat_map, n)
+        prompt_block = "\n\n".join(b for b in (continuity, beat_block) if b)
+
         brief = args.brief if n == 1 else f"{args.brief}\n(Continue naturally from chapter {n-1}.)"
-        chapter_text = content_provider.generate_novel_chapter(n, brief, continuity_block=continuity)
+        chapter_text = content_provider.generate_novel_chapter(n, brief, continuity_block=prompt_block)
 
         print(f"[voxel]   humanizer pass for chapter {n}...")
         clean_text, meta = humanizer.humanize_text(chapter_text, content_provider.call_raw)
         if meta.get("integrity_gate_failed"):
             print(f"[voxel]   WARNING: chapter {n} rewrite dropped a fact - kept original text.")
+
+        check = story_bible.check_chapter(clean_text, beat_map)
+        notes = []
+        if check["below_floor"]:
+            notes.append(f"BELOW FLOOR ({check['word_count']} < {check['floor']})")
+        if check["above_ceiling"]:
+            notes.append(f"OVER CEILING ({check['word_count']} > {check['ceiling']})")
+        if check["em_dash_violation"]:
+            notes.append(f"{check['em_dash_count']} EM DASH(ES) FOUND - zero required")
+        if notes:
+            print(f"[voxel]   WARNING chapter {n}: {'; '.join(notes)}")
+        tracker.append({"chapter": n, "word_count": check["word_count"],
+                         "em_dash_count": check["em_dash_count"], "notes": notes})
 
         chapter_path = out_dir / f"chapter_{n:02d}.md"
         chapter_path.write_text(clean_text)
@@ -168,9 +228,22 @@ def cmd_novel(args):
     manuscript_path = out_dir / f"{book_slug}_full_manuscript.md"
     manuscript_path.write_text("\n\n---\n\n".join(compiled))
 
+    progress_path = out_dir / "novel_progress.json"
+    progress_path.write_text(json.dumps({
+        "series": args.series, "book": args.book, "beat_map_used": bool(beat_map),
+        "chapters": tracker,
+    }, indent=2))
+    print(f"[voxel]   -> {progress_path} (per-chapter word-count/em-dash tracker)")
+
     summary = args.summary or f"({args.chapters}-chapter novel: {args.brief[:150]})"
     story_bible.register_book(args.series, args.book, summary)
     print(f"[voxel] Registered '{args.book}' in the '{args.series}' story bible for future sequels.")
+
+    flagged_chapters = [t for t in tracker if t["notes"]]
+    if flagged_chapters:
+        print()
+        print(f"[voxel] {len(flagged_chapters)} chapter(s) need a look before calling this book done "
+              f"(see novel_progress.json): {[t['chapter'] for t in flagged_chapters]}")
 
     print()
     print("[voxel] Done. Output folder:")
@@ -208,6 +281,9 @@ def main():
     novel_p.add_argument("--book", required=True, help="Book title, e.g. 'Amity Falls Book 2'.")
     novel_p.add_argument("--chapters", type=int, required=True)
     novel_p.add_argument("--brief", required=True, help="What this book/chapter arc is about.")
+    novel_p.add_argument("--beat-map", default=None,
+                          help="Path to a beat-map JSON file (see story_bible.py's Phase 9 docstring for the schema). "
+                               "Optional - without it, generation falls back to --brief only.")
     novel_p.add_argument("--summary", default=None)
     novel_p.add_argument("--commit", action="store_true", help="git add/commit/push when done.")
     novel_p.set_defaults(func=cmd_novel)
