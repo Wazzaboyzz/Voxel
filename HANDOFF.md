@@ -157,19 +157,25 @@ matters.
   and now `humanizer.py`, `story_bible.py`). Mock external calls.
 - **Don't claim a change works without running the tests.**
   `python -m pytest -v` locally, or check the Actions tab after pushing.
-- This repo owner (Zia) is a non-coder working browser-only most of the
-  time, though `voxel_cli.py` is meant to be run from a terminal with a
-  local clone (he has confirmed he can do this for the one-command
-  pipeline specifically). **Before attempting any write to this or any
-  other repo, an AI assistant must call whatever "get authenticated
-  user" tool it has and confirm out loud which GitHub account is
-  currently connected**, then actually attempt a real write and check
-  the result rather than assuming a past session's account/permission
-  problem still applies — this session's aliwaziri10-authenticated
-  connector had full write access to Wazzaboyzz/Voxel with no 403,
-  contradicting an earlier note in this file. Don't repeat stale
-  assumptions from memory; verify against the current tool result every
-  time.
+- **This repo owner (Zia) works browser-only, including from his phone.
+  He does NOT run a terminal/shell/CLI** — he will copy-paste any command
+  or file content into a browser interface, but a local-clone terminal
+  invocation of `voxel_cli.py` is a last resort only, to be used when no
+  browser-based path (e.g. triggering the `voxel-book.yml`/
+  `voxel-novel.yml` GitHub Actions workflows via the browser Actions tab)
+  exists at all. An earlier version of this file claimed he'd "confirmed
+  he can do this for the one-command pipeline specifically" — that was
+  wrong and has been corrected here (2026-09-13). Design any new
+  workflow/step assuming browser-only access first.
+- **Before attempting any write to this or any other repo, an AI
+  assistant must call whatever "get authenticated user" tool it has and
+  confirm out loud which GitHub account is currently connected**, then
+  actually attempt a real write and check the result rather than
+  assuming a past session's account/permission problem still applies —
+  this session's aliwaziri10-authenticated connector had full write
+  access to Wazzaboyzz/Voxel with no 403, contradicting an earlier note
+  in this file. Don't repeat stale assumptions from memory; verify
+  against the current tool result every time.
 
 ## Original Phase 4 walk-through (superseded by voxel_cli.py above, kept for reference)
 
