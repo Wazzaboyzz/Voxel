@@ -44,6 +44,16 @@ on:
         required: false
         default: ""
         type: string
+      manual_images:
+        description: "Skip image generation, just write image_prompts.md so you can generate images by hand (VEO3, Google Flow, etc.)"
+        required: false
+        default: false
+        type: boolean
+      images_dir:
+        description: "Path to a folder of hand-generated images already uploaded to this repo (e.g. manual_images/my-book). Leave blank unless you have images ready."
+        required: false
+        default: ""
+        type: string
 
 permissions:
   contents: write
@@ -73,6 +83,8 @@ jobs:
           ARGS="--concept \"${{ inputs.concept }}\" --pages ${{ inputs.pages }} --trim ${{ inputs.trim }} --paper ${{ inputs.paper }}"
           if [ "${{ inputs.coloring_book }}" = "true" ]; then ARGS="$ARGS --coloring-book"; fi
           if [ -n "${{ inputs.series }}" ]; then ARGS="$ARGS --series ${{ inputs.series }}"; fi
+          if [ "${{ inputs.manual_images }}" = "true" ]; then ARGS="$ARGS --manual-images"; fi
+          if [ -n "${{ inputs.images_dir }}" ]; then ARGS="$ARGS --images-dir ${{ inputs.images_dir }}"; fi
           eval python voxel_cli.py book $ARGS
 
       - name: Upload finished book (PDFs + project.json)
