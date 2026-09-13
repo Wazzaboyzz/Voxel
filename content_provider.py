@@ -24,10 +24,19 @@ Phase 8c fix (2026-09-13): the original NVIDIA_MODEL default,
 the live NVIDIA NIM endpoint (confirmed via a real Actions run) - the
 model id was retired from the catalog. Swapped default to
 "nvidia/nemotron-3-super-120b-a12b", which current NVIDIA-catalog
-documentation lists as a live free-tier model as of this fix. This has
-NOT yet been re-verified against a real run - the doc's own advice
-still applies: check https://build.nvidia.com if this id 404s too, and
-override via the NVIDIA_MODEL env var.
+documentation lists as a live free-tier model as of this fix.
+
+Phase 8g (2026-09-13): generate_manuscript()'s prompt was producing
+generic, forgettable text - technically valid pages with no reason for a
+reader to keep turning them. Rewritten from real published picture-book
+craft research (page-turn hooks, show-don't-tell, sensory specificity,
+refrain/repetition, punctuation-driven pacing, a want-driven character
+arc, a satisfying-AND-surprising ending) rather than a generic "write a
+children's book" instruction. Sources synthesized (no text copied):
+writers.com's 5-tip craft guide, rivereditor.com's page-turn-technique
+breakdown, thekidlitlab's pacing/page-turn essay, qinprinting's 12
+elements of successful picture books, writingmastery.com's structural
+guide, and manuscriptagency.com.au's read-aloud-focused guide.
 """
 
 import os
@@ -148,25 +157,67 @@ def generate_manuscript(concept, page_count, continuity_block=""):
 
     continuity_block: optional text from story_bible.continuity_prompt_block()
     to keep a sequel's characters/style/plot consistent with prior books.
+
+    Phase 8g: this prompt is built from real published-picture-book craft
+    principles, not a generic instruction - see module docstring for the
+    research this synthesizes.
     """
     system_prompt = (
-        f"You are a children's book author and illustrator's art director. "
-        f"Given a book concept, produce a JSON array of exactly {page_count} "
-        f"page objects. Return ONLY valid JSON, no markdown fences, no "
-        f"preamble. Each object must have exactly these keys:\n"
+        "You are a bestselling children's picture book author - the kind "
+        "whose books get \"read it again!\" every night. Given a book "
+        f"concept, write exactly {page_count} pages that are a genuine "
+        "page-turner, not a generic story that happens to be split into "
+        "pages. Follow these craft rules, all drawn from how real "
+        "published picture books actually work:\n\n"
+        "1. WANT-DRIVEN PLOT: establish what the main character wants or "
+        "is missing in page 1-2. Every page after that should move them "
+        "toward or away from getting it - no filler pages that don't "
+        "change anything.\n\n"
+        "2. PAGE-TURN HOOKS: end the text on EVERY page (except the very "
+        "last) with a reason to turn the page - an unanswered question, "
+        "a sound, a half-finished action, something half-seen, or a "
+        "sudden shift. The reader (or the child listening) should feel a "
+        "small pull to see what's next, every single page.\n\n"
+        "3. SHOW, DON'T TELL: never state a character's emotion directly "
+        "(no \"she felt sad\") - show it through action, a small physical "
+        "detail, or dialogue instead. Save physical/setting description "
+        "for the image_prompt field, not the text - the text should carry "
+        "feeling, dialogue, and forward motion; let the illustration carry "
+        "what things look like.\n\n"
+        "4. READ-ALOUD RHYTHM: vary sentence length deliberately - mix "
+        "short punchy sentences with longer flowing ones. Use commas to "
+        "build momentum and periods to land a beat. Read each page in "
+        "your head as if speaking it aloud before finalizing it - if it's "
+        "clunky to say, rewrite it.\n\n"
+        "5. A REFRAIN, IF IT FITS: if a repeated phrase or sound would "
+        "suit this story (kids love saying a repeated line along with the "
+        "reader), use one consistently - same wording every time it "
+        "appears, don't vary it partway through.\n\n"
+        "6. A REAL ENDING: the final page must feel both SATISFYING (the "
+        "want from page 1-2 is resolved) and slightly SURPRISING (not the "
+        "single most obvious resolution a reader would guess on page 1) - "
+        "avoid a flat, tidy, moralizing wrap-up sentence.\n\n"
+        "7. HUMOR AND WARMTH WHERE IT FITS: a small joke, an odd detail, "
+        "or a moment of genuine tenderness lands better than a string of "
+        "purely functional plot sentences.\n\n"
+        "Return ONLY valid JSON, no markdown fences, no preamble: a JSON "
+        "array of page objects, each with exactly these keys:\n"
         '  "page_number": integer, 1-indexed\n'
-        '  "text": the text for this page (can be an empty string for '
-        "pages meant to be pure illustration, e.g. coloring book pages)\n"
+        '  "text": the page-turn-crafted text for this page per the rules '
+        "above (can be an empty string only for pure-illustration/coloring "
+        "pages)\n"
         '  "image_prompt": a concrete, specific visual description '
-        "(10-25 words) of the illustration for this page - describe an "
-        "actual scene, character pose, or object, not an abstract idea\n"
+        "(10-25 words) of the illustration for this page - an actual "
+        "scene, character pose, or object, not an abstract idea. This is "
+        "where physical/setting description belongs since the text "
+        "shouldn't duplicate it.\n"
         "If the concept describes a coloring book, text should be empty "
         "or a very short caption, and image_prompt should describe a "
-        "clean line-art scene suitable for coloring. If it's a story, "
-        "text should carry the narrative forward page by page and "
-        "image_prompt should illustrate that page's specific moment. "
+        "clean line-art scene suitable for coloring - craft rules 1-7 "
+        "don't apply to a coloring book's minimal text.\n"
         "Avoid AI-writing tells: no rule-of-three lists, no stock phrases, "
-        "vary sentence length naturally, write like a human author."
+        "vary sentence length naturally, write like a real human author "
+        "who has actually read their pages aloud to a child."
     )
     user_content = f"Book concept: {concept}"
     if continuity_block:
