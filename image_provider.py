@@ -7,6 +7,19 @@ falls back to Cloudflare Workers AI (FLUX.2 [klein] 4B, free tier, Apache
 make_lesson.py and build_book.py call this instead of each having their
 own copy or their own fallback logic.
 
+Phase 8j (2026-09-13) - after a real run where BOTH Gemini and the
+Cloudflare fallback 429'd on every single page, the logs turned out to be
+useless for diagnosing why: the code only ever logged the string
+"429 rate limited" and never the actual response body, so there was no
+way to tell a per-minute rate limit (clears in a minute) apart from a
+per-day quota exhausted (won't clear until the provider's daily reset)
+apart from a genuinely different problem (e.g. billing required,
+Workers AI daily neuron budget spent). Fixed both _try_gemini_once and
+_try_cloudflare to capture and surface the actual response body
+(truncated to 300 chars) in the returned error string, so the next time
+this happens the console output itself says which case it is instead of
+requiring guesswork.
+
 Phase 8h (2026-09-13) - two fixes after the first real run showed zero
 character consistency (a robot turned into an animal page to page):
 
@@ -47,7 +60,11 @@ UPDATE (2026-09-13, Phase 8e): Gemini's image model can 429 on a key with
 no billing linked. Cloudflare Workers AI is used as a last-resort
 fallback - CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN are already
 configured as repo secrets. Both are genuinely free tier, matching Zia's
-standing "strictly free tier, no billing, anywhere" rule.
+standing "strictly free tier, no billing, anywhere" rule. NOTE (Phase
+8j): both providers CAN still be exhausted on the same day if enough
+test runs happen in a short window - this is expected behavior for a
+strictly-free-tier pipeline, not a bug, and the fix is to wait for the
+daily reset, not to add billing.
 
 The manual-image workflow (write_image_prompts_file() / load_manual_images(),
 Phase 8d) is kept as a fallback-of-the-fallback for the rare case where
@@ -80,6 +97,8 @@ CLOUDFLARE_FLUX_MODEL = "@cf/black-forest-labs/flux-2-klein-4b"
 CLOUDFLARE_ACCOUNT_URL = "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/run/{model}"
 
 GEMINI_RETRY_DELAYS = [15, 30, 60]  # seconds, before giving up and trying Cloudflare
+
+ERROR_BODY_PREVIEW_CHARS = 300  # enough to see "PerDay"/"PerMinute"/quota text without flooding logs
 
 REFERENCE_MATCH_INSTRUCTION = (
     "IMPORTANT: The attached reference image shows this exact character. "
@@ -119,6 +138,20 @@ def _image_to_inline_part(image_path):
     return {"inlineData": {"mimeType": mime, "data": base64.b64encode(data).decode("ascii")}}
 
 
+def _error_preview(resp):
+    """Returns a short, safe preview of a response body for error messages -
+    enough to see whether a 429's body mentions a per-minute vs per-day
+    quota, without dumping a huge/binary body into the console."""
+    try:
+        text = resp.text
+    except Exception:
+        return "(could not read response body)"
+    text = text.strip().replace("\n", " ")
+    if len(text) > ERROR_BODY_PREVIEW_CHARS:
+        text = text[:ERROR_BODY_PREVIEW_CHARS] + "...(truncated)"
+    return text or "(empty response body)"
+
+
 def _try_gemini_once(full_prompt, out_path, reference_image_path=None):
     key = os.environ.get("GEMINI_API_KEY")
     if not key:
@@ -135,7 +168,9 @@ def _try_gemini_once(full_prompt, out_path, reference_image_path=None):
     try:
         resp = requests.post(GEMINI_URL, params={"key": key}, json=body, timeout=90)
         if resp.status_code == 429:
-            return False, "429 rate limited", 429
+            # Phase 8j: surface the real body so "per-minute" vs "per-day"
+            # vs "billing required" is visible in the console, not guessed at.
+            return False, f"429 rate limited - body: {_error_preview(resp)}", 429
         resp.raise_for_status()
         data = resp.json()
         response_parts = data["candidates"][0]["content"]["parts"]
@@ -146,6 +181,9 @@ def _try_gemini_once(full_prompt, out_path, reference_image_path=None):
                 out_path.write_bytes(base64.b64decode(inline["data"]))
                 return True, None, None
         return False, f"No image data in Gemini response: {data}", None
+    except requests.HTTPError as e:
+        preview = _error_preview(e.response) if e.response is not None else str(e)
+        return False, f"{e} - body: {preview}", (e.response.status_code if e.response is not None else None)
     except (requests.RequestException, KeyError, IndexError) as e:
         return False, str(e), None
 
@@ -189,6 +227,9 @@ def _try_cloudflare(full_prompt, out_path, width=1024, height=1024, reference_im
             data["prompt"] = full_prompt
 
         resp = requests.post(url, headers=headers, data=data, files=files or None, timeout=120)
+        if resp.status_code == 429:
+            # Phase 8j: same fix as Gemini - show the real body, not just "429".
+            return False, f"429 rate limited - body: {_error_preview(resp)}"
         resp.raise_for_status()
         result = resp.json()
 
@@ -207,6 +248,9 @@ def _try_cloudflare(full_prompt, out_path, width=1024, height=1024, reference_im
         out_path.parent.mkdir(parents=True, exist_ok=True)
         out_path.write_bytes(base64.b64decode(img_b64))
         return True, None
+    except requests.HTTPError as e:
+        preview = _error_preview(e.response) if e.response is not None else str(e)
+        return False, f"{e} - body: {preview}"
     except (requests.RequestException, KeyError, IndexError) as e:
         return False, str(e)
 
@@ -257,9 +301,12 @@ def generate_all_images(items, image_dir, filename_prefix="item", seed_base=42,
     Gemini's free-tier per-minute request limit across a full book run,
     since the pipeline runs on a multi-hour cron and there is no reason
     to rush into 429s. This only helps against a per-minute limit, not a
-    per-day cap - if a run still exhausts the day's quota, check the
-    failed request's error body for "PerDay" vs "PerMinute" in its
-    quotaId to confirm which one is binding before tuning this further.
+    per-day cap - if a run still exhausts the day's quota on BOTH
+    providers (as happened once - see Phase 8j), that is a real free-tier
+    limit being hit, not a bug, and the console now prints the actual
+    response body so this can be confirmed at a glance rather than
+    guessed at. The fix for a genuine daily-quota exhaustion is to wait
+    for the provider's reset, not to add billing.
 
     Returns a list of Path (or None on total failure for that item),
     matching `items` order - same shape as before, so build_book.py's
