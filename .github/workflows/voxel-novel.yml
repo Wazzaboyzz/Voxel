@@ -3,6 +3,12 @@ name: Voxel Novel (one command)
 # Manual trigger only. Actions tab -> "Voxel Novel (one command)" -> Run
 # workflow. Fill in the series/book/brief, wait, chapters get committed
 # straight into novels/<series>/<book-slug>/ automatically.
+#
+# Phase 9: optional beat_map input. Leave blank for brief-only generation
+# (old behavior). To use a beat map: upload the JSON file first via
+# GitHub's web "Add file > Upload files" button into
+# story_bibles/beatmaps/<series>__<book-slug>.json, then put that same
+# path here.
 
 on:
   workflow_dispatch:
@@ -22,6 +28,11 @@ on:
       brief:
         description: "What this book is about (a few sentences)"
         required: true
+        type: string
+      beat_map:
+        description: "Path to an uploaded beat-map JSON file (optional), e.g. story_bibles/beatmaps/amity-falls__amity-falls-book-2.json. Leave blank for brief-only."
+        required: false
+        default: ""
         type: string
 
 jobs:
@@ -43,11 +54,9 @@ jobs:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
-          python voxel_cli.py novel \
-            --series "${{ inputs.series }}" \
-            --book "${{ inputs.book }}" \
-            --chapters ${{ inputs.chapters }} \
-            --brief "${{ inputs.brief }}"
+          ARGS="--series \"${{ inputs.series }}\" --book \"${{ inputs.book }}\" --chapters ${{ inputs.chapters }} --brief \"${{ inputs.brief }}\""
+          if [ -n "${{ inputs.beat_map }}" ]; then ARGS="$ARGS --beat-map ${{ inputs.beat_map }}"; fi
+          eval python voxel_cli.py novel $ARGS
 
       - name: Commit chapters and story bible
         run: |
