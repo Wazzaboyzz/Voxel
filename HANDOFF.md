@@ -9,7 +9,18 @@ where things stand and how to not break what's already here.
 2. `ARCHITECTURE.md` — the phased build plan.
 3. This file — process rules and current status.
 
-## Where things actually stand (updated 2026-09-13, Phase 8)
+## Where things actually stand (Phase 8, last edited 2026-09-13)
+
+**Note on this file's own dating:** the header above previously said
+"updated 2026-09-13" for the whole Phase 8 write-up below, but Zia has
+since said the original Phase 8 handoff was actually written roughly two
+months before today (2026-09-13) — only this session's Phase 8b edit
+(NVIDIA key section below) genuinely happened today. Nobody has
+reconciled which internal dates in the Phase 8 section itself are
+accurate. Don't trust "2026-09-13" elsewhere in this file as the actual
+authorship date for anything except the Phase 8b addition — verify
+against git commit history if the exact date of a specific change ever
+matters.
 
 - **Phases 1–3 are done.** `content_provider.py`, `image_provider.py`,
   `project_provider.py` are shared modules, tested, used by both
@@ -20,14 +31,28 @@ where things stand and how to not break what's already here.
     chapter-by-chapter by hand/direct-API-push, not via `build_book.py`.
   - "Luna and the Lost Star" — built and published on KDP entirely
     manually in Canva, not via this repo at all.
-- **Phase 8 (this session): a one-command pipeline was added on top of
-  the existing Phase 1-4 code**, explicitly at Zia's direction, ahead of
-  the Phase 7 gate the previous HANDOFF.md set (multi-product pipeline
-  was flagged as out of scope until Phase 7 — Zia overrode that
+- **Phase 8 (one-command pipeline): a one-command pipeline was added on
+  top of the existing Phase 1-4 code**, explicitly at Zia's direction,
+  ahead of the Phase 7 gate the previous HANDOFF.md set (multi-product
+  pipeline was flagged as out of scope until Phase 7 — Zia overrode that
   explicitly and asked for it now; noting this so the override is
   visible, not silently absorbed).
+- **Phase 8b (this session, 2026-09-13): direct NVIDIA API support.**
+  Zia generated an `NVIDIA_API_KEY` today. `content_provider.py` was
+  already written (in the Phase 8 session) to prefer `NVIDIA_API_KEY`
+  over `OPENROUTER_API_KEY` when both are set — direct NVIDIA NIM
+  endpoint, no OpenRouter middleman or free-tier rate limit — but this
+  addendum was never actually written up here until now, so a reader of
+  this file had no way to know the option existed. Nothing code-side
+  changed today; this is a docs-only fix closing that gap. To use it,
+  set `NVIDIA_API_KEY` as a repo secret (for the `voxel-book.yml` /
+  `voxel-novel.yml` Actions workflows, which already reference it) or as
+  a local environment variable (for running `voxel_cli.py` from a
+  terminal). If the model id `NVIDIA_MODEL` defaults to ever 404s, check
+  https://build.nvidia.com for the current catalog and override via the
+  `NVIDIA_MODEL` env var.
 
-### New files added this session
+### New files added this session (Phase 8)
 
 - **`voxel_cli.py`** — the single command Zia asked for.
   - `python voxel_cli.py book --concept "..." --pages 26 --series luna`
@@ -59,7 +84,8 @@ where things stand and how to not break what's already here.
 - **`content_provider.py`** — added `generate_novel_chapter()` (plain
   prose, not JSON, for novel-length work) and `call_raw()` (exposed for
   `humanizer.py`'s rewrite step). Existing `generate_manuscript()` now
-  takes an optional `continuity_block` param.
+  takes an optional `continuity_block` param. (Also added the
+  `NVIDIA_API_KEY` support documented under Phase 8b above.)
 
 ### What was deliberately NOT built (know these before extending)
 
@@ -84,17 +110,43 @@ where things stand and how to not break what's already here.
   Phase 4 plan had: the code is believed correct (it composes existing,
   already-tested modules) but nobody has actually run
   `voxel_cli.py book ...` or `voxel_cli.py novel ...` against a real
-  OpenRouter/Gemini key yet. First real run should be treated as a test,
-  the same way original Phase 4 was — check the output by eye before
-  trusting it for anything real (especially the humanizer integrity
-  gate: verify a flagged page/chapter actually did have a fact at risk,
-  not a false positive).
+  OpenRouter/Gemini/NVIDIA key yet. First real run should be treated as
+  a test, the same way original Phase 4 was — check the output by eye
+  before trusting it for anything real (especially the humanizer
+  integrity gate: verify a flagged page/chapter actually did have a
+  fact at risk, not a false positive).
 - **No automated tests added for `humanizer.py`, `story_bible.py`, or
   `voxel_cli.py`.** Per the standing rule below ("add or update a test
   when you change shared logic"), this is a gap — `humanizer.py`'s
   `scan()` function especially is pure and easy to unit test (no mocking
   needed), and should get one before it's trusted on Book 2 of Amity
   Falls or a new Luna sequel.
+
+## Known doc/repo mismatches not yet fixed (flagged, not resolved)
+
+- **`ARCHITECTURE.md`'s "Current state" section is stale.** It still
+  says Phase 4 is "NOT STARTED," contradicting this file's own account
+  above that Phase 4 shipped (as Luna, off-pipeline). Needs reconciling.
+- **README.md, `build_book.py`, and `make_lesson.py` still describe
+  images as coming from "Pollinations.ai, free, no key required."**
+  `image_provider.py`'s actual code calls Google Gemini
+  (`GEMINI_API_KEY` required), not Pollinations. Comment text is stale
+  in all three places.
+- **`generate_images.py` is a second, disconnected image pipeline.**
+  It's a GitHub-Actions-only script (Gemini → Cloudflare/FLUX → hosted
+  FLUX fallback chain) that isn't called by `image_provider.py` or
+  `voxel_cli.py` at all — only by `.github/workflows/test-image-secret.yml`.
+- **`video_output.py` (Chatterbox-TTS narrated marketing video) is built
+  but never wired into `voxel_cli.py`** and isn't mentioned elsewhere in
+  this file. It's a standalone module waiting to be called from
+  somewhere.
+- **`build-book.yml` is redundant with `voxel-book.yml`.** The former
+  calls `build_book.py` directly (bypassing humanizer/story-bible); the
+  latter calls `voxel_cli.py book`. Worth deciding whether to keep both
+  or retire the older one.
+- **`_workflows_scope_test.md` and `_write_access_test.md`** in the repo
+  root are leftover connectivity-check files, safe to delete whenever
+  someone's in there anyway.
 
 ## Rules for anyone (or anything) working on this repo
 
