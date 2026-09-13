@@ -1,0 +1,58 @@
+name: Voxel Novel (one command)
+
+# Manual trigger only. Actions tab -> "Voxel Novel (one command)" -> Run
+# workflow. Fill in the series/book/brief, wait, chapters get committed
+# straight into novels/<series>/<book-slug>/ automatically.
+
+on:
+  workflow_dispatch:
+    inputs:
+      series:
+        description: "Story-bible series slug, e.g. 'amity-falls'"
+        required: true
+        type: string
+      book:
+        description: "Book title, e.g. 'Amity Falls Book 2'"
+        required: true
+        type: string
+      chapters:
+        description: "Number of chapters to write"
+        required: true
+        type: string
+      brief:
+        description: "What this book is about (a few sentences)"
+        required: true
+        type: string
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run voxel_cli.py novel
+        env:
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          python voxel_cli.py novel \
+            --series "${{ inputs.series }}" \
+            --book "${{ inputs.book }}" \
+            --chapters ${{ inputs.chapters }} \
+            --brief "${{ inputs.brief }}"
+
+      - name: Commit chapters and story bible
+        run: |
+          git config user.name "voxel-bot"
+          git config user.email "actions@github.com"
+          git add novels/ story_bibles/
+          git diff --cached --quiet || git commit -m "Add ${{ inputs.book }} (${{ inputs.chapters }} chapters, auto-generated)"
+          git push
