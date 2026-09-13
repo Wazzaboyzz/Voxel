@@ -37,6 +37,18 @@ writers.com's 5-tip craft guide, rivereditor.com's page-turn-technique
 breakdown, thekidlitlab's pacing/page-turn essay, qinprinting's 12
 elements of successful picture books, writingmastery.com's structural
 guide, and manuscriptagency.com.au's read-aloud-focused guide.
+
+Phase 8i fix (2026-09-13): the very first real test run ("sock-collecting
+robot" concept) crashed with json.decoder.JSONDecodeError: Extra data
+before a single image was ever generated. The free-tier model returned a
+perfectly valid JSON array, then appended extra text after the closing
+bracket (a trailing note/aside - a known free-tier model habit). Strict
+json.loads() rejects the WHOLE response the moment anything follows a
+valid JSON value, even though the array itself was fine. Fixed by
+switching to json.JSONDecoder().raw_decode(), which parses only the
+first complete JSON value in the string and simply ignores whatever
+comes after it - so a good array with a chatty trailing sentence now
+works instead of crashing the entire run.
 """
 
 import os
@@ -100,6 +112,26 @@ def _post(system_prompt, user_content, timeout):
     return response.json()["choices"][0]["message"]["content"].strip()
 
 
+def _extract_first_json_value(raw_text):
+    """
+    Parses only the FIRST complete JSON value in raw_text and discards
+    anything after it, instead of json.loads()'s all-or-nothing behavior.
+    Free-tier models sometimes append a trailing note/sentence after a
+    perfectly valid JSON array or object - that trailing text should not
+    blow up an otherwise-good response (see Phase 8i in module docstring).
+    Still raises json.JSONDecodeError (caught by callers) if there is no
+    valid JSON value at all, e.g. the model returned pure prose.
+    """
+    decoder = json.JSONDecoder()
+    stripped = raw_text.strip()
+    value, end_index = decoder.raw_decode(stripped)
+    trailing = stripped[end_index:].strip()
+    if trailing:
+        print(f"[content_provider] Note: ignored {len(trailing)} char(s) of "
+              f"trailing text after valid JSON (model added extra commentary).")
+    return value
+
+
 def _call_nemotron(system_prompt, user_content, timeout=120):
     raw_text = _post(system_prompt, user_content, timeout)
 
@@ -109,7 +141,7 @@ def _call_nemotron(system_prompt, user_content, timeout=120):
             raw_text = raw_text[4:].strip()
 
     try:
-        return json.loads(raw_text)
+        return _extract_first_json_value(raw_text)
     except json.JSONDecodeError as e:
         raise RuntimeError(
             f"Model did not return valid JSON. Raw response was:\n{raw_text}"
@@ -217,7 +249,9 @@ def generate_manuscript(concept, page_count, continuity_block=""):
         "don't apply to a coloring book's minimal text.\n"
         "Avoid AI-writing tells: no rule-of-three lists, no stock phrases, "
         "vary sentence length naturally, write like a real human author "
-        "who has actually read their pages aloud to a child."
+        "who has actually read their pages aloud to a child.\n\n"
+        "Return ONLY the JSON array itself - no trailing notes, comments, "
+        "or explanation after the closing bracket."
     )
     user_content = f"Book concept: {concept}"
     if continuity_block:
