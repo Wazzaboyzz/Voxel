@@ -1,22 +1,29 @@
 #!/usr/bin/env python3
 """
 image_provider.py - single shared entry point for image generation across
-Voxel, wrapping the Google Gemini image generation API (free tier, daily
-quota). Both make_lesson.py and build_book.py call this instead of each
-having their own copy.
+Voxel. Tries Google Gemini first, then automatically falls back to
+Cloudflare Workers AI (FLUX, free tier) if Gemini fails - both
+make_lesson.py and build_book.py call this instead of each having their
+own copy or their own fallback logic.
 
-NOTE (2026-09-13): Gemini's gemini-2.5-flash-image model returns 429 on
-every call for a key with no billing linked - confirmed by a real run.
-Zia's standing rule is strictly free tier, no billing, anywhere. So the
-functions below are NOT the primary image path anymore for build_book.py /
-voxel_cli.py - see write_image_prompts_file() and load_manual_images()
-below, which support generating images by hand (VEO3, Google Flow, etc.)
-instead. generate_image()/generate_all_images() are kept for make_lesson.py
-(which hasn't hit this limit) and as a fallback if a genuinely-free Gemini
-path or another free provider is wired in later.
+UPDATE (2026-09-13, Phase 8e): Gemini's gemini-2.5-flash-image model
+returns 429 on every call for a key with no billing linked (confirmed by
+a real run). Rather than requiring manual image generation (VEO3, Google
+Flow) for every book, generate_image() now automatically falls back to
+Cloudflare Workers AI's FLUX model when Gemini fails - CLOUDFLARE_ACCOUNT_ID
+and CLOUDFLARE_API_TOKEN are already configured as repo secrets (added
+for the disconnected generate_images.py GitHub Actions script, now reused
+here) and Cloudflare Workers AI has a genuinely free tier, matching Zia's
+standing "strictly free tier, no billing, anywhere" rule.
 
-Requires a free Gemini API key from https://aistudio.google.com/apikey,
-passed via the GEMINI_API_KEY environment variable.
+The manual-image workflow (write_image_prompts_file() / load_manual_images(),
+Phase 8d) is kept as a fallback-of-the-fallback for the rare case where
+both Gemini and Cloudflare fail - --manual-images / --images-dir on
+voxel_cli.py book still work exactly as before.
+
+Requires at least one of:
+  GEMINI_API_KEY                          - free key, https://aistudio.google.com/apikey
+  CLOUDFLARE_ACCOUNT_ID + CLOUDFLARE_API_TOKEN  - free tier, Workers AI
 """
 
 import base64
@@ -32,6 +39,8 @@ GEMINI_URL = (
     f"https://generativelanguage.googleapis.com/v1beta/models/"
     f"{GEMINI_IMAGE_MODEL}:generateContent"
 )
+
+CLOUDFLARE_FLUX_MODEL = "@cf/black-forest-labs/flux-1-schnell"
 
 LESSON_STYLE_SUFFIX = (
     ", rich three-dimensional painterly illustration with strong depth, "
@@ -53,68 +62,77 @@ COLORING_BOOK_STYLE_SUFFIX = (
 )
 
 
-def _get_api_key():
+def _try_gemini(full_prompt, out_path):
     key = os.environ.get("GEMINI_API_KEY")
     if not key:
-        raise RuntimeError(
-            "GEMINI_API_KEY environment variable is not set. Get a free key "
-            "at https://aistudio.google.com/apikey and set it before calling "
-            "generate_image()."
-        )
-    return key
+        return False, "GEMINI_API_KEY not set"
+
+    body = {"contents": [{"parts": [{"text": full_prompt}]}]}
+    try:
+        resp = requests.post(GEMINI_URL, params={"key": key}, json=body, timeout=90)
+        resp.raise_for_status()
+        data = resp.json()
+        parts = data["candidates"][0]["content"]["parts"]
+        for part in parts:
+            inline = part.get("inlineData") or part.get("inline_data")
+            if inline and inline.get("data"):
+                out_path.parent.mkdir(parents=True, exist_ok=True)
+                out_path.write_bytes(base64.b64decode(inline["data"]))
+                return True, None
+        return False, f"No image data in Gemini response: {data}"
+    except (requests.RequestException, KeyError, IndexError) as e:
+        return False, str(e)
+
+
+def _try_cloudflare(full_prompt, out_path):
+    account_id = os.environ.get("CLOUDFLARE_ACCOUNT_ID")
+    token = os.environ.get("CLOUDFLARE_API_TOKEN")
+    if not account_id or not token:
+        return False, "CLOUDFLARE_ACCOUNT_ID/CLOUDFLARE_API_TOKEN not set"
+
+    url = f"https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/run/{CLOUDFLARE_FLUX_MODEL}"
+    headers = {"Authorization": f"Bearer {token}"}
+    try:
+        resp = requests.post(url, headers=headers, json={"prompt": full_prompt}, timeout=90)
+        resp.raise_for_status()
+        data = resp.json()
+        img_b64 = data["result"]["image"]
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_bytes(base64.b64decode(img_b64))
+        return True, None
+    except (requests.RequestException, KeyError) as e:
+        return False, str(e)
 
 
 def generate_image(prompt, out_path, width=1024, height=576, seed=None,
                     style_suffix=LESSON_STYLE_SUFFIX):
     """
-    Calls Google's Gemini image generation API. Requires GEMINI_API_KEY.
-    As of 2026-09-13 this 429s on free-tier keys with no billing linked -
-    see the module docstring. Kept for make_lesson.py and as a fallback.
+    Tries Gemini first, then Cloudflare Workers AI (FLUX) if Gemini fails.
+    Both are free-tier, no billing required. Raises RuntimeError only if
+    every configured provider fails, so callers (generate_all_images) can
+    still catch a single exception type the way they always have.
     """
-    api_key = _get_api_key()
     full_prompt = prompt + style_suffix
 
-    body = {
-        "contents": [
-            {"parts": [{"text": full_prompt}]}
-        ]
-    }
+    ok, err = _try_gemini(full_prompt, out_path)
+    if ok:
+        return
+    print(f"    [gemini failed, trying Cloudflare fallback] {err}")
 
-    resp = requests.post(
-        GEMINI_URL,
-        params={"key": api_key},
-        json=body,
-        timeout=90,
-    )
-    resp.raise_for_status()
-    data = resp.json()
+    ok, err = _try_cloudflare(full_prompt, out_path)
+    if ok:
+        return
 
-    try:
-        parts = data["candidates"][0]["content"]["parts"]
-    except (KeyError, IndexError) as e:
-        raise RuntimeError(f"Unexpected Gemini response shape: {data}") from e
-
-    image_b64 = None
-    for part in parts:
-        inline = part.get("inlineData") or part.get("inline_data")
-        if inline and inline.get("data"):
-            image_b64 = inline["data"]
-            break
-
-    if image_b64 is None:
-        raise RuntimeError(f"No image data returned by Gemini: {data}")
-
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_bytes(base64.b64decode(image_b64))
+    raise RuntimeError(f"All image providers failed. Gemini/Cloudflare last error: {err}")
 
 
 def generate_all_images(items, image_dir, filename_prefix="item", seed_base=42,
                          width=1024, height=576, style_suffix=LESSON_STYLE_SUFFIX,
                          prompt_key="image_prompt", number_key=None, polite_delay=2):
     """
-    Generates one image per item in `items` via Gemini. See module docstring -
-    as of 2026-09-13 this fails with 429 on a no-billing free-tier key.
-    Returns a list of Path (or None on failure) matching `items` order.
+    Generates one image per item in `items`, trying Gemini then Cloudflare
+    per item (see generate_image()). Returns a list of Path (or None on
+    total failure for that item) matching `items` order.
     """
     image_dir.mkdir(parents=True, exist_ok=True)
     image_files = []
@@ -144,13 +162,9 @@ def generate_all_images(items, image_dir, filename_prefix="item", seed_base=42,
 def write_image_prompts_file(items, out_path, prompt_key="image_prompt",
                               number_key=None, filename_prefix="item"):
     """
-    Writes a markdown file listing one prompt per item, plus the EXACT
-    filename each finished image must be saved as. This is step 1 of the
-    manual-image workflow: Zia generates each image by hand (VEO3, Google
-    Flow, or any other tool) using these prompts, saves each one with the
-    exact filename shown, uploads all of them into one folder in the repo,
-    then re-runs the build with --images-dir pointed at that folder so
-    load_manual_images() below can pick them up. Zero API calls, zero cost.
+    Manual-image fallback (Phase 8d), kept for the rare case both Gemini
+    and Cloudflare fail. Writes a markdown file listing one prompt per
+    item, plus the EXACT filename each finished image must be saved as.
     """
     out_path.parent.mkdir(parents=True, exist_ok=True)
     lines = [
@@ -176,12 +190,10 @@ def write_image_prompts_file(items, out_path, prompt_key="image_prompt",
 
 def load_manual_images(items, image_dir, filename_prefix="item", number_key=None):
     """
-    Step 2 of the manual-image workflow: looks for images already sitting in
-    image_dir, named exactly as write_image_prompts_file() specified above.
-    Makes zero network calls - just checks the filesystem. Returns a list of
-    Path (or None if that page's image isn't there yet) matching items'
-    order, the same shape generate_all_images() returns, so build_book.py's
-    PDF-assembly code works identically either way.
+    Manual-image fallback (Phase 8d): looks for images already sitting in
+    image_dir, named exactly as write_image_prompts_file() specified.
+    Zero network calls. Returns a list of Path (or None) matching items'
+    order, the same shape generate_all_images() returns.
     """
     image_dir = Path(image_dir)
     image_files = []
