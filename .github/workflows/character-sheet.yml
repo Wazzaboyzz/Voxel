@@ -1,0 +1,48 @@
+name: Character Consistency Sheet
+
+on:
+  workflow_dispatch:
+    inputs:
+      reference_image_path:
+        description: 'Path in the repo to the reference image (upload it first via Add file > Upload files)'
+        required: true
+        default: 'story_bibles/luna/reference.jpg'
+      output_dir:
+        description: 'Where to write the generated pose images'
+        required: true
+        default: 'character_sheets/luna'
+      character_name:
+        description: 'Character name (used in prompts and filenames)'
+        required: true
+        default: 'Luna'
+
+jobs:
+  generate-sheet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate character sheet
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          python generate_character_sheet.py \
+            --reference "${{ github.event.inputs.reference_image_path }}" \
+            --output-dir "${{ github.event.inputs.output_dir }}" \
+            --character-name "${{ github.event.inputs.character_name }}"
+
+      - name: Upload character sheet as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: character-sheet
+          path: ${{ github.event.inputs.output_dir }}/
+          if-no-files-found: warn
