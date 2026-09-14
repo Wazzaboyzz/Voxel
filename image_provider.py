@@ -7,18 +7,15 @@ falls back to Cloudflare Workers AI (FLUX.2 [klein] 4B, free tier, Apache
 make_lesson.py and build_book.py call this instead of each having their
 own copy or their own fallback logic.
 
-Phase 8j (2026-09-13) - after a real run where BOTH Gemini and the
-Cloudflare fallback 429'd on every single page, the logs turned out to be
-useless for diagnosing why: the code only ever logged the string
-"429 rate limited" and never the actual response body, so there was no
-way to tell a per-minute rate limit (clears in a minute) apart from a
-per-day quota exhausted (won't clear until the provider's daily reset)
-apart from a genuinely different problem (e.g. billing required,
-Workers AI daily neuron budget spent). Fixed both _try_gemini_once and
-_try_cloudflare to capture and surface the actual response body
-(truncated to 300 chars) in the returned error string, so the next time
-this happens the console output itself says which case it is instead of
-requiring guesswork.
+Phase 8j (2026-09-13) - fix after the Phase 8h retest: character
+consistency held, but too well - the robot kept an almost-identical pose
+across every page with only the background changing, and one page
+dropped the robot from frame entirely. REFERENCE_MATCH_INSTRUCTION was
+telling the model to keep the character "identical" without separating
+DESIGN (must match reference) from POSE/ACTION (must match THIS page's
+new scene, not the reference's pose). Rewritten to make that split
+explicit, and to require the character be visibly present and doing the
+described action in every image, not just implied by the scene.
 
 Phase 8h (2026-09-13) - two fixes after the first real run showed zero
 character consistency (a robot turned into an animal page to page):
@@ -60,11 +57,7 @@ UPDATE (2026-09-13, Phase 8e): Gemini's image model can 429 on a key with
 no billing linked. Cloudflare Workers AI is used as a last-resort
 fallback - CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN are already
 configured as repo secrets. Both are genuinely free tier, matching Zia's
-standing "strictly free tier, no billing, anywhere" rule. NOTE (Phase
-8j): both providers CAN still be exhausted on the same day if enough
-test runs happen in a short window - this is expected behavior for a
-strictly-free-tier pipeline, not a bug, and the fix is to wait for the
-daily reset, not to add billing.
+standing "strictly free tier, no billing, anywhere" rule.
 
 The manual-image workflow (write_image_prompts_file() / load_manual_images(),
 Phase 8d) is kept as a fallback-of-the-fallback for the rare case where
@@ -98,18 +91,28 @@ CLOUDFLARE_ACCOUNT_URL = "https://api.cloudflare.com/client/v4/accounts/{account
 
 GEMINI_RETRY_DELAYS = [15, 30, 60]  # seconds, before giving up and trying Cloudflare
 
-ERROR_BODY_PREVIEW_CHARS = 300  # enough to see "PerDay"/"PerMinute"/quota text without flooding logs
-
+# Phase 8j: DESIGN and POSE are explicitly separated. Without this split,
+# the model over-applies "keep it identical" to the whole composition
+# (pose, camera angle, position in frame) instead of just the character's
+# physical design - which is what caused the "same pose, changing
+# background" bug on the first retest.
 REFERENCE_MATCH_INSTRUCTION = (
-    "IMPORTANT: The attached reference image shows this exact character. "
-    "Keep the character's design, proportions, colors, and materials "
-    "IDENTICAL to the reference image. Only change the pose, action, and "
-    "surrounding scene as described below. Do not redesign the character."
+    "The attached reference image shows this character's DESIGN ONLY: "
+    "its proportions, colors, materials, and distinguishing features. "
+    "Keep ONLY that design identical to the reference.\n"
+    "Do NOT copy the reference image's pose, camera angle, position in "
+    "frame, or surrounding scene - those must come from the NEW scene "
+    "description below instead, even if that means a completely "
+    "different pose, angle, or position than the reference shows.\n"
+    "The character must be clearly visible and actively doing what the "
+    "scene below describes - do not omit the character from the image."
 )
 
 CLOUDFLARE_REFERENCE_PROMPT_PREFIX = (
-    "Using image 0 as the exact character reference (keep its design, "
-    "proportions, colors, and materials identical), generate a new scene: "
+    "Using image 0 only as a reference for this character's design "
+    "(proportions, colors, materials - NOT its pose or position), "
+    "generate a completely new scene where the character is clearly "
+    "visible in a new pose matching this description: "
 )
 
 LESSON_STYLE_SUFFIX = (
@@ -138,20 +141,6 @@ def _image_to_inline_part(image_path):
     return {"inlineData": {"mimeType": mime, "data": base64.b64encode(data).decode("ascii")}}
 
 
-def _error_preview(resp):
-    """Returns a short, safe preview of a response body for error messages -
-    enough to see whether a 429's body mentions a per-minute vs per-day
-    quota, without dumping a huge/binary body into the console."""
-    try:
-        text = resp.text
-    except Exception:
-        return "(could not read response body)"
-    text = text.strip().replace("\n", " ")
-    if len(text) > ERROR_BODY_PREVIEW_CHARS:
-        text = text[:ERROR_BODY_PREVIEW_CHARS] + "...(truncated)"
-    return text or "(empty response body)"
-
-
 def _try_gemini_once(full_prompt, out_path, reference_image_path=None):
     key = os.environ.get("GEMINI_API_KEY")
     if not key:
@@ -160,7 +149,7 @@ def _try_gemini_once(full_prompt, out_path, reference_image_path=None):
     parts = []
     if reference_image_path and Path(reference_image_path).exists():
         parts.append(_image_to_inline_part(reference_image_path))
-        parts.append({"text": REFERENCE_MATCH_INSTRUCTION + "\n\n" + full_prompt})
+        parts.append({"text": REFERENCE_MATCH_INSTRUCTION + "\n\nNew scene: " + full_prompt})
     else:
         parts.append({"text": full_prompt})
 
@@ -168,9 +157,7 @@ def _try_gemini_once(full_prompt, out_path, reference_image_path=None):
     try:
         resp = requests.post(GEMINI_URL, params={"key": key}, json=body, timeout=90)
         if resp.status_code == 429:
-            # Phase 8j: surface the real body so "per-minute" vs "per-day"
-            # vs "billing required" is visible in the console, not guessed at.
-            return False, f"429 rate limited - body: {_error_preview(resp)}", 429
+            return False, "429 rate limited", 429
         resp.raise_for_status()
         data = resp.json()
         response_parts = data["candidates"][0]["content"]["parts"]
@@ -181,9 +168,6 @@ def _try_gemini_once(full_prompt, out_path, reference_image_path=None):
                 out_path.write_bytes(base64.b64decode(inline["data"]))
                 return True, None, None
         return False, f"No image data in Gemini response: {data}", None
-    except requests.HTTPError as e:
-        preview = _error_preview(e.response) if e.response is not None else str(e)
-        return False, f"{e} - body: {preview}", (e.response.status_code if e.response is not None else None)
     except (requests.RequestException, KeyError, IndexError) as e:
         return False, str(e), None
 
@@ -199,7 +183,6 @@ def _try_gemini_with_retries(full_prompt, out_path, reference_image_path=None):
             return True, None
         last_err = err
         if code != 429:
-            # a non-rate-limit failure won't be fixed by waiting - stop retrying Gemini
             break
     return False, last_err
 
@@ -227,15 +210,9 @@ def _try_cloudflare(full_prompt, out_path, width=1024, height=1024, reference_im
             data["prompt"] = full_prompt
 
         resp = requests.post(url, headers=headers, data=data, files=files or None, timeout=120)
-        if resp.status_code == 429:
-            # Phase 8j: same fix as Gemini - show the real body, not just "429".
-            return False, f"429 rate limited - body: {_error_preview(resp)}"
         resp.raise_for_status()
         result = resp.json()
 
-        # This model returns either {"result": {"image": base64}} or, per
-        # Workers AI's newer image endpoints, {"data": [{"b64_json": ...}]}
-        # - handle both shapes defensively.
         img_b64 = None
         if isinstance(result.get("result"), dict) and result["result"].get("image"):
             img_b64 = result["result"]["image"]
@@ -248,9 +225,6 @@ def _try_cloudflare(full_prompt, out_path, width=1024, height=1024, reference_im
         out_path.parent.mkdir(parents=True, exist_ok=True)
         out_path.write_bytes(base64.b64decode(img_b64))
         return True, None
-    except requests.HTTPError as e:
-        preview = _error_preview(e.response) if e.response is not None else str(e)
-        return False, f"{e} - body: {preview}"
     except (requests.RequestException, KeyError, IndexError) as e:
         return False, str(e)
 
@@ -261,17 +235,12 @@ def generate_image(prompt, out_path, width=1024, height=576, seed=None,
     Tries Gemini first (with retry/backoff on 429s), then Cloudflare
     Workers AI (flux-2-klein-4b) only if Gemini still fails after
     retries. Returns used_fallback: bool.
-
-    reference_image_path, if given, is attached as a real image input to
-    WHICHEVER provider ends up handling this call - Gemini via inline
-    image data, Cloudflare via a multipart reference file - so character
-    consistency now survives a fallback instead of breaking on it.
     """
     full_prompt = prompt + style_suffix
 
     ok, err = _try_gemini_with_retries(full_prompt, out_path, reference_image_path)
     if ok:
-        return False  # used_fallback = False
+        return False
 
     print(f"    [gemini failed after retries ({err}), trying Cloudflare "
           f"flux-2-klein-4b fallback with the same reference image]")
@@ -279,7 +248,7 @@ def generate_image(prompt, out_path, width=1024, height=576, seed=None,
     ok, err = _try_cloudflare(full_prompt, out_path, width=width, height=height,
                                reference_image_path=reference_image_path)
     if ok:
-        return True  # used_fallback = True
+        return True
 
     raise RuntimeError(f"All image providers failed. Last error: {err}")
 
@@ -292,29 +261,17 @@ def generate_all_images(items, image_dir, filename_prefix="item", seed_base=42,
     Generates one image per item in `items`. The first successful image in
     the run becomes the running reference for every image after it (unless
     reference_image_path is already supplied, e.g. from a prior book in
-    the same series via story_bible.get_reference_image()), so the same
-    character design carries through the whole book instead of being
-    reinvented per page - and now this holds even for pages that fall
-    back to Cloudflare, since flux-2-klein-4b also accepts the reference.
+    the same series via story_bible.get_reference_image()).
 
-    polite_delay defaults to 12s (was 2s) to stay comfortably under
-    Gemini's free-tier per-minute request limit across a full book run,
-    since the pipeline runs on a multi-hour cron and there is no reason
-    to rush into 429s. This only helps against a per-minute limit, not a
-    per-day cap - if a run still exhausts the day's quota on BOTH
-    providers (as happened once - see Phase 8j), that is a real free-tier
-    limit being hit, not a bug, and the console now prints the actual
-    response body so this can be confirmed at a glance rather than
-    guessed at. The fix for a genuine daily-quota exhaustion is to wait
-    for the provider's reset, not to add billing.
+    Phase 8j: the reference now only locks the character's DESIGN, not its
+    pose - each page's own image_prompt drives the pose/action/position.
 
-    Returns a list of Path (or None on total failure for that item),
-    matching `items` order - same shape as before, so build_book.py's
-    PDF assembly is unaffected. Also writes `_fallback_report.json` in
-    image_dir listing any page numbers that had to use the Cloudflare
-    fallback - check this file after any run before treating the book as
-    done, even though those pages should now be far closer to correct
-    than before.
+    polite_delay defaults to 12s to stay under Gemini's free-tier
+    per-minute limit; this only helps a per-minute cap, not a per-day one.
+
+    Returns a list of Path (or None on total failure), matching `items`
+    order. Also writes `_fallback_report.json` in image_dir listing any
+    page numbers that used the Cloudflare fallback.
     """
     image_dir.mkdir(parents=True, exist_ok=True)
     image_files = []
@@ -337,8 +294,6 @@ def generate_all_images(items, image_dir, filename_prefix="item", seed_base=42,
             if used_fallback:
                 fallback_pages.append(number)
                 if running_reference is None:
-                    # even a fallback-generated first page can seed the
-                    # reference now, since flux-2-klein-4b also supports it
                     running_reference = out_path
                     print(f"    -> set as character reference for remaining pages (via Cloudflare)")
             elif running_reference is None:
@@ -358,8 +313,7 @@ def generate_all_images(items, image_dir, filename_prefix="item", seed_base=42,
             "pages_using_cloudflare_fallback": fallback_pages,
             "note": ("These pages used the Cloudflare flux-2-klein-4b fallback. "
                      "It received the same reference image as Gemini, so it should "
-                     "be close, but check by eye - a different model can still drift "
-                     "in ways Gemini wouldn't."),
+                     "be close, but check by eye."),
         }, indent=2), encoding="utf-8")
         print(f"\n  [!] {len(fallback_pages)} page(s) used the Cloudflare fallback: {fallback_pages}")
         print(f"      See {report_path} for details.")
@@ -369,12 +323,6 @@ def generate_all_images(items, image_dir, filename_prefix="item", seed_base=42,
 
 def write_image_prompts_file(items, out_path, prompt_key="image_prompt",
                               number_key=None, filename_prefix="item"):
-    """
-    Manual-image fallback (Phase 8d), kept for the rare case both Gemini
-    (after retries) and Cloudflare fail. Writes a markdown file listing
-    one prompt per item, plus the EXACT filename each finished image must
-    be saved as.
-    """
     out_path.parent.mkdir(parents=True, exist_ok=True)
     lines = [
         "# Image prompts - generate each one by hand (VEO3, Google Flow, etc.)",
@@ -398,12 +346,6 @@ def write_image_prompts_file(items, out_path, prompt_key="image_prompt",
 
 
 def load_manual_images(items, image_dir, filename_prefix="item", number_key=None):
-    """
-    Manual-image fallback (Phase 8d): looks for images already sitting in
-    image_dir, named exactly as write_image_prompts_file() specified.
-    Zero network calls. Returns a list of Path (or None) matching items'
-    order, the same shape generate_all_images() returns.
-    """
     image_dir = Path(image_dir)
     image_files = []
     for i, item in enumerate(items):

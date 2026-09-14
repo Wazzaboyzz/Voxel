@@ -32,23 +32,22 @@ reader to keep turning them. Rewritten from real published picture-book
 craft research (page-turn hooks, show-don't-tell, sensory specificity,
 refrain/repetition, punctuation-driven pacing, a want-driven character
 arc, a satisfying-AND-surprising ending) rather than a generic "write a
-children's book" instruction. Sources synthesized (no text copied):
-writers.com's 5-tip craft guide, rivereditor.com's page-turn-technique
-breakdown, thekidlitlab's pacing/page-turn essay, qinprinting's 12
-elements of successful picture books, writingmastery.com's structural
-guide, and manuscriptagency.com.au's read-aloud-focused guide.
+children's book" instruction.
 
-Phase 8i fix (2026-09-13): the very first real test run ("sock-collecting
-robot" concept) crashed with json.decoder.JSONDecodeError: Extra data
-before a single image was ever generated. The free-tier model returned a
-perfectly valid JSON array, then appended extra text after the closing
-bracket (a trailing note/aside - a known free-tier model habit). Strict
-json.loads() rejects the WHOLE response the moment anything follows a
-valid JSON value, even though the array itself was fine. Fixed by
-switching to json.JSONDecoder().raw_decode(), which parses only the
-first complete JSON value in the string and simply ignores whatever
-comes after it - so a good array with a chatty trailing sentence now
-works instead of crashing the entire run.
+Phase 8i fix (2026-09-13): switched JSON parsing to
+json.JSONDecoder().raw_decode() so a valid array with trailing model
+commentary after it doesn't crash the whole run.
+
+Phase 8j (2026-09-13): after a real retest, images had good character
+consistency but the robot's POSE never changed page to page, and one
+page dropped the robot from frame. Root cause traced to image_prompt
+text itself often being scene/object-focused without explicitly stating
+where the main character is and what it's doing. Added an explicit
+requirement that every image_prompt name the main character and its
+specific action/pose for that page - this pairs with the matching fix in
+image_provider.py's REFERENCE_MATCH_INSTRUCTION (which now locks only
+the character's DESIGN, not its pose, letting each page's stated action
+actually take effect).
 """
 
 import os
@@ -63,17 +62,11 @@ NVIDIA_API_KEY = os.environ.get("NVIDIA_API_KEY", "")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 OPENROUTER_MODEL = "nvidia/nemotron-3-ultra-550b-a55b:free"
 
-# Direct NVIDIA NIM endpoint (build.nvidia.com), OpenAI-compatible.
-# NVIDIA_MODEL can be overridden via env var if this default is renamed/
-# retired - check https://build.nvidia.com for the current model catalog
-# and matching model id if generation starts failing with a 404.
 NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 NVIDIA_MODEL = os.environ.get("NVIDIA_MODEL", "nvidia/nemotron-3-super-120b-a12b")
 
 
 def _active_provider():
-    """NVIDIA direct takes priority when its key is present, since it's a
-    paid/direct key with no OpenRouter free-tier rate limits."""
     if NVIDIA_API_KEY:
         return NVIDIA_URL, NVIDIA_MODEL, NVIDIA_API_KEY
     if OPENROUTER_API_KEY:
@@ -191,8 +184,8 @@ def generate_manuscript(concept, page_count, continuity_block=""):
     to keep a sequel's characters/style/plot consistent with prior books.
 
     Phase 8g: this prompt is built from real published-picture-book craft
-    principles, not a generic instruction - see module docstring for the
-    research this synthesizes.
+    principles. Phase 8j: image_prompt now must explicitly name the
+    character and its current pose/action on every page.
     """
     system_prompt = (
         "You are a bestselling children's picture book author - the kind "
@@ -208,30 +201,15 @@ def generate_manuscript(concept, page_count, continuity_block=""):
         "2. PAGE-TURN HOOKS: end the text on EVERY page (except the very "
         "last) with a reason to turn the page - an unanswered question, "
         "a sound, a half-finished action, something half-seen, or a "
-        "sudden shift. The reader (or the child listening) should feel a "
-        "small pull to see what's next, every single page.\n\n"
-        "3. SHOW, DON'T TELL: never state a character's emotion directly "
-        "(no \"she felt sad\") - show it through action, a small physical "
-        "detail, or dialogue instead. Save physical/setting description "
-        "for the image_prompt field, not the text - the text should carry "
-        "feeling, dialogue, and forward motion; let the illustration carry "
-        "what things look like.\n\n"
-        "4. READ-ALOUD RHYTHM: vary sentence length deliberately - mix "
-        "short punchy sentences with longer flowing ones. Use commas to "
-        "build momentum and periods to land a beat. Read each page in "
-        "your head as if speaking it aloud before finalizing it - if it's "
-        "clunky to say, rewrite it.\n\n"
-        "5. A REFRAIN, IF IT FITS: if a repeated phrase or sound would "
-        "suit this story (kids love saying a repeated line along with the "
-        "reader), use one consistently - same wording every time it "
-        "appears, don't vary it partway through.\n\n"
-        "6. A REAL ENDING: the final page must feel both SATISFYING (the "
-        "want from page 1-2 is resolved) and slightly SURPRISING (not the "
-        "single most obvious resolution a reader would guess on page 1) - "
-        "avoid a flat, tidy, moralizing wrap-up sentence.\n\n"
-        "7. HUMOR AND WARMTH WHERE IT FITS: a small joke, an odd detail, "
-        "or a moment of genuine tenderness lands better than a string of "
-        "purely functional plot sentences.\n\n"
+        "sudden shift.\n\n"
+        "3. SHOW, DON'T TELL: never state a character's emotion directly - "
+        "show it through action, a small physical detail, or dialogue "
+        "instead.\n\n"
+        "4. READ-ALOUD RHYTHM: vary sentence length deliberately.\n\n"
+        "5. A REFRAIN, IF IT FITS: use one consistently if it suits the "
+        "story.\n\n"
+        "6. A REAL ENDING: satisfying AND slightly surprising.\n\n"
+        "7. HUMOR AND WARMTH WHERE IT FITS.\n\n"
         "Return ONLY valid JSON, no markdown fences, no preamble: a JSON "
         "array of page objects, each with exactly these keys:\n"
         '  "page_number": integer, 1-indexed\n'
@@ -239,14 +217,20 @@ def generate_manuscript(concept, page_count, continuity_block=""):
         "above (can be an empty string only for pure-illustration/coloring "
         "pages)\n"
         '  "image_prompt": a concrete, specific visual description '
-        "(10-25 words) of the illustration for this page - an actual "
-        "scene, character pose, or object, not an abstract idea. This is "
-        "where physical/setting description belongs since the text "
-        "shouldn't duplicate it.\n"
+        "(10-25 words) of the illustration for this page. This MUST "
+        "explicitly name the main character and state exactly what "
+        "physical pose or action they are performing RIGHT NOW on this "
+        "page (e.g. 'the robot crouches, reaching under the fridge with "
+        "one arm outstretched' - not just 'a fridge in a kitchen'). The "
+        "main character must be visibly present and doing something "
+        "distinct from every other page's action - never describe a "
+        "scene, object, or setting alone without the character actively "
+        "in it, unless the page's text explicitly says the character has "
+        "left the scene.\n"
         "If the concept describes a coloring book, text should be empty "
         "or a very short caption, and image_prompt should describe a "
-        "clean line-art scene suitable for coloring - craft rules 1-7 "
-        "don't apply to a coloring book's minimal text.\n"
+        "clean line-art scene suitable for coloring, still following the "
+        "character-presence-and-action rule above.\n"
         "Avoid AI-writing tells: no rule-of-three lists, no stock phrases, "
         "vary sentence length naturally, write like a real human author "
         "who has actually read their pages aloud to a child.\n\n"
