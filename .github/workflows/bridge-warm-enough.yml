@@ -1,0 +1,71 @@
+name: Bridge Warm Enough
+
+# Runs the NVIDIA-first writer from aliwaziri10/Voxel here, because this repo holds
+# the working NVIDIA_API_KEY. Chapters are pushed to aliwaziri10/Voxel, never saved here.
+# Start by hand: Actions tab -> "Bridge Warm Enough" -> Run workflow.
+# Needs the secrets NVIDIA_API_KEY and ALI_VOXEL_PUSH_TOKEN on THIS repo.
+
+on:
+  workflow_dispatch:
+    inputs:
+      end:
+        description: "Last chapter to write in this run (40 = the end of the book)"
+        required: true
+        type: string
+        default: "40"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bridge-warm-enough
+  cancel-in-progress: false
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - name: Check out aliwaziri10/Voxel
+        uses: actions/checkout@v4
+        with:
+          repository: aliwaziri10/Voxel
+          token: ${{ secrets.ALI_VOXEL_PUSH_TOKEN }}
+          path: live
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Set git identity
+        working-directory: live
+        run: |
+          git config user.name "aliwaziri10"
+          git config user.email "aliwaziri10.2@gmail.com"
+
+      - name: Write chapters
+        working-directory: live
+        env:
+          END_CH: ${{ inputs.end || '40' }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+        run: |
+          case "$END_CH" in
+            ''|*[!0-9]*) echo "ERROR: end must be a number from 1 to 40"; exit 1;;
+          esac
+          END="$END_CH"
+          if [ "$END" -gt 40 ]; then END=40; fi
+          if [ "$END" -lt 1 ]; then echo "ERROR: end must be from 1 to 40"; exit 1; fi
+          if [ -z "$NVIDIA_API_KEY" ]; then echo "ERROR: NVIDIA_API_KEY is not set on this repo"; exit 1; fi
+          echo "Writing from the first missing chapter up to chapter $END"
+          set +e
+          timeout 335m python -u scripts/write_warm_enough_nim.py --auto --end "$END" --checkpoint
+          CODE=$?
+          set -e
+          if [ "$CODE" -eq 124 ]; then
+            echo "TIME LIMIT REACHED. Every finished chapter is saved. Run again to continue."
+            exit 0
+          fi
+          exit $CODE
